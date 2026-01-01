@@ -1,0 +1,258 @@
+---
+title: "Notifications"
+description: "Stay on track with smart reminders across all your channels"
+icon: "bell"
+---
+
+Peanuts keeps you accountable with timely nudges across multiple channels. Set up daily reminders, digest summaries, and smart alerts that adapt to your schedule.
+
+## Channels
+
+<CardGroup cols={3}>
+  <Card title="In-App" icon="mobile">
+    Real-time notifications in your notification center
+  </Card>
+  <Card title="Telegram" icon="paper-plane">
+    Reminders and digests via your Telegram bot
+  </Card>
+  <Card title="Email" icon="envelope">
+    Daily digests and low-credit alerts
+  </Card>
+</CardGroup>
+
+## Quick Setup
+
+<Steps>
+  <Step title="Open Settings">
+    Navigate to **Settings** from the main menu.
+  </Step>
+  <Step title="Set your timezone">
+    Select your timezone so reminders arrive at the right local time.
+  </Step>
+  <Step title="Configure digests">
+    Choose when to receive your morning and evening summaries.
+  </Step>
+  <Step title="Enable Quiet Hours">
+    Block notifications during sleep or focus time.
+  </Step>
+</Steps>
+
+## Daily Digests
+
+Get a summary of your tracked data delivered at times you choose.
+
+| Digest | Default Time | Content |
+|--------|--------------|---------|
+| Morning | 8:00 AM | Yesterday's summary, today's goals |
+| Evening | 8:00 PM | Today's progress, pending items |
+
+<Tip>
+Digests are sent via your connected channels — Telegram, email, or both.
+</Tip>
+
+### Customizing Digest Time
+
+1. Go to **Settings** → **Notification Schedule**
+2. Tap the time next to Morning or Evening digest
+3. Select your preferred time
+4. Changes apply immediately
+
+## Quiet Hours
+
+Block all notifications during specific hours.
+
+<Steps>
+  <Step title="Enable Quiet Hours">
+    Toggle on **Quiet Hours** in Settings.
+  </Step>
+  <Step title="Set start time">
+    Choose when quiet mode begins (e.g., 10:00 PM).
+  </Step>
+  <Step title="Set end time">
+    Choose when notifications resume (e.g., 8:00 AM).
+  </Step>
+</Steps>
+
+<Note>
+Quiet Hours apply across all channels — in-app, Telegram, and email digests are all silenced.
+</Note>
+
+## Per-Helper Reminders
+
+Each helper can have its own notification settings.
+
+<AccordionGroup>
+  <Accordion title="Daily Reminders" icon="clock">
+Get a nudge at a specific time to log your data.
+
+1. Open any helper
+2. Tap **Settings** (gear icon)
+3. Enable **Daily Reminder**
+4. Set your preferred time
+
+Great for habits, medications, or daily check-ins.
+  </Accordion>
+  <Accordion title="No-Entry Alerts" icon="triangle-exclamation">
+Get notified if you forget to log data for a helper.
+
+1. Open helper settings
+2. Enable **No-Entry Alert**
+3. Choose the alert time
+
+Peanuts checks if you've logged anything that day — if not, you get a gentle reminder.
+  </Accordion>
+</AccordionGroup>
+
+## Smart Nudges
+
+AI-powered suggestions that celebrate wins and prompt action.
+
+<CardGroup cols={2}>
+  <Card title="Personal Bests" icon="trophy">
+    "New record! You logged 10km today 🎉"
+  </Card>
+  <Card title="Pending Items" icon="list-check">
+    "3 quotes waiting for your response"
+  </Card>
+  <Card title="Streaks" icon="fire">
+    "7-day streak! Keep it going"
+  </Card>
+  <Card title="Trends" icon="chart-line">
+    "Your expenses are 20% lower this week"
+  </Card>
+</CardGroup>
+
+Smart Nudges appear in your helper dashboard and notification center automatically.
+
+## Low-Credit Alerts
+
+<Info>
+Receive email alerts when your AI credits are running low.
+</Info>
+
+Alerts trigger at these thresholds:
+- 10 credits remaining
+- 5 credits remaining
+- 3 credits remaining
+- 1 credit remaining
+
+### Disabling Low-Credit Emails
+
+1. Go to **Settings** → **Notifications**
+2. Toggle off **Low-credit email alerts**
+
+## Notification Center
+
+Access all your notifications from the bell icon in the header.
+
+| Feature | Description |
+|---------|-------------|
+| Real-time updates | New notifications appear instantly |
+| Read/unread status | Unread items highlighted |
+| Quick actions | Tap to jump to the relevant helper |
+| Clear all | Mark everything as read |
+
+<Tip>
+The notification badge shows your unread count. It updates in real-time.
+</Tip>
+
+## Channel Configuration
+
+### Telegram
+
+<Steps>
+  <Step title="Connect your bot">
+    Set up your Telegram bot in **Settings** → **Telegram**.
+  </Step>
+  <Step title="Enable notifications">
+    Toggle on digest and reminder notifications.
+  </Step>
+  <Step title="Test it">
+    Send `/status` to your bot to verify the connection.
+  </Step>
+</Steps>
+
+### Email
+
+<Steps>
+  <Step title="Verify your email">
+    Confirm your email address in account settings.
+  </Step>
+  <Step title="Enable email digest">
+    Toggle on **Email Digest** in notification preferences.
+  </Step>
+  <Step title="Choose frequency">
+    Select daily or weekly digest delivery.
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Not receiving notifications">
+    <div>
+      <ul>
+        <li>Check your timezone is set correctly</li>
+        <li>Verify Quiet Hours aren&apos;t active</li>
+        <li>Ensure the channel (Telegram/email) is connected</li>
+        <li>Check spam/junk folders for emails</li>
+      </ul>
+    </div>
+  </Accordion>
+
+  <Accordion title="Wrong notification times">
+    <div>
+      <ul>
+        <li>Update your timezone in Settings</li>
+        <li>Reminder times display in your local timezone</li>
+        <li>Changes may take a few minutes to apply</li>
+      </ul>
+    </div>
+  </Accordion>
+
+  <Accordion title="Too many notifications">
+    <div>
+      <ul>
+        <li>Disable per-helper reminders you don&apos;t need</li>
+        <li>Turn off Smart Nudges in helper settings</li>
+        <li>Enable Quiet Hours for focus time</li>
+      </ul>
+    </div>
+  </Accordion>
+
+  <Accordion title="Telegram notifications not working">
+    <div>
+      <ul>
+        <li>Send <code>/start</code> to your bot to re-authorize</li>
+        <li>Check that notifications are enabled in Telegram app settings</li>
+        <li>Verify the bot is still connected in Peanuts settings</li>
+      </ul>
+    </div>
+  </Accordion>
+</AccordionGroup>
+
+## Privacy
+
+<Note>
+Notification content is personalized but never shared. Your data stays private.
+</Note>
+
+- Notifications are stored only for your account
+- Telegram messages are end-to-end with your bot
+- Email digests are sent only to your verified address
+- You can delete all notification history in Account settings
+
+---
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Telegram Integration" icon="paper-plane" href="/integrations/telegram">
+    Set up your personal Telegram bot
+  </Card>
+  <Card title="Email Digest" icon="envelope" href="/features/email-digest">
+    Configure weekly summaries
+  </Card>
+</CardGroup>
+
+

@@ -1,0 +1,296 @@
+---
+title: "Telegram Integration"
+description: "Use your helpers directly from Telegram with natural language, voice, and photos"
+icon: "paper-plane"
+---
+
+Connect your own Telegram bot to Peanuts and log entries, set reminders, and get insights—all without leaving your chat.
+
+<CardGroup cols={3}>
+  <Card title="Natural Language" icon="message">
+    Just type normally—AI understands your intent
+  </Card>
+  <Card title="Voice & Photos" icon="microphone">
+    Send voice memos or snap receipts
+  </Card>
+  <Card title="Smart Routing" icon="route">
+    Auto-direct content to the right helper
+  </Card>
+</CardGroup>
+
+---
+
+## Quick Start
+
+<Steps>
+  <Step title="Create Your Bot">
+    Open [@BotFather](https://t.me/BotFather) on Telegram and send `/newbot`. Follow the prompts to name your bot and get your **bot token**.
+  </Step>
+  <Step title="Connect to Peanuts">
+    Go to **Settings → Telegram** in Peanuts, paste your bot token, and tap **Validate**.
+  </Step>
+  <Step title="Set Up Webhook">
+    Copy the webhook URL shown and tap **Configure Webhook**. Peanuts handles the rest.
+  </Step>
+  <Step title="Start Chatting">
+    Open your bot on Telegram and send `/start`. You're ready to go!
+  </Step>
+</Steps>
+
+<Tip>
+Your bot is private to you. Only you can interact with it after linking.
+</Tip>
+
+---
+
+## Using Your Bot
+
+### Commands
+
+Every helper you create gets a Telegram command. Use it to log entries or switch context:
+
+/expense 42.50 lunch with client /mood 😊 great meeting today /weight 75.2
+
+
+### Natural Language
+
+No need to remember commands—just describe what you want:
+
+"spent 25 euros on groceries" "feeling tired today, 6 hours sleep" "remind me to call mom tomorrow at 3pm"
+
+
+The AI figures out which helper to use and extracts the data automatically.
+
+### Voice Messages
+
+Record a voice memo and Peanuts transcribes it, then logs the entry to the appropriate helper.
+
+<Info>
+Voice transcription uses 1 credit per message.
+</Info>
+
+### Photos
+
+Send photos of receipts, documents, or anything you want to track. Peanuts uses vision AI to extract relevant data.
+
+| Photo Type | What Happens |
+|------------|--------------|
+| Receipt | Extracts amount, merchant, date, items |
+| Document | OCR text extraction and summary |
+| Food | Estimates calories and ingredients |
+| Screenshot | Extracts visible text and data |
+
+### Links
+
+Share a URL and Peanuts analyzes the page content:
+
+- **Recipes** → Extracts ingredients, prep time, instructions
+- **Products** → Pulls price, name, description
+- **Articles** → Summarizes key points
+- **Events** → Captures date, location, details
+
+---
+
+## Smart Routing
+
+Smart Routing automatically sends your content to the right helper without you specifying which one.
+
+### How It Works
+
+1. You send a photo, link, or voice message
+2. Peanuts analyzes the content
+3. If confident, it routes to the matching helper automatically
+4. If unsure, it asks you to confirm
+
+### Setting Up Rules
+
+Go to **Settings → Telegram → Smart Routing** to configure:
+
+<AccordionGroup>
+  <Accordion title="Photo Rules">
+    Route photos based on detected content:
+    - Receipts → Expense tracker
+    - Food → Meal log
+    - Documents → Notes
+    
+    Or set a default action for all photos.
+  </Accordion>
+  
+  <Accordion title="Link Rules">
+    Route links by domain or content type:
+    - `allrecipes.com` → Recipe collection
+    - `amazon.com` → Wishlist
+    - Any recipe page → Cooking helper
+  </Accordion>
+  
+  <Accordion title="Voice Rules">
+    Route voice messages based on detected intent or set a default helper for all voice input.
+  </Accordion>
+</AccordionGroup>
+
+### Default Actions
+
+For each content type, choose what happens when no specific rule matches:
+
+| Action | Description |
+|--------|-------------|
+| **Ask** | Bot asks which helper to use |
+| **Route** | Automatically send to a specific helper |
+| **Create New** | Suggest creating a new helper |
+| **Ignore** | Don't process this content type |
+
+<Tip>
+After you manually choose the same helper 3 times, Peanuts suggests creating an automatic rule.
+</Tip>
+
+---
+
+## Telegram Mini App
+
+Access your full Peanuts dashboard directly inside Telegram:
+
+1. Open your bot
+2. Tap the **menu button** or send `/start`
+3. Tap **Open My Apps**
+
+The Mini App gives you:
+- Full helper management
+- Entry history and editing
+- Charts and statistics
+- All features from the web app
+
+<Note>
+The Mini App adapts to Telegram's theme (light/dark) automatically.
+</Note>
+
+---
+
+## Digests & Reminders
+
+### Daily Digests
+
+Get a summary of your tracked data delivered to Telegram:
+
+| Digest | Default Time | Content |
+|--------|--------------|---------|
+| Morning | 8:00 AM | Yesterday's summary, today's goals |
+| Evening | 8:00 PM | Today's entries, streaks, insights |
+
+Configure in **Settings → Telegram → Smart Routing** or send `/settings` to your bot.
+
+### Reminders
+
+Set reminders using natural language:
+
+"remind me to take vitamins at 9am daily" "remind me about dentist appointment on Friday" "remind me to log weight every morning"
+
+Or configure per-helper reminders:
+
+- **Daily reminder** — "Don't forget to log your mood today!"
+- **No-entry alert** — Notifies you if you haven't logged anything by a certain time
+
+---
+
+## Bot Commands Reference
+
+| Command | Description |
+|---------|-------------|
+| `/start` | Initialize bot and show welcome message |
+| `/help` | List available commands and helpers |
+| `/apps` | Show all your helpers with quick-log buttons |
+| `/stats` | View summary statistics |
+| `/undo` | Delete your last entry |
+| `/today` | Show today's entries |
+| `/settings` | Configure timezone and digest preferences |
+| `/timezone` | Set your timezone (e.g., `/timezone Europe/London`) |
+
+<Info>
+Each helper also gets its own command based on the command you set when creating it.
+</Info>
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Bot doesn't respond">
+    **Check:**
+    - Bot token is correct and active
+    - Webhook is configured (green status in Settings)
+    - You've sent `/start` at least once
+    
+    **Try:**
+    - Tap "Reconfigure Webhook" in Settings → Telegram
+    - Create a new bot with BotFather if token was compromised
+  </Accordion>
+  
+  <Accordion title="Wrong helper selected">
+    The AI uses context to pick helpers. To be explicit:
+    - Use the command directly: `/expense 50`
+    - Or specify: "log 50 to my expense tracker"
+    
+    Set up Smart Routing rules for consistent behavior with photos and links.
+  </Accordion>
+  
+  <Accordion title="Voice messages not transcribing">
+    - Ensure you have credits available
+    - Check the audio is clear (minimal background noise)
+    - Voice messages must be under 5 minutes
+  </Accordion>
+  
+  <Accordion title="Photos not processing">
+    - Image must be under 10MB
+    - Ensure good lighting and focus
+    - Some image types work better than others (receipts are well-supported)
+  </Accordion>
+  
+  <Accordion title="Digests not arriving">
+    - Verify your timezone is set correctly (`/timezone`)
+    - Check digest is enabled in Settings → Telegram
+    - Ensure bot hasn't been blocked or deleted
+  </Accordion>
+  
+  <Accordion title="Mini App won't load">
+    - Update Telegram to the latest version
+    - Try closing and reopening the bot
+    - Clear Telegram cache in app settings
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Privacy & Security
+
+<CardGroup cols={2}>
+  <Card title="Your Bot, Your Data" icon="lock">
+    Only you can access your bot. Messages are processed and not stored beyond what's needed for your entries.
+  </Card>
+  <Card title="Token Security" icon="key">
+    Your bot token is encrypted and never exposed. You can revoke it anytime via BotFather.
+  </Card>
+</CardGroup>
+
+---
+
+## Credit Usage
+
+| Action | Credits |
+|--------|---------|
+| Text messages | 1 credit |
+| Voice transcription | 1 credit |
+| Photo analysis | 2 credits |
+| Link analysis | 1 credit |
+| Digests | Free |
+
+---
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Smart Routing" icon="route" href="/features/smart-routing">
+    Deep dive into automatic content routing
+  </Card>
+  <Card title="Voice Input" icon="microphone" href="/features/voice-input">
+    Learn about voice features across platforms
+  </Card>
+</CardGroup>

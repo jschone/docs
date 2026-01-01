@@ -1,0 +1,313 @@
+---
+title: "Dashboard Template"
+description: "Visual command centers combining widgets, charts, and quick metrics"
+icon: "gauge-high"
+---
+
+The **Dashboard Template** creates visual command centers that aggregate data from multiple sources into at-a-glance displays. Unlike data-entry templates, dashboards focus on visualization and monitoring rather than capturing new entries.
+
+<CardGroup cols={2}>
+  <Card title="Perfect For" icon="bullseye">
+    - Business KPI monitoring
+    - Health metric overviews
+    - Project status boards
+    - Financial summaries
+    - Goal tracking displays
+    - Team performance views
+  </Card>
+  <Card title="Key Features" icon="sparkles">
+    - Multiple widget types
+    - Real-time data updates
+    - Customizable layouts
+    - Chart visualizations
+    - Progress tracking
+    - Cross-helper aggregation
+  </Card>
+</CardGroup>
+
+---
+
+## Quick Start
+
+<Steps>
+  <Step title="Describe your dashboard">
+    Tell Peanuts what you want to monitor:
+
+    - "Sales dashboard with revenue and orders"
+    - "Health overview with weight and exercise"
+    - "Project status board"
+  </Step>
+  <Step title="Configure widgets">
+    Peanuts suggests relevant widgets based on your description. Add, remove, or rearrange as needed.
+  </Step>
+  <Step title="Connect data sources">
+    Link widgets to existing helpers or configure standalone metrics.
+  </Step>
+</Steps>
+
+---
+
+## Interface Overview
+
+<AccordionGroup>
+  <Accordion title="Widget Grid" icon="grid-2">
+    The main dashboard area displays widgets in a responsive grid:
+
+    - **Full-width widgets** — Charts and progress bars
+    - **Half-width widgets** — Counters and stats
+    - **Auto-responsive** — Adapts to screen size
+  </Accordion>
+  <Accordion title="Stats Cards" icon="chart-simple">
+    Quick numeric displays showing:
+
+    - **Primary value** — The main metric
+    - **Label** — What it represents
+    - **Trend indicator** — Up/down from previous period
+  </Accordion>
+  <Accordion title="Chart Widgets" icon="chart-line">
+    Visual data representations:
+
+    - **Area charts** — Trends over time
+    - **Bar charts** — Comparisons
+    - **Pie charts** — Distributions
+    - **Line charts** — Progress tracking
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Available Widgets
+
+### Data Visualization
+
+| Widget       | Purpose                                | Best For                           |
+| ------------ | -------------------------------------- | ---------------------------------- |
+| **Chart**    | Line, bar, area, or pie visualizations | Trends, comparisons, distributions |
+| **Progress** | Goal completion percentage             | Targets with defined endpoints     |
+| **Counter**  | Running total display                  | Cumulative metrics                 |
+
+### Activity Tracking
+
+| Widget        | Purpose                  | Best For                  |
+| ------------- | ------------------------ | ------------------------- |
+| **Streak**    | Consecutive day tracking | Habit monitoring          |
+| **Timer**     | Countdown display        | Deadlines, time-boxing    |
+| **Stopwatch** | Elapsed time tracking    | Active session monitoring |
+| **Rating**    | Star-based averages      | Quality metrics           |
+
+<Tip>
+  Dashboards work best when widgets pull data from other helpers. Create your trackers and logs first, then build a dashboard to visualize them.
+</Tip>
+
+---
+
+## Widget Configuration
+
+### Chart Widget Options
+
+<AccordionGroup>
+  <Accordion title="Chart Type" icon="chart-pie">
+    | Type     | Use Case                         |
+    | -------- | -------------------------------- |
+    | **Area** | Smooth trends, cumulative data   |
+    | **Bar**  | Discrete comparisons, categories |
+    | **Line** | Sharp trends, multiple series    |
+    | **Pie**  | Part-of-whole breakdowns         |
+  </Accordion>
+  <Accordion title="Data Source" icon="database">
+    - **Single field** — One numeric field from a helper
+    - **Aggregation** — Sum, average, or count
+    - **Time range** — 7, 14, or 30 days
+  </Accordion>
+  <Accordion title="Styling" icon="palette">
+    Charts automatically use your helper's theme colors:
+
+    - Primary color for main data
+    - Secondary colors for additional series
+    - Teal/gold accent palette
+  </Accordion>
+</AccordionGroup>
+
+### Progress Widget Options
+
+| Setting            | Description                        |
+| ------------------ | ---------------------------------- |
+| **Target**         | The goal value (e.g., 10000 steps) |
+| **Current source** | Field or calculated value          |
+| **Display**        | Percentage, fraction, or both      |
+
+### Counter Widget Options
+
+| Setting          | Description                     |
+| ---------------- | ------------------------------- |
+| **Source field** | Numeric field to sum            |
+| **Time range**   | All time, this week, this month |
+| **Format**       | Number, currency, with units    |
+
+---
+
+## Dashboard vs. Other Templates
+
+<Info>
+  **Dashboard** = Visualization and monitoring, minimal data entry\
+  **Tracker** = Data capture with built-in stats\
+  **Form** = Pure data entry, no visualization
+</Info>
+
+| Feature         | Dashboard      | Tracker         | Form             |
+| --------------- | -------------- | --------------- | ---------------- |
+| Primary purpose | View data      | Capture + view  | Capture only     |
+| Widgets         | Multiple       | Limited         | None             |
+| Data entry      | Optional       | Primary         | Primary          |
+| Charts          | Multiple types | Single optional | None             |
+| Best for        | Monitoring     | Daily logging   | One-time capture |
+
+---
+
+## Building Effective Dashboards
+
+### Layout Principles
+
+<Steps>
+  <Step title="Lead with key metrics">
+    Place your most important numbers at the top. Users should see critical data without scrolling.
+  </Step>
+  <Step title="Group related widgets">
+    Keep related data together—financial metrics in one area, health metrics in another.
+  </Step>
+  <Step title="Use charts sparingly">
+    One or two well-chosen charts communicate more than five competing visualizations.
+  </Step>
+  <Step title="Include context">
+    Show trends and comparisons, not just current values. "500" means nothing without "up 20% from last week."
+  </Step>
+</Steps>
+
+### Common Patterns
+
+<CardGroup cols={2}>
+  <Card title="KPI Dashboard" icon="bullseye-arrow">
+    - 3-4 stat cards at top
+    - One trend chart below
+    - Progress bars for goals
+  </Card>
+  <Card title="Health Overview" icon="heart-pulse">
+    - Weight trend chart
+    - Exercise streak widget
+    - Daily metrics counters
+  </Card>
+  <Card title="Project Status" icon="diagram-project">
+    - Progress percentage
+    - Tasks completed counter
+    - Timeline chart
+  </Card>
+  <Card title="Financial Summary" icon="coins">
+    - Revenue/expense stats
+    - Pie chart for categories
+    - Trend line for month
+  </Card>
+</CardGroup>
+
+---
+
+## Configuration
+
+### In Edit Mode
+
+Access via the **Edit** button to:
+
+| Action            | Description                          |
+| ----------------- | ------------------------------------ |
+| **Add widget**    | Choose from available widget types   |
+| **Remove widget** | Delete widgets you don't need        |
+| **Configure**     | Set data sources and display options |
+| **Reorder**       | Drag widgets to rearrange            |
+| **Theme**         | Change colors and icon               |
+
+### Connecting Data
+
+Widgets can pull data from:
+
+- **Same helper** — Fields within the dashboard
+- **Other helpers** — Cross-reference your trackers and logs
+- **Calculated values** — Derived from formulas
+
+<Note>
+  Cross-helper data requires helpers to share the same owner. You can't visualize other users' data on your dashboard.
+</Note>
+
+---
+
+## Tips & Best Practices
+
+<AccordionGroup>
+  <Accordion title="Start with questions" icon="circle-question">
+    Before building, ask: "What questions should this dashboard answer?" Design widgets to answer those specific questions.
+  </Accordion>
+  <Accordion title="Less is more" icon="minimize">
+    A dashboard with 3-4 well-chosen widgets beats one with 10 competing for attention. Prioritize ruthlessly.
+  </Accordion>
+  <Accordion title="Update frequency matters" icon="clock">
+    Don't create dashboards for data that rarely changes. Dashboards shine when data updates frequently and trends emerge.
+  </Accordion>
+  <Accordion title="Mobile-first design" icon="mobile">
+    Test your dashboard on mobile. Widgets stack vertically on small screens—ensure the order makes sense.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Example: Sales Dashboard
+
+A business overview dashboard:
+
+**Setup:**
+
+- Name: "Sales Dashboard"
+- Icon: 📊 Chart
+- Theme: Professional blue
+
+**Widgets:**
+
+1. **Stat Card** — Today's revenue
+2. **Stat Card** — Orders this week
+3. **Stat Card** — Average order value
+4. **Area Chart** — Revenue trend (30 days)
+5. **Pie Chart** — Sales by category
+6. **Progress** — Monthly target completion
+
+**Data sources:**
+
+- Revenue from "Sales Tracker" helper
+- Categories from "Product Sales" log
+
+---
+
+## Credit Usage
+
+| Action              | Credits                  |
+| ------------------- | ------------------------ |
+| Creating dashboard  | 1 credit (AI generation) |
+| Viewing dashboard   | Free                     |
+| Editing widgets     | Free                     |
+| Data refresh        | Free                     |
+| AI insights on data | 1 credit per query       |
+
+---
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Widgets" icon="puzzle-piece" href="/features/widgets">
+    Deep dive into all widget types
+  </Card>
+  <Card title="Tracker Template" icon="chart-line" href="/templates/tracker">
+    Create data sources for your dashboard
+  </Card>
+  <Card title="Charts" icon="chart-area" href="/features/charts">
+    Configure visualizations
+  </Card>
+  <Card title="Calculated Fields" icon="calculator" href="/features/calculated-fields">
+    Create derived metrics
+  </Card>
+</CardGroup>

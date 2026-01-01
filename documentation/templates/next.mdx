@@ -1,0 +1,273 @@
+---
+description: "Log recurring data over time and visualize trends"
+icon: "chart-line"
+title: "Tracker"
+---
+
+The Tracker is the most versatile template—built for anything you want to measure, monitor, or log consistently over time.
+
+<CardGroup cols={3}>
+  <Card title="Flexible Fields" icon="sliders">
+    Numbers, text, dates, images—any data type
+  </Card>
+  <Card title="Streaks" icon="fire">
+    Automatic streak counting for consistency
+  </Card>
+  <Card title="Charts" icon="chart-area">
+    Visualize trends with built-in widgets
+  </Card>
+</CardGroup>
+
+---
+
+## Perfect For
+
+| Use Case             | Example Fields                  |
+| -------------------- | ------------------------------- |
+| **Mood tracking**    | Mood (1-10), Energy, Notes      |
+| **Expense logging**  | Amount, Category, Merchant      |
+| **Weight tracking**  | Weight, Body fat %, Notes       |
+| **Sleep logging**    | Hours, Quality, Wake time       |
+| **Symptom tracking** | Severity, Triggers, Medications |
+| **Workout logging**  | Exercise, Duration, Reps        |
+| **Food journaling**  | Meal, Calories, Photo           |
+| **Habit tracking**   | Completed?, Duration, Notes     |
+
+---
+
+## Quick Start
+
+<Steps>
+  <Step title="Create Helper">
+    Describe what you want to track: "Track my daily expenses" or "Log my mood each day"
+  </Step>
+  <Step title="Review Fields">
+    Peanuts suggests relevant fields—adjust or add more as needed.
+  </Step>
+  <Step title="Start Logging">
+    Add entries from the helper view, quick drawer, or Telegram.
+  </Step>
+  <Step title="View Trends">
+    Check charts and stats to see patterns over time.
+  </Step>
+</Steps>
+
+---
+
+## Interface Overview
+
+### Entry List
+
+Your logged entries appear in reverse chronological order (newest first).
+
+Each entry card shows:
+
+- **Date & time** of the entry
+- **Key field values** at a glance
+- **Quick actions** (edit, delete, calendar export)
+
+<Tip>
+  Tap any entry to see full details and related correlations.
+</Tip>
+
+### Quick Add
+
+The floating **\+** button opens the entry form:
+
+- All configured fields ready to fill
+- Required fields marked with asterisk
+- Voice input available for hands-free logging
+- Smart Scan for receipts and documents
+
+### Stats Bar
+
+At the top, see at-a-glance statistics:
+
+- **Total entries** logged
+- **Current streak** (consecutive days)
+- **This week/month** counts
+
+---
+
+## Features
+
+### Streaks
+
+Trackers automatically count **consecutive days** with at least one entry.
+
+| Streak Type   | Description                |
+| ------------- | -------------------------- |
+| **Current**   | Days in a row up to today  |
+| **Best**      | Your longest streak ever   |
+| **This week** | Entries in the past 7 days |
+
+<Note>
+  Missing a day resets your current streak to zero—but your best streak is preserved forever.
+</Note>
+
+### Charts
+
+Add visual widgets to see trends:
+
+<AccordionGroup>
+  <Accordion title="Area Chart">
+    Shows change over time with a filled area. Great for weight, mood, or any continuous metric.
+  </Accordion>
+  <Accordion title="Bar Chart">
+    Compare values across days or categories. Great for expenses, counts, or comparisons.
+  </Accordion>
+  <Accordion title="Line Chart">
+    Track progression with connected points. Great for trends and patterns.
+  </Accordion>
+  <Accordion title="Pie Chart">
+    Show distribution by category. Great for expense breakdowns or category splits.
+  </Accordion>
+</AccordionGroup>
+
+Configure charts in Edit Mode:
+
+- Select which **numeric field** to visualize
+- Choose **aggregation** (Sum, Average, Count)
+- Set **time range** (7, 14, or 30 days)
+
+### Calculated Fields
+
+Auto-compute values from other fields:
+
+profit = revenue - cost bmi = weight / (height \* height) average = (score1 + score2 + score3) / 3
+
+Calculated fields update automatically and display as read-only.
+
+---
+
+## Field Types
+
+Trackers support all field types:
+
+| Type           | Best For                      |
+| -------------- | ----------------------------- |
+| **Number**     | Amounts, scores, measurements |
+| **Text**       | Notes, descriptions, names    |
+| **Select**     | Categories, status, options   |
+| **Date**       | Event dates, deadlines        |
+| **Time**       | Timestamps, durations         |
+| **Checkbox**   | Yes/no, completed flags       |
+| **Image**      | Photos, receipts, proof       |
+| **Smart Scan** | OCR from receipts/documents   |
+| **Calculated** | Auto-computed values          |
+
+---
+
+## Input Methods
+
+Log entries however works best for you:
+
+<CardGroup cols={2}>
+  <Card title="Web App" icon="browser">
+    Full form interface with all fields
+  </Card>
+  <Card title="Quick Drawer" icon="sidebar">
+    Swipe-up form from the home screen
+  </Card>
+  <Card title="Voice" icon="microphone">
+    Speak naturally—AI extracts the data
+  </Card>
+  <Card title="Telegram" icon="paper-plane">
+    Message your bot with text, voice, or photos
+  </Card>
+</CardGroup>
+
+---
+
+## Configuration
+
+### In Edit Mode
+
+Tap the **pencil icon** to customize:
+
+- **Add/remove fields** — Drag to reorder
+- **Set required fields** — Block incomplete entries
+- **Add widgets** — Charts, counters, progress bars
+- **Configure Smart Scan** — For receipt/document OCR
+- **Set reminders** — Daily nudges to log
+
+### Enforcement Rules
+
+Make data quality effortless:
+
+| Rule             | Effect                              |
+| ---------------- | ----------------------------------- |
+| **Required**     | Entry blocked until field is filled |
+| **Min/Max**      | Number must be within range         |
+| **"Held" state** | Entry saved but marked incomplete   |
+
+<Info>
+  "Held" entries appear with a ⏸ badge—a gentle reminder to complete them later.
+</Info>
+
+---
+
+## Tips & Best Practices
+
+<AccordionGroup>
+  <Accordion title="Start simple">
+    Begin with 2-3 essential fields. You can always add more later.
+  </Accordion>
+  <Accordion title="Use Select for categories">
+    Dropdowns ensure consistent data for better charts and filtering.
+  </Accordion>
+  <Accordion title="Enable streaks for motivation">
+    Visible streaks create positive reinforcement for daily logging.
+  </Accordion>
+  <Accordion title="Add one chart minimum">
+    Visual progress is more motivating than raw numbers.
+  </Accordion>
+  <Accordion title="Set a daily reminder">
+    A 9 PM nudge catches missed entries before the day ends.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Example: Expense Tracker
+
+A typical expense tracker might include:
+
+| Field    | Type                                  | Required |
+| -------- | ------------------------------------- | -------- |
+| Amount   | Number                                | ✓        |
+| Category | Select (Food, Transport, Bills, etc.) | ✓        |
+| Merchant | Text                                  | ✗        |
+| Date     | Date                                  | ✓        |
+| Receipt  | Smart Scan                            | ✗        |
+| Notes    | Text                                  | ✗        |
+
+**Widgets:**
+
+- Pie chart showing spend by category
+- Bar chart showing daily totals
+- Counter showing monthly total
+
+---
+
+## Credit Usage
+
+| Action               | Credits   |
+| -------------------- | --------- |
+| Adding entries (web) | Free      |
+| Voice entry          | 1 credit  |
+| Smart Scan (OCR)     | 2 credits |
+| Photo analysis       | 2 credits |
+
+---
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Habit Template" icon="repeat" href="/features/templates/habit">
+    Simpler daily completion tracking with calendar view
+  </Card>
+  <Card title="Widgets" icon="chart-pie" href="/features/widgets">
+    All available visualization components
+  </Card>
+</CardGroup>

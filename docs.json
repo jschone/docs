@@ -52,32 +52,31 @@
           {
             "group": "Features",
             "pages": [
-              "documentation/features/webh",
               "documentation/features/untitled-page",
               "documentation/features/untitled-page-1",
               "documentation/features/widgets",
               "documentation/features/untitled-page-2",
-              "features/webhooks",
-              "features/notifications"
-            ]
-          },
-          {
-            "group": "Integrations",
-            "pages": [
-              "integrations/telegram",
-              "integrations/whatsapp",
-              "integrations/email",
-              "integrations/calendar"
+              "documentation/features/notifications",
+              "documentation/features/webh"
             ]
           },
           {
             "group": "Templates",
             "pages": [
-              "templates/overview",
-              "templates/tracker",
-              "templates/habit",
-              "templates/checklist",
-              "templates/dashboard"
+              "documentation/templates/overview",
+              "documentation/templates/next",
+              "documentation/templates/checklist",
+              "documentation/templates/habit",
+              "documentation/templates/list"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "documentation/integrations/telegram",
+              "documentation/integrations/whatsapp-coming-soon",
+              "documentation/integrations/email",
+              "documentation/integrations/calendar"
             ]
           }
         ]

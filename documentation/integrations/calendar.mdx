@@ -1,0 +1,189 @@
+---
+title: "Calendar Integration"
+description: "Sync entries with date fields to your favorite calendar app"
+icon: "calendar"
+---
+
+Add scheduled entries directly to your calendar with a single tap—no account linking required.
+
+<CardGroup cols={2}>
+  <Card title="One-Tap Export" icon="download">
+    Download .ics files instantly
+  </Card>
+  <Card title="Universal Compatibility" icon="arrows-rotate">
+    Works with Google, Apple, Outlook, and more
+  </Card>
+</CardGroup>
+
+---
+
+## How It Works
+
+When an entry contains a **date field**, Peanuts automatically shows an **Add to Calendar** button.
+
+<Steps>
+  <Step title="Create an Entry">
+    Log an entry with a date field (e.g., appointment, deadline, event).
+  </Step>
+  <Step title="Tap Add to Calendar">
+    Find the calendar icon on the entry card or detail view.
+  </Step>
+  <Step title="Download .ics File">
+    A standard calendar file downloads to your device.
+  </Step>
+  <Step title="Open in Calendar">
+    Your device prompts you to add it to your calendar app.
+  </Step>
+</Steps>
+
+<Tip>
+No OAuth or account linking needed—just download and import.
+</Tip>
+
+---
+
+## What Gets Exported
+
+The .ics file includes:
+
+| Field | Source |
+|-------|--------|
+| **Event Title** | Helper name + entry summary |
+| **Date/Time** | The date field value |
+| **Description** | All entry data formatted as text |
+| **Duration** | 1 hour default (or custom if configured) |
+
+<Info>
+If your entry has a time field alongside the date, both are included for precise scheduling.
+</Info>
+
+---
+
+## Compatible Calendars
+
+The .ics format is an open standard supported by:
+
+<CardGroup cols={4}>
+  <Card title="Google Calendar" icon="google" />
+  <Card title="Apple Calendar" icon="apple" />
+  <Card title="Outlook" icon="microsoft" />
+  <Card title="Any .ics App" icon="calendar-check" />
+</CardGroup>
+
+### Import Methods
+
+<AccordionGroup>
+  <Accordion title="iPhone / iPad">
+    1. Tap the downloaded .ics file
+    2. Calendar app opens automatically
+    3. Tap **Add** to confirm
+  </Accordion>
+  
+  <Accordion title="Android">
+    1. Open the downloaded file
+    2. Choose your calendar app when prompted
+    3. Confirm the event details
+  </Accordion>
+  
+  <Accordion title="Google Calendar (Web)">
+    1. Go to calendar.google.com
+    2. Click **+** next to "Other calendars"
+    3. Select **Import**
+    4. Upload the .ics file
+  </Accordion>
+  
+  <Accordion title="Outlook">
+    1. Open Outlook Calendar
+    2. Go to **File → Open & Export → Import**
+    3. Select the .ics file
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Best Use Cases
+
+| Helper Type | Example |
+|-------------|---------|
+| **Appointments** | Doctor visits, meetings, calls |
+| **Deadlines** | Project due dates, bill payments |
+| **Events** | Birthdays, holidays, conferences |
+| **Reminders** | Follow-ups, check-ins |
+| **Schedules** | Recurring activities, classes |
+
+<Note>
+Any helper with a date field supports calendar export—create your own!
+</Note>
+
+---
+
+## Date Field Setup
+
+To enable calendar export for a helper:
+
+1. Open your helper in **Edit Mode**
+2. Add a field with type **Date** or **Date & Time**
+3. Save the helper
+
+All entries with that field populated will show the calendar button.
+
+---
+
+## Limitations
+
+<Warning>
+Calendar export is one-way. Changes made in your calendar app won't sync back to Peanuts.
+</Warning>
+
+| Feature | Status |
+|---------|--------|
+| Export to .ics | ✓ Supported |
+| Two-way sync | ✗ Not available |
+| Recurring events | ✗ Each entry exports individually |
+| Calendar OAuth | ✗ No account linking |
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="No calendar button visible">
+    - Ensure your helper has a **Date** field
+    - Make sure the entry has a date value filled in
+    - Refresh the page if you just added the field
+  </Accordion>
+  
+  <Accordion title="File won't open">
+    - Check you have a calendar app installed
+    - Try opening the file from your Downloads folder
+    - On desktop, double-click the .ics file
+  </Accordion>
+  
+  <Accordion title="Wrong time displayed">
+    - The export uses your Peanuts timezone setting
+    - Update timezone in **Settings → Preferences**
+    - Your calendar app may also adjust for local time
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Credit Usage
+
+<Info>
+Calendar exports are **free** and do not consume credits.
+</Info>
+
+---
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Date Fields" icon="calendar-days" href="/features/fields#date">
+    Learn about date and time field configuration
+  </Card>
+  <Card title="Reminders" icon="bell" href="/guides/notifications#reminders">
+    Set up automatic reminder notifications
+  </Card>
+</CardGroup>
+
