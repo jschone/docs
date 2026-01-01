@@ -1,0 +1,455 @@
+---
+title: "Widgets"
+description: "Add interactive elements to your helpers with timers, counters, charts, and more"
+icon: "puzzle-piece"
+---
+
+<Info>
+  Widgets are interactive components that add real-time functionality to your helpers. They work independently of your data entries and can be configured to save values to fields.
+</Info>
+
+## Widget Overview
+
+Widgets enhance your helpers with dynamic, interactive elements that go beyond simple data collection. Use them to time activities, track progress, visualize trends, and maintain streaks.
+
+<Frame>
+  ![Helper with multiple widgets](/images/features/widgets-overview.png)
+</Frame>
+
+---
+
+## Available Widget Types
+
+Peanuts offers seven widget types, each designed for specific use cases:
+
+<CardGroup cols={2}>
+  <Card title="Timer" icon="hourglass-half">
+    Countdown timer with preset durations for focused work sessions
+  </Card>
+  <Card title="Stopwatch" icon="stopwatch">
+    Track elapsed time with lap recording for detailed time logging
+  </Card>
+  <Card title="Counter" icon="hashtag">
+    Increment and decrement values with hold-to-repeat functionality
+  </Card>
+  <Card title="Rating" icon="star">
+    Star-based ratings for quick quality assessments
+  </Card>
+  <Card title="Progress" icon="bars-progress">
+    Visual progress bars with customizable goals and units
+  </Card>
+  <Card title="Streak" icon="fire">
+    Track consecutive days of activity with a mini-calendar
+  </Card>
+  <Card title="Chart" icon="chart-line">
+    Visualize your data with area, bar, line, or pie charts
+  </Card>
+</CardGroup>
+
+---
+
+## Timer Widget
+
+The Timer widget provides a circular countdown display with preset durations, perfect for Pomodoro technique, cooking, workouts, or any timed activity.
+
+<Frame>
+  ![Timer widget interface](/images/features/timer-widget.png)
+</Frame>
+
+### Features
+
+<AccordionGroup>
+  <Accordion title="Preset Durations">
+    Quick-select buttons for common durations:
+
+    - **5 minutes** - Quick breaks
+    - **10 minutes** - Short tasks
+    - **15 minutes** - Medium sessions
+    - **25 minutes** - Pomodoro focus blocks
+    - **30 minutes** - Extended work periods
+  </Accordion>
+  <Accordion title="Visual Progress">
+    A circular progress indicator shows remaining time at a glance with smooth animation as time counts down.
+  </Accordion>
+  <Accordion title="Controls">
+    - **Play/Pause** - Start or pause the countdown
+    - **Reset** - Return to the selected duration
+    - **Preset Selection** - Tap any preset to switch durations
+  </Accordion>
+</AccordionGroup>
+
+### Configuration
+
+| Setting         | Description                 | Default |
+| --------------- | --------------------------- | ------- |
+| Label           | Display name for the widget | "Timer" |
+| Default Minutes | Starting duration           | 25      |
+
+<Tip>
+  Combine a Timer widget with a "Duration" number field and enable "Save to Field" to automatically log how long you spend on activities.
+</Tip>
+
+---
+
+## Stopwatch Widget
+
+The Stopwatch widget counts elapsed time with lap recording capability, ideal for tracking workout segments, study sessions, or any activity where you need to measure duration.
+
+<Frame>
+  ![Stopwatch widget interface](/images/features/stopwatch-widget.png)
+</Frame>
+
+### Features
+
+- **Precise Timing** - Counts seconds with HH:MM:SS display for longer sessions
+- **Lap Recording** - Tap the flag icon to record split times
+- **Lap History** - View all recorded laps in a scrollable list
+- **Visual Feedback** - Pulsing animation while running
+
+### Controls
+
+| Button     | Action                       |
+| ---------- | ---------------------------- |
+| Play/Pause | Start or pause timing        |
+| Reset      | Clear time and all laps      |
+| Flag       | Record current time as a lap |
+
+---
+
+## Counter Widget
+
+The Counter widget provides a simple increment/decrement interface with configurable limits, perfect for tracking repetitions, sets, or any quantity.
+
+<Frame>
+  ![Counter widget interface](/images/features/counter-widget.png)
+</Frame>
+
+### Features
+
+<AccordionGroup>
+  <Accordion title="Hold-to-Repeat">
+    Press and hold the + or - buttons to continuously increment or decrement the value. Great for quickly reaching large numbers.
+  </Accordion>
+  <Accordion title="Configurable Limits">
+    Set minimum and maximum bounds to prevent invalid values:
+
+    - Minimum: The lowest allowed value
+    - Maximum: The highest allowed value
+    - Step: How much to change per click
+  </Accordion>
+</AccordionGroup>
+
+### Configuration
+
+| Setting | Description      | Default   |
+| ------- | ---------------- | --------- |
+| Label   | Display name     | "Counter" |
+| Min     | Minimum value    | 0         |
+| Max     | Maximum value    | 100       |
+| Step    | Increment amount | 1         |
+
+### Example Use Cases
+
+- **Reps Counter** - Min: 0, Max: 100, Step: 1
+- **Sets Tracker** - Min: 0, Max: 10, Step: 1
+- **Hydration Cups** - Min: 0, Max: 12, Step: 1
+- **Meal Portions** - Min: 0, Max: 5, Step: 0.5
+
+---
+
+## Rating Widget
+
+The Rating widget displays an interactive star rating, ideal for quick quality assessments, mood tracking, or satisfaction scores.
+
+<Frame>
+  ![Rating widget interface](/images/features/rating-widget.png)
+</Frame>
+
+### Features
+
+- **Interactive Stars** - Tap to set rating, tap again to clear
+- **Hover Preview** - See rating before committing (on desktop)
+- **Smooth Animations** - Stars animate on selection
+- **Flexible Scale** - Configure 3 to 10 stars
+
+### Configuration
+
+| Setting   | Description            | Default  |
+| --------- | ---------------------- | -------- |
+| Label     | Display name           | "Rating" |
+| Max Stars | Number of stars (3-10) | 5        |
+
+### Example Use Cases
+
+| Helper Type    | Rating Label | Stars |
+| -------------- | ------------ | ----- |
+| Meal Logger    | Satisfaction | 5     |
+| Mood Tracker   | Energy Level | 5     |
+| Movie Log      | Rating       | 10    |
+| Product Review | Quality      | 5     |
+
+---
+
+## Progress Widget
+
+The Progress widget tracks advancement toward a goal with a visual progress bar and increment/decrement controls.
+
+<Frame>
+  ![Progress widget interface](/images/features/progress-widget.png)
+</Frame>
+
+### Features
+
+- **Visual Progress Bar** - Fills as you approach your goal
+- **Percentage Display** - Shows completion percentage
+- **Completion Indicator** - "Complete!" badge when goal is reached
+- **Overflow Support** - Can exceed 100% if you surpass your goal
+
+### Configuration
+
+| Setting | Description                                    | Default    |
+| ------- | ---------------------------------------------- | ---------- |
+| Label   | Display name                                   | "Progress" |
+| Goal    | Target value                                   | 10         |
+| Unit    | Label for the value (e.g., "glasses", "pages") | "items"    |
+| Step    | Increment amount                               | 1          |
+
+### Example Configurations
+
+<Tabs>
+  <Tab title="Water Intake">
+    - Goal: 8
+    - Unit: glasses
+    - Step: 1
+  </Tab>
+  <Tab title="Reading">
+    - Goal: 30
+    - Unit: pages
+    - Step: 5
+  </Tab>
+  <Tab title="Steps">
+    - Goal: 10000
+    - Unit: steps
+    - Step: 500
+  </Tab>
+</Tabs>
+
+---
+
+## Streak Widget
+
+The Streak widget automatically calculates consecutive days of activity based on your entries, providing motivation through visual feedback.
+
+<Frame>
+  ![Streak widget interface](/images/features/streak-widget.png)
+</Frame>
+
+### Features
+
+<AccordionGroup>
+  <Accordion title="Current Streak">
+    Displays your current streak prominently with a flame icon. At 3+ days, the flame pulses with a glow effect!
+  </Accordion>
+  <Accordion title="Best Streak">
+    Shows your all-time best streak with a trophy icon, giving you a record to beat.
+  </Accordion>
+  <Accordion title="7-Day Calendar">
+    A mini-calendar shows the last 7 days, with completed days highlighted in your theme color.
+  </Accordion>
+</AccordionGroup>
+
+### How It Works
+
+The Streak widget automatically:
+
+1. Analyzes all entries in your helper
+2. Groups entries by date
+3. Calculates consecutive days with at least one entry
+4. Tracks your best-ever streak
+
+<Note>
+  The Streak widget is read-only and calculates automatically. Just add entries to your helper, and your streak updates in real-time.
+</Note>
+
+---
+
+## Chart Widget
+
+The Chart widget visualizes your helper data over time with multiple chart types and aggregation options.
+
+<Frame>
+  ![Chart widget showing area chart](/images/features/chart-widget.png)
+</Frame>
+
+### Chart Types
+
+<CardGroup cols={2}>
+  <Card title="Area Chart" icon="chart-area">
+    Smooth filled area showing trends over time. Great for continuous data like weight or mood.
+  </Card>
+  <Card title="Bar Chart" icon="chart-bar">
+    Vertical bars for comparing daily values. Ideal for discrete counts like workouts or meals.
+  </Card>
+  <Card title="Line Chart" icon="chart-line">
+    Connected points showing progression. Perfect for tracking metrics like steps or calories.
+  </Card>
+  <Card title="Pie Chart" icon="chart-pie">
+    Distribution breakdown by category. Use for expense categories or time allocation.
+  </Card>
+</CardGroup>
+
+### Configuration
+
+| Setting     | Description           | Options                     |
+| ----------- | --------------------- | --------------------------- |
+| Chart Type  | Visual style          | Area, Bar, Line, Pie        |
+| Time Range  | Period to display     | 7, 14, or 30 days           |
+| Data Field  | Which field to chart  | Any numeric field or "Auto" |
+| Aggregation | How to combine values | Sum, Average, Count         |
+| Show Legend | Display chart legend  | On/Off                      |
+
+### Aggregation Types
+
+<AccordionGroup>
+  <Accordion title="Sum">
+    Adds all values for each day. Best for:
+
+    - Total calories consumed
+    - Daily spending
+    - Minutes exercised
+  </Accordion>
+  <Accordion title="Average">
+    Calculates daily average. Best for:
+
+    - Average mood score
+    - Mean weight readings
+    - Typical sleep duration
+  </Accordion>
+  <Accordion title="Count">
+    Counts number of entries. Best for:
+
+    - Habits completed
+    - Meals logged
+    - Workouts tracked
+  </Accordion>
+</AccordionGroup>
+
+### Pie Chart Behavior
+
+Pie charts work differently from time-series charts:
+
+- Groups data by the selected field's **values** (not dates)
+- Shows percentage distribution
+- Displays horizontal legend below the chart
+- Best for categorical data like expense categories or workout types
+
+<Tip>
+  Charts use a professional Teal/Gold color palette that automatically complements your helper's theme color.
+</Tip>
+
+---
+
+## Adding Widgets to Helpers
+
+<Steps>
+  <Step title="Open Helper Settings">
+    Navigate to your helper and tap the **Edit** button, then scroll to the Widgets section.
+  </Step>
+  <Step title="Add a Widget">
+    Tap **Add Widget** to open the widget picker and select a widget type.
+  </Step>
+  <Step title="Configure Options">
+    Expand the widget card to access configuration options specific to that widget type.
+  </Step>
+  <Step title="Reorder Widgets">
+    Use the up/down arrows to arrange widgets in your preferred order.
+  </Step>
+  <Step title="Save Changes">
+    Your widgets are saved automatically and appear in your helper immediately.
+  </Step>
+</Steps>
+
+---
+
+## Saving Widget Values to Fields
+
+Some widgets can automatically save their values to fields when you add an entry:
+
+| Widget    | Saveable | Save To                |
+| --------- | -------- | ---------------------- |
+| Timer     | Yes      | Number field (seconds) |
+| Stopwatch | Yes      | Number field (seconds) |
+| Counter   | Yes      | Number field           |
+| Rating    | Yes      | Number field           |
+| Progress  | No       | -                      |
+| Streak    | No       | -                      |
+| Chart     | No       | -                      |
+
+### How to Enable
+
+1. Add a **Number** field to your helper
+2. Configure your widget
+3. In widget settings, select the field under "Save to Field"
+4. Widget value is automatically saved when you add entries
+
+<Tip>
+  This is powerful for logging timed activities! Set up a Timer widget that saves to a "Duration" field, and every entry automatically records how long you spent.
+</Tip>
+
+---
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Choose the Right Widget">
+    - **Timing something?** → Timer or Stopwatch
+    - **Counting things?** → Counter
+    - **Rating quality?** → Rating
+    - **Tracking toward a goal?** → Progress
+    - **Building a habit?** → Streak
+    - **Visualizing trends?** → Chart
+  </Accordion>
+  <Accordion title="Don't Overload">
+    2-3 widgets is usually ideal. Too many widgets can make your helper feel cluttered and slow down the interface.
+  </Accordion>
+  <Accordion title="Combine with Fields">
+    Widgets work best alongside fields. A workout helper might have:
+
+    - Counter widget for reps
+    - Timer widget for rest periods
+    - "Exercise" text field
+    - "Weight" number field
+  </Accordion>
+  <Accordion title="Use Charts Strategically">
+    Add charts only after you have some data. They're most valuable when you've been tracking for a week or more.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Credit Usage
+
+<Info>
+  Widgets themselves are **free** and do not consume credits. They run entirely in your browser.
+</Info>
+
+The only credit cost is if you use AI features like Ask Peanuts to query data visualized in charts.
+
+---
+
+## Related Features
+
+<CardGroup cols={2}>
+  <Card title="Fields" icon="input-text" href="/features/fields">
+    Learn about data fields that work alongside widgets
+  </Card>
+  <Card title="Templates" icon="clone" href="/concepts/templates">
+    Pre-configured helpers with widgets already set up
+  </Card>
+  <Card title="Reports" icon="file-pdf" href="/features/reports">
+    Export your helper data including chart visualizations
+  </Card>
+  <Card title="Themes" icon="palette" href="/features/themes">
+    Customize widget colors with helper themes
+  </Card>
+</CardGroup>

@@ -1,0 +1,314 @@
+---
+title: "Ask Peanuts"
+description: "Your personal AI that knows everything you've recorded and can answer questions about your data"
+icon: "sparkles"
+---
+
+<Info>
+  Ask Peanuts is available on **Starter** plan and above. Each query uses 1 AI credit.
+</Info>
+
+## What is Ask Peanuts?
+
+Ask Peanuts is an AI-powered assistant that has complete knowledge of everything you've recorded in your helpers. Unlike generic AI chatbots, Peanuts only knows what you've actually logged—it never makes up information or hallucinates data.
+
+<Frame>
+  ![Ask Peanuts interface](/images/concepts/ask-peanuts-interface.png)
+</Frame>
+
+Think of it as having a personal analyst who has read every single entry across all your helpers and can instantly recall patterns, trends, and specific details.
+
+---
+
+## Key Capabilities
+
+<CardGroup cols={2}>
+  <Card title="Data Recall" icon="brain">
+    Instantly find entries across all helpers. "Did I take my meds yesterday?" or "What did I spend on groceries last week?"
+  </Card>
+  <Card title="Trend Analysis" icon="chart-line">
+    Spot patterns in your data over time. "Show me my sleep trends" or "Am I exercising more this month?"
+  </Card>
+  <Card title="Cross-Helper Insights" icon="link">
+    Connect data across different helpers. "On days I slept well, how was my mood?"
+  </Card>
+  <Card title="Smart Summaries" icon="file-lines">
+    Get quick summaries of your logged data. "Summarize my expenses for March."
+  </Card>
+</CardGroup>
+
+---
+
+## How It Works
+
+<Steps>
+  <Step title="Access Ask Peanuts">
+    Click the floating **Ask Peanuts** button in the bottom-right corner of any page, or use the keyboard shortcut `Cmd/Ctrl + K`.
+
+    <Frame>
+      ![Ask Peanuts floating button](/images/concepts/ask-peanuts-button.png)
+    </Frame>
+  </Step>
+  <Step title="Ask Your Question">
+    Type your question naturally. Peanuts understands context and time references:
+
+    - "What did I log today?"
+    - "How much did I spend this week?"
+    - "Show me entries from last month"
+    - "Did I take my vitamins yesterday?"
+  </Step>
+  <Step title="Get an Answer">
+    Peanuts searches your data using semantic understanding and returns a focused answer based solely on what you've recorded.
+
+    <Tip>
+      Peanuts will cite the date and helper for each piece of data it references, so you always know where the information came from.
+    </Tip>
+  </Step>
+  <Step title="Continue the Conversation">
+    Ask follow-up questions in the same session. Peanuts remembers the context of your conversation.
+  </Step>
+</Steps>
+
+---
+
+## Quick Actions
+
+For common queries, use the quick action chips that appear when you first open Ask Peanuts:
+
+| Quick Action        | What It Does                               |
+| ------------------- | ------------------------------------------ |
+| **Today's logs**    | Shows everything you recorded today        |
+| **Weekly spending** | Summarizes expenses from the past week     |
+| **Med check**       | Confirms medication entries                |
+| **Trends**          | Analyzes recent patterns in your data      |
+| **Summary**         | Provides an overview of your recorded data |
+
+<Frame>
+  ![Quick action chips](/images/concepts/quick-actions.png)
+</Frame>
+
+---
+
+## Input Methods
+
+### Text Input
+
+Type your question in the input field and press **Enter** or click the send button.
+
+### Voice Input
+
+Click the **microphone** button to speak your question. Peanuts will:
+
+1. Transcribe your speech to text
+2. Process your question
+3. Respond with the answer
+
+<Tip>
+  Voice input is perfect for quick queries when you're on the go. You can also enable **auto-speak** to have Peanuts read responses aloud.
+</Tip>
+
+---
+
+## Time-Aware Queries
+
+Peanuts understands natural language time references:
+
+<Tabs>
+  <Tab title="Relative Dates">
+    - "today", "yesterday", "this morning"
+    - "this week", "last week"
+    - "this month", "last month"
+    - "last 7 days", "past 2 weeks"
+  </Tab>
+  <Tab title="Specific Periods">
+    - "in January", "during March"
+    - "last 30 days"
+    - "past 3 months"
+  </Tab>
+  <Tab title="Example Queries">
+    - "How much did I spend yesterday?"
+    - "What was my average sleep last week?"
+    - "Show me all entries from January"
+    - "Did I exercise in the past 5 days?"
+  </Tab>
+</Tabs>
+
+---
+
+## Semantic Search
+
+Ask Peanuts uses **semantic search** to find relevant entries—not just keyword matching. This means:
+
+<AccordionGroup>
+  <Accordion title="Understanding Intent">
+    If you ask "how am I sleeping?", Peanuts will find entries from sleep-related helpers even if you never used the word "sleeping" in your entries.
+  </Accordion>
+  <Accordion title="Contextual Relevance">
+    Peanuts prioritizes entries that are semantically related to your question. A query about "fitness progress" will surface workout, weight, and activity entries.
+  </Accordion>
+  <Accordion title="Cross-Helper Discovery">
+    Semantic search works across all your helpers, so you can ask questions that span multiple types of data.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Business Knowledge Base Integration
+
+<Note>
+  **Pro Feature**: Business Knowledge Base is available on the Pro plan.
+</Note>
+
+If you've uploaded documents to the Business Knowledge Base (pricelists, catalogs, service descriptions), Peanuts can reference this information when answering questions.
+
+<Frame>
+  ![Business Knowledge Base](/images/concepts/knowledge-base.png)
+</Frame>
+
+### Supported Document Types
+
+| Type   | Extensions              | Best For                      |
+| ------ | ----------------------- | ----------------------------- |
+| PDF    | `.pdf`                  | Catalogs, pricelists, manuals |
+| Excel  | `.xlsx`, `.xls`         | Price tables, inventory lists |
+| CSV    | `.csv`                  | Data exports, price lists     |
+| Images | `.jpg`, `.png`, `.webp` | Scanned documents, receipts   |
+| Text   | `.txt`                  | Notes, descriptions           |
+
+### How It Works
+
+1. Upload documents in **Settings \> Business Knowledge Base**
+2. Peanuts automatically processes and learns from them
+3. When you ask questions, Peanuts can cite information from your documents
+
+<Tip>
+  When Peanuts uses information from your uploaded documents, it will cite the source document name and page number (if applicable).
+</Tip>
+
+---
+
+## Features & Controls
+
+### Auto-Speak
+
+Toggle the **speaker icon** in the header to have Peanuts read responses aloud. This uses ElevenLabs text-to-speech for natural-sounding audio.
+
+### Listen to Response
+
+Hover over any assistant message and click the **speaker button** to hear that specific response read aloud.
+
+### Clear Conversation
+
+Click the **trash icon** in the header to clear your conversation history and start fresh.
+
+### Keyboard Shortcuts
+
+| Shortcut       | Action                 |
+| -------------- | ---------------------- |
+| `Cmd/Ctrl + K` | Open/close Ask Peanuts |
+| `Escape`       | Close the dialog       |
+| `Enter`        | Send message           |
+
+---
+
+## Privacy & Data Handling
+
+<CardGroup cols={2}>
+  <Card title="Your Data Only" icon="lock">
+    Peanuts only has access to data you've recorded in your helpers and documents you've uploaded.
+  </Card>
+  <Card title="No Hallucinations" icon="shield-check">
+    If Peanuts doesn't have data to answer your question, it will tell you "I don't have a record of that."
+  </Card>
+  <Card title="Session Memory" icon="rotate">
+    Conversation history persists for continuity but can be cleared anytime.
+  </Card>
+  <Card title="Credit-Based" icon="coins">
+    Each question uses 1 AI credit, giving you control over usage.
+  </Card>
+</CardGroup>
+
+---
+
+## Example Conversations
+
+<AccordionGroup>
+  <Accordion title="Health Tracking">
+    **You**: Did I take my meds yesterday?
+
+    **Peanuts**: Yes! I found an entry in your "Daily Meds" helper from yesterday at 8:15 AM. You logged: Vitamin D, Omega-3, and Multivitamin.
+  </Accordion>
+  <Accordion title="Expense Analysis">
+    **You**: How much did I spend on food this week?
+
+    **Peanuts**: Based on your "Expenses" helper, you spent \$156.40 on food this week:
+
+    - Groceries: \$89.20 (Monday)
+    - Lunch: \$12.50 (Tuesday)
+    - Dinner out: \$54.70 (Friday)
+  </Accordion>
+  <Accordion title="Habit Insights">
+    **You**: Am I exercising more this month compared to last month?
+
+    **Peanuts**: Looking at your "Workout Log" helper: You've logged 12 workouts so far this month (we're on day 20), compared to 8 total workouts last month. That's a 50% increase in frequency. Great progress!
+  </Accordion>
+  <Accordion title="Cross-Helper Correlation">
+    **You**: On days I sleep well, how's my productivity?
+
+    **Peanuts**: Interesting pattern! When you log 7+ hours of sleep in your "Sleep Tracker", your "Daily Tasks" helper shows an average of 8.2 tasks completed. On days with less than 6 hours, you complete an average of 4.5 tasks.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Peanuts says 'I don't have a record of that'">
+    This means there's no data matching your query. Make sure you've been logging relevant information in your helpers.
+  </Accordion>
+  <Accordion title="Answers seem incomplete">
+    Try being more specific with time ranges. Instead of "show me my expenses", try "show me my expenses from this week."
+  </Accordion>
+  <Accordion title="Can't access Ask Peanuts">
+    Ask Peanuts requires a Starter plan or above. Free tier users will see an upgrade prompt.
+  </Accordion>
+  <Accordion title="Out of credits">
+    Each query uses 1 AI credit. Check your credit balance in the header or go to Settings \> Credits to top up.
+  </Accordion>
+  <Accordion title="Voice input not working">
+    Ensure you've granted microphone permissions in your browser. Try refreshing the page and clicking the microphone button again.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Best Practices
+
+<Steps>
+  <Step title="Be Specific with Time">
+    Include time references for better results: "this week", "yesterday", "in March"
+  </Step>
+  <Step title="Use Natural Language">
+    Ask questions as you would to a human assistant. Peanuts understands context.
+  </Step>
+  <Step title="Reference Helper Names">
+    For targeted queries, mention the helper: "Check my Sleep Tracker for last week"
+  </Step>
+  <Step title="Ask Follow-ups">
+    Build on previous answers in the same session for deeper analysis.
+  </Step>
+</Steps>
+
+---
+
+## Related Documentation
+
+<CardGroup cols={2}>
+  <Card title="Understanding Credits" icon="coins" href="/concepts/credits">
+    Learn how credits work and manage your AI usage
+  </Card>
+  <Card title="Helpers (Micro-Apps)" icon="puzzle-piece" href="/concepts/micro-apps">
+    Create helpers to give Peanuts more data to work with
+  </Card>
+</CardGroup>

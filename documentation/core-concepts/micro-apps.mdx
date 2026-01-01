@@ -1,0 +1,186 @@
+---
+title: "Helpers (Micro-Apps)"
+description: "Understand what helpers are and how they work in Peanuts"
+icon: "wand-magic-sparkles"
+---
+
+<Info>
+  In Peanuts, we call them **Helpers** — small, focused tools that help you track, log, and manage specific parts of your life. Internally, they're powered by a flexible micro-app system.
+</Info>
+
+## What is a Helper?
+
+A Helper is a personalized mini-application that Peanuts creates for you based on a simple description of what you need. Unlike traditional apps that try to do everything, each Helper focuses on one specific task.
+
+<CardGroup cols={2}>
+  <Card title="Single Purpose" icon="bullseye">
+    Each Helper does one thing really well — track meds, log expenses, monitor habits.
+  </Card>
+  <Card title="AI-Generated" icon="sparkles">
+    Describe what you need in plain language, and Peanuts builds it for you.
+  </Card>
+  <Card title="Customizable" icon="sliders">
+    Add fields, widgets, and rules to match exactly how you work.
+  </Card>
+  <Card title="Works Everywhere" icon="mobile">
+    Use Helpers on web, mobile, or through Telegram.
+  </Card>
+</CardGroup>
+
+## How Helpers Work
+
+When you describe what you need — like "remind me to take my meds" or "track my daily spending" — Peanuts:
+
+<Steps>
+  <Step title="Understands Your Intent">
+    AI analyzes your description and identifies the core purpose.
+  </Step>
+  <Step title="Classifies the Pattern">
+    Maps your need to one of several archetypes (tracker, checklist, habit, etc.).
+  </Step>
+  <Step title="Generates the Structure">
+    Creates appropriate fields, widgets, and enforcement rules.
+  </Step>
+  <Step title="Applies Smart Defaults">
+    Adds domain-specific features like cooldowns for medication or streak tracking for habits.
+  </Step>
+</Steps>
+
+## Helper Types
+
+Behind the scenes, Helpers are based on **archetypes** — patterns that define how data is collected and displayed:
+
+| Archetype      | Best For                   | Example                          |
+| -------------- | -------------------------- | -------------------------------- |
+| **Log**        | Recording things over time | Expense tracker, mood journal    |
+| **Tracker**    | Counting and metrics       | Water intake, step counter       |
+| **Habit**      | Daily consistency          | Medication, workout routine      |
+| **Checklist**  | Items to complete          | Shopping list, safety checks     |
+| **Collection** | Saving items for later     | Recipe book, reading list        |
+| **Schedule**   | Time-bound events          | Weekly meal plan, appointments   |
+| **Plan**       | Multi-step projects        | Trip planning, party prep        |
+| **Visualizer** | AI-powered previews        | Virtual wardrobe, color previews |
+
+<Tip>
+  You don't need to choose an archetype — just describe what you need, and Peanuts picks the right one automatically.
+</Tip>
+
+## Life Domains
+
+Helpers are also classified by life domain to apply the right defaults:
+
+<Tabs>
+  <Tab title="Personal">
+    - **Health** — Medication, symptoms, sleep, mood
+    - **Habits** — Daily routines, pet care, wellness
+    - **Reflection** — Journals, gratitude, decisions
+  </Tab>
+  <Tab title="Practical">
+    - **Finance** — Expenses, budgets, subscriptions
+    - **Food** — Meals, recipes, groceries
+    - **Admin** — Documents, contracts, deadlines
+  </Tab>
+  <Tab title="Professional">
+    - **Work** — Clients, quotes, deliverables
+    - **Trades** — Jobs, safety checks, photo evidence
+    - **Learning** — Study, skills, coursework
+  </Tab>
+</Tabs>
+
+## Anatomy of a Helper
+
+Every Helper consists of these components:
+
+<Frame>
+  ![Helper anatomy diagram](/images/concepts/helper-anatomy.png)
+</Frame>
+
+### Fields
+
+The data you capture with each entry:
+
+| Field Type | Description            | Example                 |
+| ---------- | ---------------------- | ----------------------- |
+| Text       | Short or long text     | Item name, notes        |
+| Number     | Numeric values         | Amount, duration        |
+| Select     | Dropdown options       | Category, priority      |
+| Date       | Date picker            | Due date, event date    |
+| Checkbox   | Yes/no toggle          | Completed, paid         |
+| Image      | Photo attachment       | Receipt, proof          |
+| Smart Scan | AI-powered recognition | Fridge contents, tools  |
+| Calculated | Auto-computed values   | Profit = revenue - cost |
+
+### Widgets
+
+Interactive components that enhance your Helper:
+
+- **Timer/Stopwatch** — Time activities
+- **Counter** — Quick increment/decrement
+- **Rating** — Star-based feedback
+- **Progress** — Track toward a goal
+- **Streak** — Consecutive day counter
+- **Chart** — Visualize trends over time
+
+### Enforcement Rules
+
+Smart behaviors that keep you accountable:
+
+<AccordionGroup>
+  <Accordion title="Anti-Procrastination">
+    Require photo proof before marking tasks complete.
+  </Accordion>
+  <Accordion title="Anti-Forgetting">
+    Daily nudges if nothing has been logged.
+  </Accordion>
+  <Accordion title="Double-Check">
+    Cooldown periods to prevent duplicate entries (e.g., 8 hours between medication doses).
+  </Accordion>
+  <Accordion title="Budget Guard">
+    Alerts when spending exceeds thresholds.
+  </Accordion>
+  <Accordion title="Habit Streak">
+    Gamified consistency tracking with streak counters.
+  </Accordion>
+</AccordionGroup>
+
+## Creating Helpers
+
+There are three ways to create a Helper:
+
+<CardGroup cols={3}>
+  <Card title="Describe It" icon="message" href="/getting-started/quickstart">
+    Type what you need in plain language.
+  </Card>
+  <Card title="Quick Templates" icon="bolt" href="/concepts/templates">
+    Start from a pre-built template.
+  </Card>
+  <Card title="Template Gallery" icon="grid" href="/concepts/templates#gallery">
+    Browse the full template library.
+  </Card>
+</CardGroup>
+
+## Helper Limits
+
+The number of Helpers you can create depends on your plan:
+
+| Plan    | Active Helpers |
+| ------- | -------------- |
+| Free    | 3              |
+| Starter | 10             |
+| Pro     | Unlimited      |
+| Team    | Unlimited      |
+
+<Note>
+  When you reach your limit, you'll be prompted to upgrade or delete an existing Helper.
+</Note>
+
+## What's Next?
+
+<CardGroup cols={2}>
+  <Card title="Templates" icon="grid" href="/concepts/templates">
+    Explore pre-built Helper templates
+  </Card>
+  <Card title="AI Assistant" icon="sparkles" href="/concepts/ai-assistant">
+    Learn about Ask Peanuts
+  </Card>
+</CardGroup>

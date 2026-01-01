@@ -1,0 +1,336 @@
+---
+title: "Smart Scan"
+description: "Scan photos to automatically identify and log multiple items using AI vision"
+icon: "scanner-keyboard"
+---
+
+<Info>
+  **Smart Scan uses AI credits.** Each image scan costs 1 AI credit. See [Credits](/concepts/credits) for details on usage and limits.
+</Info>
+
+Smart Scan uses advanced AI vision to recognize multiple items from a single photo and automatically populate your helper's data fields. Take a picture of your fridge, toolbox, wine collection, or parts bin — Peanuts identifies everything and adds it to your inventory in seconds.
+
+<Frame>
+  ![Smart Scan identifying items from a photo](/images/features/smart-scan-overview.png)
+</Frame>
+
+## How It Works
+
+Smart Scan is **context-aware** — it reads your helper's name, description, and fields to understand exactly what to look for and how to categorize items.
+
+<Steps>
+  <Step title="Take a Photo">
+    Tap the Smart Scan field and take a photo or upload an existing image
+  </Step>
+  <Step title="AI Analyzes">
+    Gemini Vision AI identifies all visible items based on your helper's context
+  </Step>
+  <Step title="Review Results">
+    A dialog shows all detected items — edit, select, or deselect as needed
+  </Step>
+  <Step title="Confirm & Add">
+    Selected items are bulk-added to your helper with all fields populated
+  </Step>
+</Steps>
+
+## Domain Intelligence
+
+Smart Scan automatically adapts its recognition based on your helper's **domain**. This ensures more accurate and relevant results.
+
+<AccordionGroup>
+  <Accordion title="Food & Kitchen" icon="utensils">
+    - Identifies food items, brands, and quantities
+    - Notes visible expiry dates and freshness indicators
+    - Recognizes packaging and portion sizes
+
+    **Best for:** Fridge contents, pantry inventory, meal prep ingredients
+  </Accordion>
+  <Accordion title="Trades & Tools" icon="wrench">
+    - Identifies parts, tools, and equipment
+    - Notes condition, brand names, and part numbers
+    - Recognizes tool types and sizes
+
+    **Best for:** Tool shed inventory, spare parts, workshop equipment
+  </Accordion>
+  <Accordion title="Health & Wellness" icon="heart-pulse">
+    - Identifies medications, supplements, and health products
+    - Notes dosages when visible
+    - Recognizes packaging and form factors
+
+    **Best for:** Medication cabinet, supplement tracking, first aid kit
+  </Accordion>
+  <Accordion title="Finance & Admin" icon="file-invoice">
+    - Identifies receipts, invoices, and documents
+    - Extracts amounts, descriptions, and dates
+    - Recognizes document types and key identifiers
+
+    **Best for:** Expense tracking, receipt logging, document organization
+  </Accordion>
+  <Accordion title="Collections & Hobbies" icon="star">
+    - Identifies collectible items and memorabilia
+    - Notes titles, editions, and visible details
+    - Recognizes item conditions and unique features
+
+    **Best for:** Comic books, trading cards, vinyl records, wine bottles
+  </Accordion>
+</AccordionGroup>
+
+## Using Smart Scan
+
+### Taking a Good Photo
+
+For best results, follow these tips:
+
+<CardGroup cols={2}>
+  <Card title="Lighting" icon="sun">
+    Use bright, even lighting. Avoid shadows and glare.
+  </Card>
+  <Card title="Angle" icon="camera">
+    Photograph items straight-on so labels and text are readable.
+  </Card>
+  <Card title="Spacing" icon="grip">
+    Spread items apart slightly so AI can distinguish each one.
+  </Card>
+  <Card title="Focus" icon="bullseye">
+    Ensure the image is sharp and in focus, especially on labels.
+  </Card>
+</CardGroup>
+
+### The Scan Interface
+
+<Frame>
+  ![Smart Scan upload area](/images/features/smart-scan-interface.png)
+</Frame>
+
+The Smart Scan field appears with:
+
+- **Camera icon** — Tap to take a photo or upload
+- **AI Scan badge** — Indicates this is an AI-powered feature
+- **Drag & drop zone** — On desktop, drag images directly into the field
+
+### Review & Edit Dialog
+
+After scanning, a dialog presents all detected items:
+
+<Frame>
+  ![Smart Scan results dialog with items](/images/features/smart-scan-results.png)
+</Frame>
+
+| Feature              | Description                           |
+| -------------------- | ------------------------------------- |
+| **Source thumbnail** | Shows the scanned image for reference |
+| **Item checkboxes**  | Select/deselect items to include      |
+| **Select all/none**  | Bulk selection controls               |
+| **Edit button**      | Expand to edit any field value        |
+| **Add button**       | Confirm and add selected items        |
+
+<Tip>
+  Tap the **pencil icon** on any item to expand its fields for editing before adding.
+</Tip>
+
+## Field Mapping
+
+Smart Scan intelligently maps extracted data to your helper's fields:
+
+| Field Type   | AI Extraction Behavior                            |
+| ------------ | ------------------------------------------------- |
+| **Text**     | Extracts names, descriptions, brands              |
+| **Number**   | Extracts quantities, amounts, numeric values only |
+| **Select**   | Matches to the closest available option           |
+| **Date**     | Extracts dates in YYYY-MM-DD format               |
+| **Checkbox** | Returns true/false based on presence              |
+
+<Note>
+  Image fields are not populated by Smart Scan — the scan replaces the need for individual photos.
+</Note>
+
+## Custom Scan Hints
+
+For specialized use cases, helpers can include a **scan hint** that provides additional instructions to the AI.
+
+<Tabs>
+  <Tab title="Wine Collection">
+    ```
+    "Identify wine bottles, read labels for name, vintage, and region"
+    ```
+
+    Result: AI focuses on extracting wine-specific details from bottle labels.
+  </Tab>
+  <Tab title="Auto Parts">
+    ```
+    "Identify parts, read part numbers, note condition"
+    ```
+
+    Result: AI prioritizes finding manufacturer part numbers and assessing condition.
+  </Tab>
+  <Tab title="Medication Cabinet">
+    ```
+    "Identify medications, note dosages and expiry dates if visible"
+    ```
+
+    Result: AI carefully reads small print for dosage information.
+  </Tab>
+</Tabs>
+
+## Built-In Templates
+
+Several templates come with Smart Scan pre-configured:
+
+<CardGroup cols={2}>
+  <Card title="Fridge Contents" icon="snowflake" href="/templates/inventory">
+    Track food items with expiry dates. Scan hint optimized for food identification.
+  </Card>
+  <Card title="Tool Shed Inventory" icon="screwdriver-wrench" href="/templates/inventory">
+    Catalog your tools by type, brand, and condition.
+  </Card>
+  <Card title="Wine Cellar" icon="wine-bottle" href="/templates/inventory">
+    Log bottles with vintage, type, region, and ratings.
+  </Card>
+  <Card title="Auto Parts Tracker" icon="car" href="/templates/inventory">
+    Track spare parts with part numbers and vehicle compatibility.
+  </Card>
+</CardGroup>
+
+## Mobile Experience
+
+<Tabs>
+  <Tab title="Camera Capture">
+    On mobile, tapping the Smart Scan field opens your device camera directly with the rear camera selected for optimal capture.
+
+    <Frame caption="Mobile camera capture for Smart Scan">
+      ![Smart Scan on mobile](/images/features/smart-scan-mobile.png)
+    </Frame>
+  </Tab>
+  <Tab title="Photo Upload">
+    You can also upload existing photos from your gallery — useful for scanning images you've already taken.
+  </Tab>
+</Tabs>
+
+## Credit Usage
+
+<Warning>
+  Each Smart Scan analysis uses **1 AI credit**, regardless of how many items are found.
+</Warning>
+
+Credit is deducted **after** successful analysis, not when you cancel or the scan fails.
+
+| Action                   | Credit Cost |
+| ------------------------ | ----------- |
+| Successful scan          | 1 credit    |
+| Cancelled before results | 0 credits   |
+| Failed scan (error)      | 0 credits   |
+| Editing results dialog   | 0 credits   |
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="No items found" icon="circle-xmark">
+    **Possible causes:**
+
+    - Image too dark or blurry
+    - Items too close together
+    - Labels not visible
+
+    **Solutions:**
+
+    - Improve lighting conditions
+    - Spread items apart
+    - Angle camera to capture labels
+    - Try a closer photo
+  </Accordion>
+  <Accordion title="Wrong items detected" icon="triangle-exclamation">
+    **Possible causes:**
+
+    - Ambiguous items in frame
+    - Helper context doesn't match content
+
+    **Solutions:**
+
+    - Use the edit button to correct fields
+    - Deselect incorrect items
+    - Ensure you're using the right helper for the content
+  </Accordion>
+  <Accordion title="Incorrect category/values" icon="arrows-rotate">
+    **Possible causes:**
+
+    - AI made a best-guess match to available options
+    - Item doesn't fit predefined categories
+
+    **Solutions:**
+
+    - Expand the item and select the correct option
+    - Consider adding more category options to your helper
+  </Accordion>
+  <Accordion title="Scan failed error" icon="bug">
+    **Possible causes:**
+
+    - Image too large (\>10MB)
+    - Network connectivity issues
+    - Insufficient credits
+
+    **Solutions:**
+
+    - Use a smaller/compressed image
+    - Check your internet connection
+    - Check your [credit balance](/concepts/credits)
+  </Accordion>
+</AccordionGroup>
+
+## Best Practices
+
+<CardGroup cols={1}>
+  <Card title="Batch Similar Items" icon="layer-group">
+    Photograph groups of similar items together — the AI handles them efficiently.
+  </Card>
+  <Card title="Use Good Lighting" icon="lightbulb">
+    Natural daylight or bright indoor lighting gives the best recognition results.
+  </Card>
+  <Card title="Show Labels" icon="tag">
+    Position items so brand names, labels, and text are visible to the camera.
+  </Card>
+  <Card title="Review Before Adding" icon="check-double">
+    Always review the results dialog — AI is helpful but not perfect!
+  </Card>
+</CardGroup>
+
+## Technical Details
+
+<AccordionGroup>
+  <Accordion title="Supported Image Formats" icon="image">
+    - JPEG / JPG
+    - PNG
+    - WebP
+    - HEIC (converted automatically on iOS)
+  </Accordion>
+  <Accordion title="Size Limits" icon="compress">
+    - Maximum file size: **10MB**
+    - Recommended resolution: 1-4 megapixels
+    - Images are processed at original resolution
+  </Accordion>
+  <Accordion title="AI Model" icon="microchip">
+    Smart Scan uses **Gemini 2.5 Flash** vision model for fast, accurate item recognition.
+  </Accordion>
+  <Accordion title="Privacy" icon="shield-check">
+    - Images are uploaded securely to Peanuts storage
+    - AI processing happens via encrypted API
+    - Images are associated with your account only
+    - You control data retention in your account settings
+  </Accordion>
+</AccordionGroup>
+
+## Related Features
+
+<CardGroup cols={2}>
+  <Card title="Receipt OCR" icon="receipt" href="/features/receipt-scan">
+    Specialized scanning for receipts and expense tracking.
+  </Card>
+  <Card title="Voice Input" icon="microphone" href="/features/voice-input">
+    Another hands-free way to add entries to your helpers.
+  </Card>
+  <Card title="Widgets" icon="chart-simple" href="/features/widgets">
+    Visualize your scanned inventory with charts and counters.
+  </Card>
+  <Card title="Templates" icon="grid-2" href="/concepts/templates">
+    Explore templates with Smart Scan already configured.
+  </Card>
+</CardGroup>

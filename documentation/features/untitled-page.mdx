@@ -1,0 +1,388 @@
+---
+title: "Voice Input"
+description: "Add entries and interact with your helpers using natural speech - perfect for busy moments"
+icon: "microphone"
+---
+
+<Info>
+  Voice Input is a premium feature available to **Starter**, **Pro**, and **Team** subscribers. Each voice operation uses credits from your account.
+</Info>
+
+Peanuts offers multiple ways to capture data using your voice - from quick one-tap dictation to fully hands-free conversational entry. Say goodbye to typing on tiny keyboards while you're cooking, driving, or on the go.
+
+## Voice Entry Methods
+
+<CardGroup cols={3}>
+  <Card title="Quick Voice Entry" icon="bolt">
+    Tap-to-speak with AI parsing and a visual confirmation dialog
+  </Card>
+  <Card title="Hands-Free Mode" icon="headphones">
+    Full conversational loop with audio waveform visualization - no screen touching required
+  </Card>
+  <Card title="Field Dictation" icon="keyboard">
+    Dictate into individual text fields when typing isn't convenient
+  </Card>
+</CardGroup>
+
+---
+
+## Quick Voice Entry
+
+Quick Voice Entry is the fastest way to log data by voice. Speak naturally, and AI extracts the relevant information from your speech.
+
+### How It Works
+
+<Steps>
+  <Step title="Tap the voice button">
+    Look for the **"Add by voice"** button on any helper that supports it. It appears near the add form.
+
+    <Frame>
+      ![Voice entry button](/images/features/voice-entry-button.png)
+    </Frame>
+  </Step>
+  <Step title="Speak your entry">
+    When the button turns red and shows **"Stop"**, speak naturally. For example:
+
+    > "Spent forty-two dollars at Whole Foods on groceries"
+
+    The button will pulse while recording.
+  </Step>
+  <Step title="Wait for processing">
+    After you stop, you'll see two processing states:
+
+    - **"Listening..."** - Transcribing your speech to text
+    - **"Understanding..."** - AI parsing your text into structured fields
+  </Step>
+  <Step title="Review and confirm">
+    A confirmation dialog appears showing:
+
+    - Your **raw transcription** (exactly what you said)
+    - **Parsed fields** with extracted values
+    - **Confidence badges** on successfully filled fields
+    - **"Held" warnings** if required fields are missing
+
+    <Frame>
+      ![Voice confirmation dialog](/images/features/voice-confirm-dialog.png)
+    </Frame>
+  </Step>
+  <Step title="Add, edit, or cancel">
+    Choose your action:
+
+    - **Add** - Confirms the entry as-is
+    - **Edit** - Opens the full form with pre-filled values
+    - **Cancel** - Discards the entry
+  </Step>
+</Steps>
+
+### Natural Speech Examples
+
+Speak naturally - the AI understands context and extracts the right data:
+
+| What You Say                               | Fields Extracted                                                   |
+| ------------------------------------------ | ------------------------------------------------------------------ |
+| "Coffee at Starbucks, five twenty"         | **Amount:** 5.20, **Description:** Coffee, **Merchant:** Starbucks |
+| "Ran three miles in twenty-eight minutes"  | **Distance:** 3, **Duration:** 28, **Activity:** Running           |
+| "Call mom tomorrow at 2pm"                 | **Task:** Call mom, **Date:** tomorrow, **Time:** 2:00 PM          |
+| "Feeling tired today, slept about 6 hours" | **Mood:** tired, **Sleep:** 6                                      |
+
+<Tip>
+  Include as much detail as you want in a single breath - the AI will match your words to the available fields.
+</Tip>
+
+---
+
+## Hands-Free Mode
+
+Hands-Free Mode creates a full conversational loop between you and Peanuts - perfect when you can't look at or touch your screen.
+
+<Frame>
+  ![Hands-free mode interface](/images/features/hands-free-mode.png)
+</Frame>
+
+### When to Use Hands-Free Mode
+
+- 🚗 **Driving** - Log expenses or notes without touching your phone
+- 🍳 **Cooking** - Track ingredients or recipe notes with messy hands
+- 🏃 **Exercising** - Record workout data mid-session
+- 👶 **Multitasking** - When your hands are literally full
+
+### The Conversation Flow
+
+<Steps>
+  <Step title="Enter Hands-Free Mode">
+    Tap the **headphones icon** on supported helpers to launch the full-screen hands-free interface.
+  </Step>
+  <Step title="Tap to start">
+    A large circular microphone button appears. Tap once to start the session.
+
+    <Frame>
+      ![Hands-free microphone button](/images/features/hands-free-mic.png)
+    </Frame>
+  </Step>
+  <Step title="Speak your entry">
+    When you see **"Listening..."** and the audio waveform animation, speak your entry naturally.
+
+    The waveform visualizes your voice in real-time using your helper's theme color.
+  </Step>
+  <Step title="Listen to confirmation">
+    Peanuts speaks back what it understood:
+
+    > "Got it. Forty-two dollars at Whole Foods for groceries. Say yes to add, or no to cancel."
+
+    The screen shows your transcript and pending data.
+  </Step>
+  <Step title="Respond verbally">
+    - Say **"Yes"** or **"Confirm"** to add the entry
+    - Say **"No"** or **"Cancel"** to discard
+    - Say **"Edit"** to exit and make manual changes
+    - Say **"Exit"** to close hands-free mode entirely
+  </Step>
+  <Step title="Continue or exit">
+    After confirming, Peanuts says **"Done"** and waits for your next entry. The loop continues until you say **"exit"**.
+  </Step>
+</Steps>
+
+### Handling Missing Fields
+
+If required fields are missing, Peanuts enters a **"Held" state** and prompts you:
+
+> "I got forty-two dollars, but I need a category. What category is this?"
+
+You can then speak just the missing information, and Peanuts combines it with what it already has.
+
+### Voice Commands in Hands-Free Mode
+
+| Command                        | Action                     |
+| ------------------------------ | -------------------------- |
+| "Yes" / "Confirm" / "Add it"   | Saves the pending entry    |
+| "No" / "Cancel" / "Never mind" | Discards the pending entry |
+| "Edit" / "Let me fix that"     | Exits to manual editing    |
+| "Exit" / "Close" / "I'm done"  | Closes hands-free mode     |
+
+<Note>
+  Peanuts uses a calm, utilitarian voice (ElevenLabs "Sarah") designed for productivity - not a chatty assistant. Responses are brief: "Done", "Got it", "Held".
+</Note>
+
+---
+
+## Field Dictation
+
+For simpler use cases, you can dictate into individual text fields without AI parsing.
+
+### How Field Dictation Works
+
+<Steps>
+  <Step title="Find the microphone icon">
+    Look for the 🎤 icon next to text input fields. Not all fields have this - typically longer text fields like notes or descriptions.
+  </Step>
+  <Step title="Tap and speak">
+    Tap the microphone icon, speak your text, and tap again to stop.
+  </Step>
+  <Step title="Review transcription">
+    The transcribed text appears directly in the field. Edit if needed.
+  </Step>
+</Steps>
+
+<Tip>
+  Field dictation is great for long-form notes or descriptions. For structured data with multiple fields, use Quick Voice Entry instead.
+</Tip>
+
+---
+
+## Supported Field Types
+
+Voice input works intelligently with different field types:
+
+| Field Type   | How Voice Handles It                                   |
+| ------------ | ------------------------------------------------------ |
+| **Text**     | Direct transcription or parsed extraction              |
+| **Number**   | Converts spoken numbers ("forty-two" → 42)             |
+| **Select**   | Matches spoken words to available options              |
+| **Date**     | Understands "today", "tomorrow", "next Monday", etc.   |
+| **Checkbox** | Interprets "yes/no", "true/false", "checked/unchecked" |
+| **Image**    | Skipped in voice entry - use form for photos           |
+
+<Warning>
+  **Image fields** cannot be filled by voice. If your helper has a required image field, use the Edit option from the voice confirmation dialog to add it manually.
+</Warning>
+
+---
+
+## Credit Usage
+
+Voice features use credits from your account:
+
+| Operation                             | Credits Used |
+| ------------------------------------- | ------------ |
+| Speech-to-Text (transcription)        | 10 credits   |
+| Voice Entry Parsing (AI extraction)   | 1 credit     |
+| Text-to-Speech (hands-free responses) | 15 credits   |
+
+<AccordionGroup>
+  <Accordion title="How are credits calculated for hands-free mode?">
+    Each hands-free conversation step uses credits:
+
+    - **Your speech** → Transcription (10 credits)
+    - **AI parsing** → Understanding (1 credit)
+    - **Peanuts response** → Text-to-speech (15 credits)
+
+    A typical single entry with confirmation uses approximately **26 credits**.
+  </Accordion>
+  <Accordion title="What happens when I run out of credits?">
+    If you run out of credits mid-session:
+
+    - Voice buttons show a **lock icon**
+    - An upgrade prompt appears
+    - You can still use manual text entry
+
+    [Check your credit balance →](/credits)
+  </Accordion>
+  <Accordion title="Can I reduce credit usage?">
+    To minimize credit usage:
+
+    - Use **Quick Voice Entry** instead of Hands-Free (no TTS credits)
+    - Batch multiple items in one spoken entry
+    - Use field dictation for simple transcription only
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Browser Permissions
+
+Voice input requires microphone access from your browser or device.
+
+### Granting Microphone Access
+
+<Tabs>
+  <Tab title="Chrome / Edge">
+    1. Click the lock/info icon in the address bar
+    2. Find **Microphone** in the permissions list
+    3. Set to **Allow**
+    4. Refresh the page
+  </Tab>
+  <Tab title="Safari">
+    1. Go to **Safari → Settings for This Website**
+    2. Set **Microphone** to **Allow**
+    3. Refresh the page
+  </Tab>
+  <Tab title="iOS (Safari/PWA)">
+    1. Open **Settings → Safari → Microphone**
+    2. Ensure **Ask** or **Allow** is selected
+    3. Return to Peanuts and try again
+  </Tab>
+  <Tab title="Android (Chrome/PWA)">
+    1. Tap the lock icon in the address bar
+    2. Tap **Permissions**
+    3. Enable **Microphone**
+  </Tab>
+</Tabs>
+
+<Warning>
+  If you previously denied microphone access, you may need to **reset permissions** in your browser settings before the prompt appears again.
+</Warning>
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Voice button shows a lock icon">
+    This means voice features are restricted for your subscription tier or you've run out of credits.
+
+    **Solutions:**
+
+    - Check your credit balance in the header
+    - Upgrade to a paid plan (Starter, Pro, or Team)
+    - Purchase additional credits
+  </Accordion>
+  <Accordion title="'No speech detected' error">
+    The transcription service didn't detect any spoken words.
+
+    **Solutions:**
+
+    - Speak clearly and at a normal volume
+    - Check that your microphone is working (test in another app)
+    - Move to a quieter environment
+    - Ensure the microphone isn't covered or muted
+  </Accordion>
+  <Accordion title="Transcription is inaccurate">
+    Speech-to-text may struggle with:
+
+    - Heavy accents or unusual pronunciations
+    - Background noise
+    - Very fast or mumbled speech
+    - Technical jargon or proper nouns
+
+    **Solutions:**
+
+    - Speak slightly slower and more clearly
+    - Use the **Edit** option to correct mistakes
+    - For proper nouns, spell them out or edit after
+  </Accordion>
+  <Accordion title="AI parsing extracts wrong values">
+    If the AI puts data in the wrong fields:
+
+    **Solutions:**
+
+    - Be more explicit: "The **amount** is forty-two dollars"
+    - Use field names from your helper in your speech
+    - Use **Edit** to correct, then confirm
+    - For repeated issues, consider renaming ambiguous fields
+  </Accordion>
+  <Accordion title="Hands-free mode doesn't hear my response">
+    **Solutions:**
+
+    - Wait for the audio waveform animation before speaking
+    - Speak within 5 seconds (there's a max recording duration)
+    - Tap the mic button to manually restart listening
+    - Check that TTS finished playing before responding
+  </Accordion>
+  <Accordion title="'Microphone access denied' error">
+    Your browser blocked microphone access.
+
+    **Solutions:**
+
+    - Follow the [Browser Permissions](#browser-permissions) instructions above
+    - Check system-level microphone permissions (especially on Mac/iOS)
+    - Try a different browser
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Speak Naturally" icon="comments">
+    Don't use robotic commands. Say "spent fifty bucks on dinner" not "amount fifty category food".
+  </Card>
+  <Card title="Include Context" icon="circle-info">
+    The more detail you provide, the better the AI parses. "Coffee at Starbucks" works better than just "coffee".
+  </Card>
+  <Card title="Use Quiet Spaces" icon="volume-xmark">
+    Background noise affects transcription accuracy. Find a quieter spot for better results.
+  </Card>
+  <Card title="Review Before Confirming" icon="eye">
+    Always check the confirmation dialog. Voice entry is fast, but not always perfect.
+  </Card>
+</CardGroup>
+
+---
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Smart Scan" icon="camera" href="/features/smart-scan">
+    Another hands-free input method - capture receipts with your camera
+  </Card>
+  <Card title="Ask Peanuts" icon="sparkles" href="/concepts/ai-assistant">
+    Use voice with the AI assistant for natural language queries
+  </Card>
+  <Card title="Widgets" icon="gauge" href="/features/widgets">
+    Add timers and stopwatches that pair well with voice entry
+  </Card>
+  <Card title="Telegram Integration" icon="paper-plane" href="/integrations/telegram">
+    Send voice messages via Telegram for another hands-free option
+  </Card>
+</CardGroup>

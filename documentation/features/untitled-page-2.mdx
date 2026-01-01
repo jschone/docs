@@ -1,0 +1,348 @@
+---
+title: "Reports & Data Export"
+description: "Generate PDF reports, export data, and schedule automated weekly summaries for your helpers"
+icon: "file-text"
+---
+
+<Info>
+  Reports help you visualize progress, share data with others, and keep permanent records. Download branded PDFs, export raw data, or automate weekly reports to your inbox.
+</Info>
+
+## What's Included
+
+Peanuts offers three ways to get your data out:
+
+<CardGroup cols={3}>
+  <Card title="PDF Reports" icon="file-pdf">
+    Branded documents with stats, charts, and entry tables
+  </Card>
+  <Card title="Data Export" icon="download">
+    Raw data in CSV or JSON format for spreadsheets and analysis
+  </Card>
+  <Card title="Scheduled Reports" icon="calendar-clock">
+    Automated weekly summaries sent to your inbox
+  </Card>
+</CardGroup>
+
+---
+
+## PDF Reports
+
+Generate professional, branded PDF reports for any helper with just a few taps.
+
+### What's in a Report?
+
+Every PDF report includes:
+
+| Section           | Description                                                |
+| ----------------- | ---------------------------------------------------------- |
+| **Header**        | Helper name with your theme color and date range           |
+| **Stats Grid**    | Total entries, total value, and average for numeric fields |
+| **7-Day Trend**   | Visual bar chart showing daily activity                    |
+| **Entries Table** | Up to 15 recent entries with key field values              |
+| **Footer**        | Generation timestamp and page numbers                      |
+
+<Frame caption="A sample PDF report showing stats, trend chart, and recent entries">
+  ![PDF Report Example](/images/features/pdf-report-example.png)
+</Frame>
+
+### Generating a Report
+
+<Steps>
+  <Step title="Open your helper">
+    Navigate to any helper with recorded entries.
+  </Step>
+  <Step title="Tap the download icon">
+    In the toolbar, tap the download button to open export options.
+  </Step>
+  <Step title="Select 'Generate PDF Report'">
+    Choose PDF from the dropdown menu.
+  </Step>
+  <Step title="Choose your date range">
+    Select from preset options or set a custom range:
+
+    - **7 days** - Last week of activity
+    - **14 days** - Last two weeks
+    - **30 days** - Last month
+    - **Custom** - Pick specific start and end dates
+  </Step>
+  <Step title="Download or email">
+    - Tap **Download PDF** to save to your device
+    - Or enter an email address to send it directly
+  </Step>
+</Steps>
+
+<Frame caption="The report dialog with date range options and email delivery">
+  ![Report Dialog](/images/features/report-dialog.png)
+</Frame>
+
+### Emailing Reports
+
+Share reports directly with others without downloading first:
+
+1. In the report dialog, enter the recipient's email address
+2. Tap the mail icon button
+3. The recipient gets a beautifully formatted email with the PDF attached
+
+<Tip>
+  Perfect for sending expense reports to your accountant, health logs to your doctor, or progress updates to a coach or manager.
+</Tip>
+
+---
+
+## Data Export
+
+Export your raw data for use in spreadsheets, databases, or other tools.
+
+### Export Formats
+
+<Tabs>
+  <Tab title="CSV">
+    **Comma-Separated Values** - Works with Excel, Google Sheets, Numbers, and virtually any spreadsheet app.
+
+    The CSV includes:
+
+    - Entry ID and timestamp
+    - All field values in separate columns
+    - Boolean fields shown as "Yes" / "No"
+
+    ```csv
+    id,created_at,Amount,Category,Notes
+    abc123,2024-01-15T09:30:00Z,45.50,Groceries,Weekly shopping
+    def456,2024-01-14T18:00:00Z,12.99,Transport,Bus pass
+    ```
+  </Tab>
+  <Tab title="JSON">
+    **JavaScript Object Notation** - Ideal for developers, APIs, and data processing scripts.
+
+    The JSON includes:
+
+    - App metadata (name, export timestamp)
+    - Field definitions (id, label, type)
+    - Full entry data with all values
+
+    ```json
+    {
+      "app_name": "Expense Tracker",
+      "exported_at": "2024-01-16T10:00:00.000Z",
+      "fields": [
+        {"id": "amount", "label": "Amount", "type": "number"},
+        {"id": "category", "label": "Category", "type": "select"}
+      ],
+      "items": [
+        {
+          "id": "abc123",
+          "created_at": "2024-01-15T09:30:00Z",
+          "amount": 45.50,
+          "category": "Groceries"
+        }
+      ]
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### How to Export
+
+<Steps>
+  <Step title="Open your helper">
+    Navigate to the helper containing the data you want to export.
+  </Step>
+  <Step title="Tap the download icon">
+    Find it in the toolbar area of your helper.
+  </Step>
+  <Step title="Choose your format">
+    - **Export as CSV** for spreadsheets
+    - **Export as JSON** for developer tools
+  </Step>
+  <Step title="Save the file">
+    The file downloads immediately with your helper name in the filename.
+  </Step>
+</Steps>
+
+<Note>
+  Exports include **all** entries in your helper, not just those visible on screen. There's no date range filter for raw exports.
+</Note>
+
+---
+
+## Scheduled Reports
+
+Set up automated weekly reports that arrive in your inbox without any action required.
+
+### How It Works
+
+<Steps>
+  <Step title="Open helper settings">
+    Go to your helper's integrations settings.
+  </Step>
+  <Step title="Enable Scheduled PDF Report">
+    Toggle on the scheduled report option.
+  </Step>
+  <Step title="Configure delivery">
+    Set three options:
+
+    - **Recipient email** - Where to send the report
+    - **Day of week** - Which day to send (Monday-Sunday)
+    - **Time** - What time to send (in your timezone)
+  </Step>
+  <Step title="Save changes">
+    Reports will automatically be sent on your schedule.
+  </Step>
+</Steps>
+
+<Frame caption="Scheduled report settings in helper integrations">
+  ![Scheduled Report Settings](/images/features/scheduled-report-settings.png)
+</Frame>
+
+### What Gets Sent
+
+The weekly email includes:
+
+- **Summary stats** - Entry count, totals, and averages for the past 7 days
+- **Recent entries table** - Up to 10 entries with key field values
+- **Trend indicator** - Visual comparison of your week's activity
+
+<Tip>
+  Unlike on-demand PDF reports, scheduled reports are sent as HTML emails (not PDF attachments). This makes them faster to load and easier to read on mobile devices.
+</Tip>
+
+---
+
+## Accountability Partner
+
+Share your progress automatically with someone who helps keep you on track.
+
+### Setting Up a Partner
+
+<Steps>
+  <Step title="Open helper integrations">
+    Navigate to your helper's settings and find integrations.
+  </Step>
+  <Step title="Enable Accountability Partner">
+    Toggle on the accountability partner option.
+  </Step>
+  <Step title="Enter their details">
+    - **Name** (optional) - For personalization
+    - **Email** - Where to send their copy
+  </Step>
+  <Step title="Choose what they receive">
+    - **Include in digests** - CC them on daily/weekly summaries
+    - **Include in reports** - CC them on scheduled PDF reports
+  </Step>
+</Steps>
+
+<Frame caption="Accountability partner configuration options">
+  ![Accountability Partner Settings](/images/features/accountability-partner.png)
+</Frame>
+
+### Use Cases
+
+<AccordionGroup>
+  <Accordion title="Fitness tracking with a trainer">
+    Share your workout logs and progress with your personal trainer. They can monitor your consistency and adjust your program accordingly.
+  </Accordion>
+  <Accordion title="Expense tracking with a partner">
+    Keep your spouse or financial advisor in the loop on spending habits. Transparency helps maintain financial goals.
+  </Accordion>
+  <Accordion title="Medication compliance with a caregiver">
+    Parents or caregivers can receive updates on medication adherence to ensure health routines are maintained.
+  </Accordion>
+  <Accordion title="Study habits with a mentor">
+    Share study session logs with a tutor or academic advisor who can help identify patterns and areas for improvement.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Credit Usage
+
+| Feature             | Credits  |
+| ------------------- | -------- |
+| Download PDF report | **Free** |
+| Email PDF report    | **Free** |
+| Export to CSV       | **Free** |
+| Export to JSON      | **Free** |
+| Scheduled reports   | **Free** |
+
+<Tip>
+  All reporting and export features are completely free and don't consume any credits. Export as often as you need!
+</Tip>
+
+---
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Regular Backups" icon="hard-drive">
+    Export your data to CSV or JSON periodically as a backup. Store copies in cloud storage for safekeeping.
+  </Card>
+  <Card title="Weekly Reviews" icon="calendar-check">
+    Schedule reports for Sunday evening or Monday morning to review the previous week and plan ahead.
+  </Card>
+  <Card title="Professional Sharing" icon="briefcase">
+    Use PDF reports when sharing with professionals - the branded format looks polished and trustworthy.
+  </Card>
+  <Card title="Spreadsheet Analysis" icon="table">
+    Export to CSV for deeper analysis in Excel or Google Sheets. Create charts, pivot tables, and custom calculations.
+  </Card>
+</CardGroup>
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="PDF won't download">
+    **Try these steps:**
+
+    1. Check your browser's pop-up blocker settings
+    2. Ensure you have enough device storage
+    3. Try a different browser (Chrome works best)
+    4. On iOS, the PDF may open in a new tab - use the share button to save
+  </Accordion>
+  <Accordion title="Email not received">
+    **Check for:**
+
+    - Typos in the email address
+    - Spam or junk folder
+    - Email filtering rules blocking attachments
+    - Reports are sent from `reports@mail.usepeanuts.com` - add to contacts
+  </Accordion>
+  <Accordion title="Scheduled report not arriving">
+    **Verify:**
+
+    - The scheduled report toggle is enabled
+    - The recipient email is correct
+    - The day and time haven't passed yet this week
+    - Check spam folder for emails from Peanuts
+  </Accordion>
+  <Accordion title="Missing data in export">
+    **Note that:**
+
+    - Calculated fields are excluded from exports
+    - Image fields are not included in CSV/JSON
+    - Very long text may be truncated in PDF tables
+    - JSON export contains all raw data if you need complete records
+  </Accordion>
+  <Accordion title="Charts not showing in PDF">
+    The PDF includes a 7-day trend chart by default. If it appears empty:
+
+    - Ensure you have entries within the selected date range
+    - Charts require at least one numeric field to display values
+    - If no numeric field exists, the chart shows entry counts instead
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related Features
+
+<CardGroup cols={2}>
+  <Card title="Email Digest" icon="inbox" href="/features/email-integrations#email-digest">
+    Get daily or weekly entry summaries without attachments
+  </Card>
+  <Card title="Widgets" icon="chart-bar" href="/features/widgets#chart-widget">
+    View real-time charts and stats within your helper
+  </Card>
+</CardGroup>

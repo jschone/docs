@@ -43,19 +43,20 @@
           {
             "group": "Core Concepts",
             "pages": [
-              "concepts/micro-apps",
-              "concepts/templates",
-              "concepts/ai-assistant",
-              "concepts/credits"
+              "documentation/core-concepts/micro-apps",
+              "documentation/core-concepts/untitled-page",
+              "documentation/core-concepts/ask-peanuts",
+              "documentation/core-concepts/credits"
             ]
           },
           {
             "group": "Features",
             "pages": [
-              "features/voice-input",
-              "features/smart-scan",
-              "features/widgets",
-              "features/reports",
+              "documentation/features/webh",
+              "documentation/features/untitled-page",
+              "documentation/features/untitled-page-1",
+              "documentation/features/widgets",
+              "documentation/features/untitled-page-2",
               "features/webhooks",
               "features/notifications"
             ]
