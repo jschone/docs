@@ -1,5 +1,6 @@
 {
-  "$schema": "https://mintlify.com/schema.json",
+  "$schema": "https://mintlify.com/schema/docs.json",
+  "theme": "maple",
   "name": "Peanuts",
   "logo": {
     "dark": "/logo/peanuts-logo-dark.png",
@@ -19,11 +20,10 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hello@peanutsapp.com"
+      "url": "mailto:support@peanutsapp.com"
     }
   ],
   "topbarCtaButton": {
-    "type": "link",
     "name": "Get Started",
     "url": "https://peanutsapp.com"
   },
@@ -40,13 +40,15 @@
   "anchors": [
     {
       "name": "Community",
-      "icon": "discord",
-      "url": "https://discord.gg/peanuts"
+      "icon": "telegram",
+      "url": "https://t.me/peanutsapp",
+      "color": "#2DB8A1"
     },
     {
       "name": "Blog",
       "icon": "newspaper",
-      "url": "https://peanutsapp.com/blog"
+      "url": "https://peanutsapp.com/blog",
+      "color": "#FDE472"
     }
   ],
   "navigation": [
@@ -55,28 +57,17 @@
       "pages": [
         "introduction",
         "quickstart",
-        "how-it-works",
-        "first-helper"
-      ]
-    },
-    {
-      "group": "Core Concepts",
-      "pages": [
-        "concepts/helpers",
-        "concepts/entries",
-        "concepts/proofs",
-        "concepts/held-done",
-        "concepts/ai-assistant"
+        "core-concepts"
       ]
     },
     {
       "group": "Features",
       "pages": [
-        "features/voice-entry",
-        "features/image-scanning",
+        "features/helpers",
+        "features/entries",
+        "features/voice-input",
+        "features/smart-scan",
         "features/widgets",
-        "features/charts-insights",
-        "features/reminders",
         "features/reports",
         "features/knowledge-base"
       ]
@@ -84,7 +75,6 @@
     {
       "group": "Integrations",
       "pages": [
-        "integrations/overview",
         "integrations/telegram",
         "integrations/whatsapp",
         "integrations/webhooks",
@@ -95,30 +85,26 @@
       "group": "Templates",
       "pages": [
         "templates/overview",
-        "templates/expense-tracker",
-        "templates/habit-tracker",
-        "templates/workout-log",
-        "templates/reading-list",
-        "templates/grocery-list"
+        "templates/trackers",
+        "templates/habits",
+        "templates/lists"
       ]
     },
     {
       "group": "Guides",
       "pages": [
+        "guides/first-helper",
         "guides/telegram-setup",
-        "guides/whatsapp-setup",
-        "guides/webhook-automation",
-        "guides/sharing-helpers",
-        "guides/data-export"
+        "guides/voice-tracking",
+        "guides/automation"
       ]
     },
     {
       "group": "FAQ & Troubleshooting",
       "pages": [
         "faq/general",
-        "faq/telegram",
         "faq/billing",
-        "faq/privacy-security"
+        "faq/troubleshooting"
       ]
     },
     {
@@ -139,8 +125,7 @@
   ],
   "footerSocials": {
     "x": "https://x.com/peanutsapp",
-    "discord": "https://discord.gg/peanuts",
-    "github": "https://github.com/peanutsapp"
+    "website": "https://peanutsapp.com"
   },
   "feedback": {
     "suggestEdit": true,
@@ -151,4 +136,5 @@
     "isHidden": false
   }
 }
+
 
