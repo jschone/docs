@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "maple",
+  "theme": "almond",
   "name": "Peanuts",
   "description": "AI-powered personal productivity platform for tracking, organizing, and automating your life.",
   "colors": {
@@ -93,9 +93,9 @@
             "group": "Tutorials",
             "pages": [
               "guides/tutorials/tutorials",
-              "guides/telegram-bot",
-              "guides/voice-tracking",
-              "guides/automations"
+              "guides/tutorials/telegram",
+              "guides/tutorials/voice",
+              "guides/tutorials/automations"
             ]
           },
           {

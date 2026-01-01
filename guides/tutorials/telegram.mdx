@@ -1,0 +1,331 @@
+---
+title: "Connect Telegram"
+description: "Set up your personal Telegram bot to log entries, receive reminders, and manage helpers via chat"
+icon: "paper-plane"
+---
+
+Connect Peanuts to Telegram for the fastest possible data entry. Log expenses, track habits, save links, and get reminders—all without opening the app.
+
+<Info>
+**What you'll get:** A personal Telegram bot that understands your helpers. Send a message, photo, or voice note—Peanuts figures out where it belongs and saves it.
+</Info>
+
+---
+
+## What You'll Need
+
+- A Telegram account
+- 5 minutes to set up
+- (Optional) A phone with Telegram installed
+
+<Note>
+You'll create your own personal bot. This bot is private to you—no one else can access your data through it.
+</Note>
+
+---
+
+## Step 1: Create Your Bot
+
+<Steps>
+  <Step title="Open BotFather">
+    In Telegram, search for **@BotFather** or tap [this link](https://t.me/BotFather). This is Telegram's official bot for creating new bots.
+  </Step>
+  <Step title="Start a new bot">
+    Send the command:
+    ```
+    /newbot
+    ```
+  </Step>
+  <Step title="Name your bot">
+    BotFather asks for a display name. Choose something like:
+    - "My Peanuts"
+    - "Personal Tracker"
+    - "Life Log"
+  </Step>
+  <Step title="Choose a username">
+    BotFather needs a unique username ending in `bot`. Examples:
+    - `mylife_peanuts_bot`
+    - `jsmith_tracker_bot`
+    - `personal_log_2024_bot`
+    
+    <Tip>
+    If your first choice is taken, add numbers or underscores to make it unique.
+    </Tip>
+  </Step>
+  <Step title="Copy your token">
+    BotFather responds with your **bot token**—a long string like:
+    ```
+    123456789:ABCdefGHIjklMNOpqrSTUvwxYZ
+    ```
+    Copy this token. You'll need it in the next step.
+    
+    <Warning>
+    Keep this token private! Anyone with it can control your bot.
+    </Warning>
+  </Step>
+</Steps>
+
+---
+
+## Step 2: Connect to Peanuts
+
+<Steps>
+  <Step title="Go to Telegram Settings">
+    In Peanuts, navigate to **Settings → Integrations → Telegram**.
+  </Step>
+  <Step title="Enter your bot token">
+    Paste the token from BotFather into the token field.
+  </Step>
+  <Step title="Click Connect">
+    Peanuts verifies your bot and sets up the connection.
+  </Step>
+  <Step title="Start chatting">
+    Open your new bot in Telegram and send `/start` to activate it.
+  </Step>
+</Steps>
+
+<Info>
+Once connected, you'll see a confirmation with your bot's username. The bot is now ready to receive messages.
+</Info>
+
+---
+
+## Step 3: Authorize Your Chat
+
+For security, your bot only responds to authorized chats.
+
+<Steps>
+  <Step title="Send /start to your bot">
+    Open your bot in Telegram and send:
+    ```
+    /start
+    ```
+  </Step>
+  <Step title="Bot sends authorization code">
+    Your bot responds with a 6-digit code.
+  </Step>
+  <Step title="Enter code in Peanuts">
+    Back in Peanuts Telegram Settings, enter the code to authorize this chat.
+  </Step>
+  <Step title="You're connected!">
+    The bot confirms: "✅ Authorized! You can now send entries."
+  </Step>
+</Steps>
+
+---
+
+## Your First Entry
+
+Try sending a message to your bot:
+
+Spent €12.50 on lunch
+
+**What happens:**
+1. Bot receives your message
+2. AI identifies it as an expense
+3. Bot asks: "Save to /expenses?" (or auto-routes if you have a rule)
+4. You confirm
+5. Entry is saved with amount, category, and timestamp
+
+<CardGroup cols={2}>
+  <Card title="Text Messages" icon="message">
+    ```
+    Mood is 7 today, feeling productive
+    ```
+    ```
+    Finished reading Atomic Habits
+    ```
+    ```
+    Weight: 73.2kg
+    ```
+  </Card>
+  <Card title="Voice Notes" icon="microphone">
+    Record a voice note describing your entry. Peanuts transcribes and parses it automatically.
+  </Card>
+</CardGroup>
+
+---
+
+## Send Photos
+
+Photos are automatically analyzed:
+
+| Photo Type | What Happens |
+|------------|--------------|
+| **Receipt** | Extracts merchant, amount, date |
+| **Document** | OCR extracts text content |
+| **Product** | Identifies item for collections |
+| **Screenshot** | Reads text from the image |
+
+**Example:** Send a photo of a restaurant receipt → Bot extracts "Lunch at Mario's, €24.50" → Saves to your expense tracker.
+
+---
+
+## Bot Commands
+
+| Command | What It Does |
+|---------|--------------|
+| `/start` | Initialize or re-authorize the bot |
+| `/help` | Show available commands |
+| `/apps` | List your helpers |
+| `/today` | See today's entries |
+| `/stats` | Quick summary of recent activity |
+| `/routing` | Manage auto-routing rules |
+
+<Tip>
+Send `/apps` to see all your helpers. You can then specify where to save by starting a message with the helper command (e.g., `/expenses 15 coffee`).
+</Tip>
+
+---
+
+## Smart Routing
+
+Tired of confirming where to save each message? Set up automatic routing.
+
+### How It Works
+
+1. **Pattern matching** — "allrecipes.com links → /recipes"
+2. **Content type** — "All photos → /receipts"
+3. **Learning** — After 3 manual selections, bot suggests a rule
+
+### Set Up a Rule
+
+Via Telegram:
+/routing
+
+
+Or in the web app: **Settings → Telegram → Smart Routing**
+
+| Rule Type | Example |
+|-----------|---------|
+| **Domain** | Links from netflix.com → /watchlist |
+| **Keyword** | Messages with "workout" → /exercise |
+| **Content** | All voice notes → /journal |
+| **Time** | Morning messages → /morning-routine |
+
+<Info>
+Smart routing learns from your behavior. If you manually select the same helper 3 times for similar content, the bot suggests creating an automatic rule.
+</Info>
+
+---
+
+## The Mini App
+
+Your bot includes a full web interface accessible from Telegram:
+
+<Steps>
+  <Step title="Tap 'Open My Apps'">
+    In any bot message, tap the button or send `/start`.
+  </Step>
+  <Step title="Full interface opens">
+    A mini app appears with your dashboard, helpers, and full editing capabilities.
+  </Step>
+  <Step title="Use just like the web app">
+    Add entries, edit helpers, view stats—all without leaving Telegram.
+  </Step>
+</Steps>
+
+---
+
+## Reminders & Digests
+
+### Set Reminders
+
+Via Telegram:
+
+/remind Take vitamins at 8am daily
+
+/remind Check expenses every Sunday at 6pm
+
+### Daily Digests
+
+Get morning and evening summaries:
+- **Morning digest** — Yesterday's summary, today's agenda
+- **Evening digest** — Today's entries, streaks, and stats
+
+Configure in **Settings → Telegram → Digests** or send `/settings` to your bot.
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Bot doesn't respond" icon="circle-exclamation">
+    1. Check that the bot is connected in Peanuts Settings
+    2. Verify you've authorized the chat with `/start`
+    3. Ensure your Peanuts account is active
+  </Accordion>
+  
+  <Accordion title="Messages aren't being saved" icon="triangle-exclamation">
+    1. Check if you have an active helper that matches the content
+    2. Try specifying the helper: `/expenses 15 coffee`
+    3. Make sure the helper has appropriate fields
+  </Accordion>
+  
+  <Accordion title="Voice notes aren't transcribed" icon="microphone-slash">
+    Voice transcription requires Starter plan or higher. Check your subscription in Settings.
+  </Accordion>
+  
+  <Accordion title="Photos aren't analyzed" icon="image">
+    Image analysis uses credits. Ensure you have available credits in your account.
+  </Accordion>
+  
+  <Accordion title="Want to reset the connection" icon="rotate">
+    1. Go to Settings → Telegram
+    2. Click "Disconnect"
+    3. In Telegram, send `/start` to your bot
+    4. Reconnect with the same or a new token
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Security Notes
+
+<CardGroup cols={2}>
+  <Card title="Your Data" icon="lock">
+    - Bot token is encrypted
+    - Messages processed on secure servers
+    - Data belongs to you
+    - Export anytime
+  </Card>
+  <Card title="Access Control" icon="shield-check">
+    - Only authorized chats work
+    - You control which helpers the bot can access
+    - Revoke access anytime
+    - Delete bot to remove connection
+  </Card>
+</CardGroup>
+
+---
+
+## Credit Usage
+
+| Action | Credits |
+|--------|---------|
+| Text messages | Free (AI routing uses 1 credit) |
+| Photo analysis | 5 credits |
+| Voice transcription | 10 credits |
+| Link analysis | 1 credit |
+| Reminders | Free |
+| Digests | Free |
+
+---
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Smart Routing" href="/integrations/telegram/routing" icon="route">
+    Set up automatic content routing
+  </Card>
+  <Card title="Voice Features" href="/features/voice" icon="microphone">
+    Master voice notes and transcription
+  </Card>
+  <Card title="Notifications" href="/guides/notifications" icon="bell">
+    Configure reminders and digests
+  </Card>
+  <Card title="Templates" href="/templates" icon="shapes">
+    Create helpers optimized for Telegram
+  </Card>
+</CardGroup>
+

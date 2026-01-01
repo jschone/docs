@@ -1,0 +1,315 @@
+---
+title: "Voice Features"
+description: "Use your voice for hands-free data entry and AI conversations"
+icon: "microphone"
+---
+
+<Info>
+Voice features require a **Starter plan or higher** and use credits from your monthly allowance.
+</Info>
+
+## Voice Entry Options
+
+Peanuts offers three ways to use voice:
+
+| Method | Best For | How It Works |
+|--------|----------|--------------|
+| **Quick Voice** | Single entries while multitasking | Tap mic → speak → confirm |
+| **Hands-Free Mode** | Driving, cooking, workouts | Full voice conversation loop |
+| **Ask Peanuts** | Questions about your data | Natural language queries |
+
+---
+
+## Quick Voice Entry
+
+The fastest way to log data by voice.
+
+<Steps>
+  <Step title="Open Your Helper">
+    Navigate to any helper where you want to add an entry.
+  </Step>
+  <Step title="Tap the Microphone">
+    Look for the mic button next to the "Add Entry" button or in the input area.
+  </Step>
+  <Step title="Speak Naturally">
+    Describe your entry in plain language:
+    - *"Spent forty-five dollars on groceries at Whole Foods"*
+    - *"Ran 5k in 28 minutes this morning"*
+    - *"Met with Sarah about Q3 planning, went well"*
+  </Step>
+  <Step title="Review & Confirm">
+    Peanuts shows what it understood. Check the parsed fields, then tap **Add** to save or **Edit** to adjust.
+  </Step>
+</Steps>
+
+<Tip>
+Speak in complete thoughts. "Coffee meeting with Tom, $12, downtown café" works better than fragmented phrases.
+</Tip>
+
+### What Gets Parsed
+
+Peanuts automatically extracts:
+
+- **Numbers** → Amount, quantity, duration fields
+- **Dates/Times** → Date fields (today, yesterday, next Monday)
+- **Categories** → Select fields with matching options
+- **Descriptions** → Text fields
+
+<AccordionGroup>
+  <Accordion title="Example: Expense Tracker">
+    **You say:** *"Lunch with the team, sixty-two dollars, put it under meals"*
+    
+    **Peanuts parses:**
+    - Amount: $62.00
+    - Category: Meals
+    - Description: Lunch with the team
+  </Accordion>
+  <Accordion title="Example: Workout Log">
+    **You say:** *"Did upper body today, bench pressed 185 for 3 sets of 8"*
+    
+    **Peanuts parses:**
+    - Type: Upper Body
+    - Exercise: Bench Press
+    - Weight: 185 lbs
+    - Sets: 3
+    - Reps: 8
+  </Accordion>
+  <Accordion title="Example: Meeting Notes">
+    **You say:** *"One-on-one with David, discussed promotion timeline, follow up next week"*
+    
+    **Peanuts parses:**
+    - Title: One-on-one with David
+    - Notes: Discussed promotion timeline
+    - Follow-up: Next week
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Hands-Free Mode
+
+A full conversational experience—perfect when you can't touch your phone.
+
+<Steps>
+  <Step title="Enter Hands-Free Mode">
+    Tap the **hands-free icon** (headphones) in your helper's action bar.
+  </Step>
+  <Step title="Listen for the Prompt">
+    Peanuts speaks: *"Ready to log. What would you like to add?"*
+  </Step>
+  <Step title="Speak Your Entry">
+    Describe what you want to log naturally.
+  </Step>
+  <Step title="Confirm by Voice">
+    Peanuts reads back what it understood and asks for confirmation:
+    - Say **"Yes"** or **"Confirm"** to save
+    - Say **"Edit"** to make changes
+    - Say **"Cancel"** to discard
+  </Step>
+  <Step title="Continue or Exit">
+    After saving, Peanuts asks if you want to add another. Say **"Done"** to exit.
+  </Step>
+</Steps>
+
+### The Conversation Flow
+
+```
+🎧 Peanuts: "Ready to log. What would you like to add?"
+
+🎤 You: "Twenty dollars on an Uber to the airport"
+
+🎧 Peanuts: "Got it. Twenty dollars for Uber, category Transport. 
+             Should I save this?"
+
+🎤 You: "Yes"
+
+🎧 Peanuts: "Done. Anything else?"
+
+🎤 You: "No, that's all"
+
+🎧 Peanuts: "All set. Have a safe trip!"
+```
+
+<Note>
+Hands-Free Mode uses both speech-to-text (10 credits) and text-to-speech (15 credits) per interaction.
+</Note>
+
+### Visual Feedback
+
+Even in hands-free mode, you get visual cues:
+
+- **Pulsing waveform** → Peanuts is listening
+- **Processing spinner** → Transcribing your speech
+- **Confirmation card** → Shows parsed data before saving
+
+---
+
+## Ask Peanuts
+
+Query your data using natural language.
+
+<Steps>
+  <Step title="Open Ask Peanuts">
+    Tap the **Peanuts icon** in the header or use the floating action button.
+  </Step>
+  <Step title="Ask Your Question">
+    Type or speak questions about your tracked data:
+    - *"How much did I spend on food this month?"*
+    - *"What's my workout streak?"*
+    - *"Show my meetings from last week"*
+  </Step>
+  <Step title="Get Insights">
+    Peanuts searches across your helpers and provides answers with relevant data.
+  </Step>
+</Steps>
+
+### What You Can Ask
+
+<CardGroup cols={2}>
+  <Card title="Summaries" icon="calculator">
+    - "Total expenses this month"
+    - "Average workout duration"
+    - "How many books did I read?"
+  </Card>
+  <Card title="Patterns" icon="chart-line">
+    - "When do I exercise most?"
+    - "What's my biggest expense category?"
+    - "Am I sleeping more this week?"
+  </Card>
+  <Card title="Lookups" icon="magnifying-glass">
+    - "Find my note about the project deadline"
+    - "When did I last see Dr. Smith?"
+    - "What movies did I watch in January?"
+  </Card>
+  <Card title="Comparisons" icon="scale-balanced">
+    - "Am I spending more than last month?"
+    - "How does this week compare to last?"
+    - "Best vs worst workout this month"
+  </Card>
+</CardGroup>
+
+<Tip>
+Ask Peanuts works best when you have at least a few weeks of data. The more you track, the better the insights.
+</Tip>
+
+### Voice Responses
+
+Toggle **Read Aloud** to have Peanuts speak the answer. Perfect for:
+- Checking stats while cooking
+- Getting updates during your commute
+- Accessibility needs
+
+---
+
+## Voice Tips & Best Practices
+
+### For Best Recognition
+
+<CardGroup cols={2}>
+  <Card title="Do" icon="check">
+    - Speak clearly at normal pace
+    - Use complete sentences
+    - Include units ("dollars", "minutes", "miles")
+    - Mention category names from your helper
+  </Card>
+  <Card title="Avoid" icon="xmark">
+    - Speaking too fast or mumbling
+    - Background noise (TV, crowds)
+    - Very short fragments
+    - Uncommon abbreviations
+  </Card>
+</CardGroup>
+
+### Natural Phrasing Examples
+
+| Instead of... | Try... |
+|--------------|--------|
+| "50, food" | "Spent fifty dollars on food" |
+| "Run 5k" | "Ran five kilometers this morning" |
+| "Meeting Bob" | "Had a meeting with Bob about sales" |
+
+### Handling Mistakes
+
+If Peanuts misunderstands:
+
+1. **Quick Voice**: Tap **Edit** to correct before saving
+2. **Hands-Free**: Say "Edit" or "No, let me try again"
+3. **After saving**: Edit the entry normally from the list
+
+---
+
+## Credit Usage
+
+Voice features consume credits from your monthly allowance:
+
+| Action | Credits |
+|--------|---------|
+| Voice-to-text (speaking) | 10 |
+| Text-to-speech (listening) | 15 |
+| AI parsing | 1 |
+
+### Typical Scenarios
+
+- **Quick Voice entry**: ~11 credits (STT + parsing)
+- **Hands-Free single entry**: ~26 credits (STT + TTS + parsing)
+- **Ask Peanuts with audio**: ~26 credits (STT + AI + TTS)
+- **Ask Peanuts text only**: ~1 credit (AI only)
+
+<Info>
+Starter plan includes 200 credits/month. Pro includes 1,000 credits. See [Pricing](/pricing) for details.
+</Info>
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Microphone not working">
+    1. Check browser permissions (Settings → Privacy → Microphone)
+    2. Ensure Peanuts has microphone access
+    3. Try refreshing the page
+    4. Test mic in another app to rule out hardware issues
+  </Accordion>
+  <Accordion title="Poor transcription accuracy">
+    - Move to a quieter environment
+    - Speak slightly slower
+    - Hold phone closer to your mouth
+    - Check your internet connection
+  </Accordion>
+  <Accordion title="'Upgrade required' message">
+    Voice features require Starter plan or higher. Check your subscription in Settings → Billing.
+  </Accordion>
+  <Accordion title="'Insufficient credits' error">
+    You've used your monthly credit allowance. Options:
+    - Wait for monthly reset
+    - Purchase credit top-up
+    - Upgrade to a higher tier
+  </Accordion>
+  <Accordion title="Hands-Free audio not playing">
+    - Check phone volume/silent mode
+    - Ensure "Read Aloud" is enabled
+    - Try with headphones
+    - Check Bluetooth connection if using wireless audio
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Create Your First Helper" href="/tutorials/create-your-first-helper" icon="wand-magic-sparkles">
+    Start tracking before using voice
+  </Card>
+  <Card title="Connect Telegram" href="/tutorials/connect-telegram" icon="paper-plane">
+    Voice messages via Telegram
+  </Card>
+  <Card title="Credits & Usage" href="/features/credits" icon="coins">
+    Understanding credit consumption
+  </Card>
+  <Card title="Pricing Plans" href="/pricing" icon="credit-card">
+    Compare voice credit allowances
+  </Card>
+</CardGroup>
+
+

@@ -1,0 +1,431 @@
+---
+title: "Automations & Webhooks"
+description: "Connect Peanuts to external tools and automate your workflows"
+icon: "bolt"
+---
+
+<Info>
+Webhook integrations are available on **Pro plan and higher**.
+</Info>
+
+## What Are Webhooks?
+
+Webhooks let Peanuts notify external services whenever you add, update, or delete an entry. This enables powerful automations like:
+
+- Adding expenses to a spreadsheet
+- Creating tasks in project management tools
+- Sending Slack notifications for new entries
+- Syncing data to your CRM or database
+
+---
+
+## Setting Up Webhooks
+
+<Steps>
+  <Step title="Open Your Helper">
+    Navigate to the helper you want to connect.
+  </Step>
+  <Step title="Go to Integrations">
+    Tap the **gear icon** → **Integrations** tab.
+  </Step>
+  <Step title="Add Webhook URL">
+    Paste your webhook endpoint URL (from Zapier, Make, n8n, or your custom server).
+  </Step>
+  <Step title="Enable & Save">
+    Toggle the webhook on and save. Peanuts will now send data to your endpoint.
+  </Step>
+</Steps>
+
+---
+
+## Webhook Payload
+
+When an entry is created, Peanuts sends a POST request with this structure:
+
+```json
+{
+  "event": "entry.created",
+  "timestamp": "2026-01-15T14:30:00Z",
+  "helper": {
+    "id": "abc123",
+    "name": "Expense Tracker",
+    "command": "/expenses"
+  },
+  "entry": {
+    "id": "entry_456",
+    "created_at": "2026-01-15T14:30:00Z",
+    "data": {
+      "amount": 45.50,
+      "category": "Food",
+      "description": "Team lunch",
+      "date": "2026-01-15"
+    }
+  },
+  "user": {
+    "id": "user_789"
+  }
+}
+```
+
+### Event Types
+
+| Event | Description |
+|-------|-------------|
+| `entry.created` | New entry added |
+| `entry.updated` | Existing entry modified |
+| `entry.deleted` | Entry removed |
+
+---
+
+## Signature Verification
+
+<Warning>
+Always verify webhook signatures in production to ensure requests come from Peanuts.
+</Warning>
+
+Peanuts signs every webhook request with HMAC-SHA256. The signature is in the `X-Peanuts-Signature` header.
+
+### How It Works
+
+1. Peanuts creates a signature using your webhook secret and the request body
+2. The signature is sent in the `X-Peanuts-Signature` header
+3. Your server recreates the signature and compares them
+4. If they match, the request is authentic
+
+### Finding Your Webhook Secret
+
+1. Go to your helper's **Integrations** settings
+2. Click **Show Secret** next to your webhook URL
+3. Copy the secret for use in your verification code
+
+---
+
+## Verification Examples
+
+<AccordionGroup>
+  <Accordion title="Node.js / Express">
+```javascript
+const crypto = require('crypto');
+
+function verifyWebhook(req, secret) {
+  const signature = req.headers['x-peanuts-signature'];
+  const payload = JSON.stringify(req.body);
+  
+  const expectedSignature = crypto
+    .createHmac('sha256', secret)
+    .update(payload)
+    .digest('hex');
+  
+  return crypto.timingSafeEqual(
+    Buffer.from(signature),
+    Buffer.from(expectedSignature)
+  );
+}
+
+// Express middleware
+app.post('/webhook', (req, res) => {
+  const secret = process.env.PEANUTS_WEBHOOK_SECRET;
+  
+  if (!verifyWebhook(req, secret)) {
+    return res.status(401).json({ error: 'Invalid signature' });
+  }
+  
+  // Process the webhook
+  const { event, entry, helper } = req.body;
+  console.log(`Received ${event} for ${helper.name}`);
+  
+  res.status(200).json({ received: true });
+});
+```
+  </Accordion>
+  <Accordion title="Python / Flask">
+```python
+import hmac
+import hashlib
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+def verify_webhook(payload, signature, secret):
+    expected = hmac.new(
+        secret.encode(),
+        payload,
+        hashlib.sha256
+    ).hexdigest()
+    return hmac.compare_digest(signature, expected)
+
+@app.route('/webhook', methods=['POST'])
+def webhook():
+    signature = request.headers.get('X-Peanuts-Signature')
+    secret = os.environ.get('PEANUTS_WEBHOOK_SECRET')
+    
+    if not verify_webhook(request.data, signature, secret):
+        return jsonify({'error': 'Invalid signature'}), 401
+    
+    data = request.json
+    print(f"Received {data['event']} for {data['helper']['name']}")
+    
+    return jsonify({'received': True}), 200
+```
+  </Accordion>
+  <Accordion title="PHP">
+```php
+<?php
+function verifyWebhook($payload, $signature, $secret) {
+    $expected = hash_hmac('sha256', $payload, $secret);
+    return hash_equals($expected, $signature);
+}
+
+$payload = file_get_contents('php://input');
+$signature = $_SERVER['HTTP_X_PEANUTS_SIGNATURE'] ?? '';
+$secret = getenv('PEANUTS_WEBHOOK_SECRET');
+
+if (!verifyWebhook($payload, $signature, $secret)) {
+    http_response_code(401);
+    echo json_encode(['error' => 'Invalid signature']);
+    exit;
+}
+
+$data = json_decode($payload, true);
+error_log("Received {$data['event']} for {$data['helper']['name']}");
+
+http_response_code(200);
+echo json_encode(['received' => true]);
+```
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Popular Integrations
+
+### Zapier
+
+Connect Peanuts to 5,000+ apps with no code.
+
+<Steps>
+  <Step title="Create a Zap">
+    Go to [zapier.com](https://zapier.com) and create a new Zap.
+  </Step>
+  <Step title="Choose Webhook Trigger">
+    Select **Webhooks by Zapier** → **Catch Hook** as your trigger.
+  </Step>
+  <Step title="Copy the Webhook URL">
+    Zapier provides a unique URL. Copy it.
+  </Step>
+  <Step title="Add to Peanuts">
+    Paste the URL in your helper's Integrations settings.
+  </Step>
+  <Step title="Test & Build">
+    Add a test entry in Peanuts, then continue building your Zap with the received data.
+  </Step>
+</Steps>
+
+**Example Zaps:**
+- Expense → Google Sheets row
+- Task completed → Slack message
+- Meeting logged → Calendar event
+
+---
+
+### Make (Integromat)
+
+Visual automation with advanced logic.
+
+<Steps>
+  <Step title="Create a Scenario">
+    Start a new scenario in [make.com](https://make.com).
+  </Step>
+  <Step title="Add Webhook Module">
+    Choose **Webhooks** → **Custom webhook** as the first module.
+  </Step>
+  <Step title="Get Webhook URL">
+    Click **Add** to create a new webhook and copy the URL.
+  </Step>
+  <Step title="Configure in Peanuts">
+    Add the URL to your helper's webhook settings.
+  </Step>
+  <Step title="Determine Structure">
+    Send a test entry, then click **Redetermine data structure** in Make.
+  </Step>
+</Steps>
+
+---
+
+### n8n
+
+Self-hosted workflow automation.
+
+<Steps>
+  <Step title="Add Webhook Node">
+    Create a new workflow with a **Webhook** trigger node.
+  </Step>
+  <Step title="Configure Path">
+    Set a custom path (e.g., `/peanuts-expenses`).
+  </Step>
+  <Step title="Get Production URL">
+    Switch to **Production** and copy the webhook URL.
+  </Step>
+  <Step title="Connect to Peanuts">
+    Add the URL in your helper's Integrations.
+  </Step>
+</Steps>
+
+<Tip>
+n8n can be connected directly to Lovable via MCP for enhanced agent capabilities. See [n8n Integration](/integrations/n8n) for details.
+</Tip>
+
+---
+
+### Google Sheets
+
+Log entries directly to a spreadsheet.
+
+**Via Zapier:**
+1. Trigger: Webhooks by Zapier (Catch Hook)
+2. Action: Google Sheets → Create Spreadsheet Row
+3. Map fields: `entry.data.amount` → Column A, etc.
+
+**Via Apps Script:**
+```javascript
+function doPost(e) {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  const data = JSON.parse(e.postData.contents);
+  
+  sheet.appendRow([
+    data.entry.created_at,
+    data.entry.data.amount,
+    data.entry.data.category,
+    data.entry.data.description
+  ]);
+  
+  return ContentService.createTextOutput('OK');
+}
+```
+
+---
+
+### Slack Notifications
+
+Get notified when entries are added.
+
+**Webhook Setup:**
+1. Create an [Incoming Webhook](https://api.slack.com/messaging/webhooks) in Slack
+2. Use Zapier/Make to forward Peanuts webhooks to Slack
+3. Format the message with entry details
+
+**Example Message Template (Zapier):**
+```
+📝 New expense logged!
+Amount: ${{entry.data.amount}}
+Category: {{entry.data.category}}
+Description: {{entry.data.description}}
+```
+
+---
+
+## Webhook History
+
+Track delivery status for all webhook calls.
+
+1. Go to helper **Settings** → **Integrations**
+2. Click **View History**
+3. See delivery status, response codes, and retry attempts
+
+| Status | Meaning |
+|--------|---------|
+| ✅ Delivered | Successfully received (2xx response) |
+| ⏳ Pending | Awaiting delivery or retry |
+| ❌ Failed | All retry attempts exhausted |
+
+### Retry Policy
+
+Failed webhooks are retried automatically:
+- **3 attempts** with exponential backoff
+- Retries at 1 minute, 5 minutes, 30 minutes
+- After 3 failures, webhook is marked as failed
+
+---
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Security" icon="shield">
+    - Always verify signatures
+    - Use HTTPS endpoints only
+    - Store secrets in environment variables
+    - Rotate secrets periodically
+  </Card>
+  <Card title="Reliability" icon="server">
+    - Return 200 quickly, process async
+    - Implement idempotency (handle duplicates)
+    - Log webhook payloads for debugging
+    - Monitor for failures
+  </Card>
+</CardGroup>
+
+### Quick Response Pattern
+
+```javascript
+// Respond immediately, process later
+app.post('/webhook', async (req, res) => {
+  // Verify signature first
+  if (!verifyWebhook(req, secret)) {
+    return res.status(401).send();
+  }
+  
+  // Queue for processing
+  await queue.add('process-webhook', req.body);
+  
+  // Respond quickly
+  res.status(200).json({ queued: true });
+});
+```
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Webhooks not firing">
+    1. Verify the webhook is enabled in settings
+    2. Check the URL is correct and accessible
+    3. Ensure your endpoint returns 2xx status
+    4. Check webhook history for error details
+  </Accordion>
+  <Accordion title="Signature verification failing">
+    1. Ensure you're using the raw request body, not parsed JSON
+    2. Check the secret matches exactly (no extra whitespace)
+    3. Verify you're using SHA256, not SHA1
+    4. Use timing-safe comparison functions
+  </Accordion>
+  <Accordion title="Missing data in payload">
+    1. Check the entry has data in the expected fields
+    2. Field IDs in payload match your helper's field configuration
+    3. Some fields may be null if not filled
+  </Accordion>
+  <Accordion title="Duplicate webhooks received">
+    1. Implement idempotency using `entry.id`
+    2. Store processed entry IDs temporarily
+    3. Skip if already processed
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Telegram Integration" href="/tutorials/connect-telegram" icon="paper-plane">
+    Add entries via Telegram bot
+  </Card>
+  <Card title="Voice Features" href="/tutorials/voice-features" icon="microphone">
+    Hands-free data entry
+  </Card>
+  <Card title="Fields Reference" href="/features/fields" icon="input-text">
+    Understanding field types
+  </Card>
+  <Card title="API Reference" href="/api" icon="code">
+    Direct API access (coming soon)
+  </Card>
+</CardGroup>
