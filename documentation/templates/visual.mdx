@@ -1,0 +1,386 @@
+---
+title: "Visualizer Template"
+description: "Image-based collections with AI-powered virtual try-on and preview"
+icon: "wand-magic-sparkles"
+---
+
+The **Visualizer Template** is designed for image-centric collections with AI-powered try-on capabilities. Unlike other templates focused on data, visualizers let you see items on yourself or in context—perfect for wardrobes, home décor, makeup, or any "what would this look like?" scenario.
+
+<CardGroup cols={2}>
+  <Card title="Perfect For" icon="bullseye">
+    - Virtual wardrobes
+    - Makeup try-on
+    - Furniture placement
+    - Car color previews
+    - Hairstyle visualization
+    - Home paint colors
+  </Card>
+  <Card title="Key Features" icon="sparkles">
+    - AI-powered try-on
+    - Image catalog management
+    - Base photo system
+    - Result saving & sharing
+    - Try-on history gallery
+    - Category filtering
+  </Card>
+</CardGroup>
+
+---
+
+## Quick Start
+
+<Steps>
+  <Step title="Describe your visualizer">
+    Tell Peanuts what you want to preview:
+    - "Virtual wardrobe for trying on clothes"
+    - "Hair color visualizer"
+    - "Living room furniture preview"
+  </Step>
+  <Step title="Add your base photo">
+    Upload a photo of yourself or your space—this is what items will be applied to.
+  </Step>
+  <Step title="Build your catalog">
+    Add items (clothes, colors, furniture) you want to try on.
+  </Step>
+  <Step title="Try on & save">
+    Select items to see AI-generated previews. Save the ones you love.
+  </Step>
+</Steps>
+
+---
+
+## Interface Overview
+
+<AccordionGroup>
+  <Accordion title="Base Photo Section" icon="image">
+    Your subject photo:
+    - **Current base** — The photo items will be applied to
+    - **Change photo** — Upload a new base image
+    - **Photo requirements** — Clear, well-lit, appropriate framing
+  </Accordion>
+  
+  <Accordion title="Catalog Grid" icon="grid-2">
+    Your collection of items:
+    - **Item cards** — Thumbnail with name
+    - **Category tabs** — Filter by type
+    - **Search** — Find specific items
+    - **List view** — Toggle for detailed view
+  </Accordion>
+  
+  <Accordion title="Try-On Result" icon="wand-magic-sparkles">
+    AI-generated preview:
+    - **Result image** — Item applied to your base photo
+    - **Save result** — Keep to your history
+    - **Download** — Save to device
+    - **Share** — Send via Web Share API
+    - **Try again** — Generate new variation
+  </Accordion>
+  
+  <Accordion title="Try-On History" icon="clock-rotate-left">
+    Your saved results:
+    - **Result gallery** — Grid of past try-ons
+    - **Metadata** — Which item, when created
+    - **Re-try** — Use same item again
+    - **Delete** — Remove unwanted results
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## How Try-On Works
+
+### The Process
+
+<Steps>
+  <Step title="Upload base photo">
+    Provide a clear photo of yourself or your space. This becomes the canvas for try-ons.
+  </Step>
+  <Step title="Select catalog item">
+    Tap an item from your catalog that you want to visualize.
+  </Step>
+  <Step title="AI generates preview">
+    Gemini Vision composites the item onto your base photo, creating a realistic preview.
+  </Step>
+  <Step title="Review & save">
+    View the result. Save it, download it, or try again for a different variation.
+  </Step>
+</Steps>
+
+### Behind the Scenes
+
+| Component | Technology |
+|-----------|------------|
+| **Image analysis** | Gemini Vision AI |
+| **Compositing** | AI-powered blending |
+| **Storage** | Secure cloud storage |
+| **Sharing** | Signed URLs (7-day expiry) |
+
+<Note>
+Try-on results are saved to your account and accessible for 7 days via shareable links. Download results you want to keep permanently.
+</Note>
+
+---
+
+## Catalog Management
+
+### Adding Items
+
+Each catalog item includes:
+
+| Field | Purpose |
+|-------|---------|
+| **Name** | Item identifier |
+| **Image** | Photo of the item |
+| **Category** | For filtering (optional) |
+| **Notes** | Additional details |
+
+### Organization
+
+<AccordionGroup>
+  <Accordion title="Categories" icon="folder">
+    Group items for easy filtering:
+    - Wardrobe: Tops, Bottoms, Dresses, Shoes
+    - Makeup: Lipstick, Eyeshadow, Foundation
+    - Furniture: Sofas, Tables, Chairs, Decor
+  </Accordion>
+  
+  <Accordion title="Search" icon="magnifying-glass">
+    Quickly find items:
+    - Search by name
+    - Filter by category
+    - Sort by date added
+  </Accordion>
+  
+  <Accordion title="Views" icon="grip">
+    Toggle between:
+    - **Grid view** — Thumbnail gallery
+    - **List view** — Detailed item cards
+  </Accordion>
+</AccordionGroup>
+
+### Item Details
+
+Tap any catalog item to see:
+- Full-size image
+- Item metadata
+- Try-on button
+- Edit/delete options
+
+---
+
+## Base Photo Guidelines
+
+### For Best Results
+
+<CardGroup cols={2}>
+  <Card title="Do" icon="check">
+    - Use good lighting
+    - Face camera directly
+    - Wear fitted clothing
+    - Use neutral background
+    - High resolution photos
+  </Card>
+  <Card title="Avoid" icon="xmark">
+    - Dark or shadowy photos
+    - Busy backgrounds
+    - Extreme angles
+    - Low resolution images
+    - Motion blur
+  </Card>
+</CardGroup>
+
+### By Visualizer Type
+
+| Type | Base Photo Tips |
+|------|-----------------|
+| **Wardrobe** | Full body, front-facing, arms slightly away |
+| **Makeup** | Close-up face, good lighting, no glasses |
+| **Hair** | Face visible, current hair showing |
+| **Furniture** | Room photo, clear floor/wall space |
+| **Car colors** | Side view, good lighting, clean background |
+
+---
+
+## Visualizer vs. Other Templates
+
+| Feature | Visualizer | Tracker | List |
+|---------|------------|---------|------|
+| Image-focused | ✅ Primary | ❌ Optional | ❌ Optional |
+| AI try-on | ✅ Built-in | ❌ No | ❌ No |
+| Catalog grid | ✅ Yes | ❌ No | ❌ No |
+| Base photo | ✅ Required | ❌ No | ❌ No |
+| Result saving | ✅ Yes | ❌ No | ❌ No |
+| Best for | Visual preview | Data logging | Task management |
+
+---
+
+## Try-On History
+
+### Saved Results
+
+Every try-on you save includes:
+- Generated result image
+- Base photo used
+- Catalog item applied
+- Timestamp
+- Sharing link
+
+### Gallery Features
+
+| Action | Description |
+|--------|-------------|
+| **View** | Full-screen result |
+| **Download** | Save to device |
+| **Share** | Generate shareable link |
+| **Try again** | New variation with same item |
+| **Delete** | Remove from history |
+
+<Info>
+Shareable links expire after 7 days. Download any results you want to keep permanently.
+</Info>
+
+---
+
+## Pre-Configured Visualizers
+
+Peanuts includes 30+ pre-configured visualizer templates:
+
+<CardGroup cols={2}>
+  <Card title="Fashion" icon="shirt">
+    - Virtual Wardrobe
+    - Outfit Planner
+    - Shoe Collection
+    - Accessory Try-On
+  </Card>
+  <Card title="Beauty" icon="face-smile">
+    - Makeup Visualizer
+    - Hair Color Preview
+    - Nail Art Gallery
+    - Skincare Tracker
+  </Card>
+  <Card title="Home" icon="house">
+    - Furniture Placement
+    - Paint Color Preview
+    - Decor Visualizer
+    - Garden Planner
+  </Card>
+  <Card title="Automotive" icon="car">
+    - Car Color Preview
+    - Wheel Visualizer
+    - Wrap Designer
+    - Interior Preview
+  </Card>
+</CardGroup>
+
+---
+
+## Configuration
+
+### In Edit Mode
+
+Access via the **Edit** button to:
+
+| Setting | Options |
+|---------|---------|
+| **Categories** | Define item groupings |
+| **Item fields** | Add notes, links, prices |
+| **Base photo label** | Customize the upload prompt |
+| **Theme** | Colors and icon |
+
+### Credit Settings
+
+Try-on uses separate monthly allocation:
+
+| Tier | Try-On Uses/Month |
+|------|-------------------|
+| Free | 5 |
+| Starter | 20 |
+| Pro | 100 |
+
+---
+
+## Tips & Best Practices
+
+<AccordionGroup>
+  <Accordion title="Use consistent base photos" icon="image">
+    For fair comparisons, use the same base photo when trying multiple items. Different lighting or angles make comparison harder.
+  </Accordion>
+  
+  <Accordion title="Organize by category" icon="folder-tree">
+    As your catalog grows, categories keep things manageable. Set up categories before adding lots of items.
+  </Accordion>
+  
+  <Accordion title="Save favorites immediately" icon="heart">
+    Like a result? Save it right away. You can always delete later, but regenerating the exact same result isn't guaranteed.
+  </Accordion>
+  
+  <Accordion title="Download for permanence" icon="download">
+    Sharing links expire. Download results you want to keep forever or reference later.
+  </Accordion>
+  
+  <Accordion title="Try multiple times" icon="rotate">
+    AI generation has variability. If the first result isn't perfect, try again—you might get a better composite.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Example: Virtual Wardrobe
+
+A clothing try-on collection:
+
+**Setup:**
+- Name: "My Wardrobe"
+- Icon: 👗 Dress
+- Theme: Fashion pink
+
+**Categories:**
+- Tops
+- Bottoms
+- Dresses
+- Outerwear
+- Accessories
+
+**Usage:**
+1. Upload a full-body base photo
+2. Add clothing items to catalog (photos from shopping or closet)
+3. Tap item to see it on you
+4. Save results you love
+5. Build a visual wishlist or outfit planner
+
+---
+
+## Credit Usage
+
+| Action | Credits |
+|--------|---------|
+| Creating visualizer | 1 credit (AI generation) |
+| Adding catalog items | Free |
+| Try-on generation | Uses monthly try-on allocation |
+| Saving results | Free |
+| Downloading | Free |
+| Sharing | Free |
+
+<Note>
+Try-on uses a separate monthly counter from regular credits. Check your usage in Settings → Credits.
+</Note>
+
+---
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Smart Scan" href="/features/smart-scan" icon="camera">
+    Quickly add items via photo
+  </Card>
+  <Card title="Image Fields" href="/features/fields#image" icon="image">
+    Working with photos in any template
+  </Card>
+  <Card title="Credits" href="/concepts/credits" icon="coins">
+    Understanding usage limits
+  </Card>
+  <Card title="Storage" href="/features/storage" icon="hard-drive">
+    How images are stored
+  </Card>
+</CardGroup>
+

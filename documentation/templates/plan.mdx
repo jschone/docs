@@ -1,0 +1,340 @@
+---
+title: "Plan Template"
+description: "Categorized milestones and project phases with progress tracking"
+icon: "diagram-project"
+---
+
+The **Plan Template** organizes work into categorized phases and milestones. Unlike simple lists, plans provide structure for multi-stage projects—perfect for goal planning, project management, or any work that progresses through defined stages.
+
+<CardGroup cols={2}>
+  <Card title="Perfect For" icon="bullseye">
+    - Project roadmaps
+    - Goal planning
+    - Course curricula
+    - Product launches
+    - Life milestones
+    - Learning paths
+  </Card>
+  <Card title="Key Features" icon="sparkles">
+    - Phase/category grouping
+    - Milestone tracking
+    - Progress visualization
+    - Sequential organization
+    - Completion tracking
+    - Target dates
+  </Card>
+</CardGroup>
+
+---
+
+## Quick Start
+
+<Steps>
+  <Step title="Describe your plan">
+    Tell Peanuts what you're planning:
+    - "Home renovation project plan"
+    - "Career development roadmap"
+    - "Product launch checklist"
+  </Step>
+  <Step title="Define phases">
+    Peanuts suggests logical phases based on your description. Customize categories to match your workflow.
+  </Step>
+  <Step title="Add milestones">
+    Populate each phase with specific milestones. Track progress as you complete them.
+  </Step>
+</Steps>
+
+---
+
+## Interface Overview
+
+<AccordionGroup>
+  <Accordion title="Phase Sections" icon="layer-group">
+    Milestones grouped by category/phase:
+    - **Phase header** — Category name with count
+    - **Progress bar** — Completion within phase
+    - **Expandable** — Show/hide phase contents
+  </Accordion>
+  
+  <Accordion title="Milestone Cards" icon="flag">
+    Each milestone displays:
+    - **Title** — What needs to be done
+    - **Status** — Not started, In progress, Complete
+    - **Target date** — When it should be done
+    - **Details** — Notes, dependencies, resources
+  </Accordion>
+  
+  <Accordion title="Overall Progress" icon="chart-pie">
+    Top-level summary:
+    - **Total completion** — Percentage across all phases
+    - **Milestones count** — X of Y complete
+    - **Current phase** — Which phase you're in
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Plan vs. Other Templates
+
+<Tip>
+**Plan** = Structured phases, milestone tracking, project overview  
+**List** = Flat tasks, no categories, simple completion  
+**Schedule** = Date-focused, calendar view, time slots
+</Tip>
+
+| Feature | Plan | List | Schedule |
+|---------|------|------|----------|
+| Categories/phases | ✅ Built-in | ❌ Optional field | ❌ No |
+| Progress by phase | ✅ Yes | ❌ No | ❌ No |
+| Target dates | ✅ Per milestone | ❌ Optional | ✅ Primary |
+| Sequential flow | ✅ Implied | ❌ No | ❌ No |
+| Best for | Projects | Tasks | Events |
+
+---
+
+## Phases & Categories
+
+### Default Phase Structure
+
+When you describe a project, Peanuts suggests appropriate phases:
+
+<CardGroup cols={2}>
+  <Card title="Project Launch" icon="rocket">
+    - Planning
+    - Development
+    - Testing
+    - Launch
+    - Post-launch
+  </Card>
+  <Card title="Home Renovation" icon="house">
+    - Design
+    - Permits
+    - Demolition
+    - Construction
+    - Finishing
+  </Card>
+  <Card title="Career Goal" icon="briefcase">
+    - Research
+    - Skill building
+    - Networking
+    - Applications
+    - Interviews
+  </Card>
+  <Card title="Learning Path" icon="graduation-cap">
+    - Fundamentals
+    - Intermediate
+    - Advanced
+    - Projects
+    - Mastery
+  </Card>
+</CardGroup>
+
+### Custom Phases
+
+Create your own phase structure in Edit mode:
+1. Add a **Category** select field
+2. Define your phase options
+3. Milestones automatically group by selection
+
+---
+
+## Milestone Fields
+
+### Core Fields
+
+| Field | Purpose |
+|-------|---------|
+| **Title** | What needs to be accomplished |
+| **Phase/Category** | Which stage it belongs to |
+| **Status** | Not started, In progress, Complete |
+
+### Optional Fields
+
+| Field | Purpose |
+|-------|---------|
+| **Target date** | When it should be done |
+| **Priority** | Importance level |
+| **Owner** | Who's responsible |
+| **Notes** | Additional context |
+| **Dependencies** | What must come first |
+| **Resources** | Links, documents, tools |
+
+---
+
+## Progress Tracking
+
+### Phase Progress
+
+Each phase shows:
+- **Count** — "3 of 5 complete"
+- **Bar** — Visual percentage
+- **Status** — Not started, In progress, Complete
+
+<Info>
+A phase is "Complete" when all its milestones are marked done. "In progress" when at least one milestone is started.
+</Info>
+
+### Overall Progress
+
+The plan header displays:
+- **Total percentage** — All milestones across all phases
+- **Current focus** — The phase with active work
+- **Completion estimate** — Based on target dates
+
+### Milestone Status Flow
+
+Not Started → In Progress → Complete
+
+| Status | Meaning |
+|--------|---------|
+| **Not started** | Work hasn't begun |
+| **In progress** | Actively working |
+| **Complete** | Finished and verified |
+
+---
+
+## Input Methods
+
+### Web App
+
+<AccordionGroup>
+  <Accordion title="Add to Phase" icon="plus">
+    Click **Add** within a phase to create a milestone pre-assigned to that category.
+  </Accordion>
+  
+  <Accordion title="Quick Add" icon="bolt">
+    Use the global add button for milestones—select the phase during creation.
+  </Accordion>
+  
+  <Accordion title="Drag & Drop" icon="arrows-up-down">
+    Reorder milestones within phases or move between phases.
+  </Accordion>
+</AccordionGroup>
+
+### Voice Entry
+
+<Note>
+Voice features require Starter plan or higher and consume credits.
+</Note>
+
+Natural language planning:
+- "Add milestone: finalize design, phase planning"
+- "New task for development: set up database"
+- "Mark user testing complete"
+
+### Telegram
+
+Send milestones via chat:
+- "plan: Research competitors, phase: Planning"
+- "add milestone: Submit proposal, due Friday"
+
+---
+
+## Configuration
+
+### In Edit Mode
+
+Access via the **Edit** button to:
+
+| Setting | Options |
+|---------|---------|
+| **Define phases** | Add/edit category options |
+| **Milestone fields** | Add target date, priority, etc. |
+| **Status options** | Customize status labels |
+| **Theme** | Colors and icon |
+
+### Widgets for Plans
+
+| Widget | Purpose |
+|--------|---------|
+| **Progress** | Overall plan completion |
+| **Counter** | Total milestones or by phase |
+| **Chart** | Milestones by status or phase |
+
+---
+
+## Tips & Best Practices
+
+<AccordionGroup>
+  <Accordion title="Keep phases to 3-7" icon="layer-group">
+    Too few phases lack structure; too many create overhead. Aim for distinct, meaningful stages.
+  </Accordion>
+  
+  <Accordion title="Make milestones specific" icon="crosshairs">
+    "Launch website" is better than "Finish project." Specific milestones are easier to verify as complete.
+  </Accordion>
+  
+  <Accordion title="Set realistic dates" icon="calendar">
+    Target dates keep plans accountable. Overdue milestones surface what needs attention.
+  </Accordion>
+  
+  <Accordion title="Review regularly" icon="rotate">
+    Plans evolve. Review weekly to update priorities, adjust dates, and celebrate progress.
+  </Accordion>
+  
+  <Accordion title="Start with phase one" icon="play">
+    Don't try to detail every phase upfront. Focus on the current phase; future phases can stay high-level.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Example: Product Launch Plan
+
+A startup product launch:
+
+**Setup:**
+- Name: "App Launch Plan"
+- Icon: 🚀 Rocket
+- Theme: Professional purple
+
+**Phases:**
+1. **Planning** — Research, scope, timeline
+2. **Development** — Build core features
+3. **Testing** — QA, beta users
+4. **Launch** — Go-live activities
+5. **Growth** — Post-launch optimization
+
+**Sample Milestones:**
+
+| Phase | Milestone | Target Date |
+|-------|-----------|-------------|
+| Planning | Define MVP features | Jan 15 |
+| Planning | Create wireframes | Jan 22 |
+| Development | Backend API complete | Feb 15 |
+| Development | Frontend UI complete | Mar 1 |
+| Testing | Internal QA pass | Mar 10 |
+| Testing | Beta user feedback | Mar 20 |
+| Launch | Marketing assets ready | Mar 25 |
+| Launch | Go live | Apr 1 |
+
+---
+
+## Credit Usage
+
+| Action | Credits |
+|--------|---------|
+| Creating plan | 1 credit (AI generation) |
+| Adding milestones | Free |
+| Updating status | Free |
+| Voice entry | 10 credits (speech-to-text) |
+| Editing | Free |
+
+---
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="List Template" href="/templates/list" icon="list">
+    For flat task lists without phases
+  </Card>
+  <Card title="Schedule Template" href="/templates/schedule" icon="calendar-days">
+    For date-focused event planning
+  </Card>
+  <Card title="Widgets" href="/features/widgets" icon="puzzle-piece">
+    Add progress visualization
+  </Card>
+  <Card title="Voice Features" href="/features/voice" icon="microphone">
+    Add milestones hands-free
+  </Card>
+</CardGroup>

@@ -1,0 +1,314 @@
+---
+title: "Schedule Template"
+description: "Date-based events and time-slot organization with calendar integration"
+icon: "calendar-days"
+---
+
+The **Schedule Template** organizes events and appointments by date and time. Unlike lists or trackers, schedules are built around a calendar view—perfect for managing appointments, planning events, or organizing time-blocked activities.
+
+<CardGroup cols={2}>
+  <Card title="Perfect For" icon="bullseye">
+    - Appointment booking
+    - Event planning
+    - Class schedules
+    - Meeting management
+    - Shift planning
+    - Content calendars
+  </Card>
+  <Card title="Key Features" icon="sparkles">
+    - Date-based organization
+    - Time slot management
+    - Calendar view
+    - ICS export
+    - Upcoming/past views
+    - Recurring events
+  </Card>
+</CardGroup>
+
+---
+
+## Quick Start
+
+<Steps>
+  <Step title="Describe your schedule">
+    Tell Peanuts what you're organizing:
+    - "Appointment scheduler"
+    - "Weekly class schedule"
+    - "Content publishing calendar"
+  </Step>
+  <Step title="Define event fields">
+    Peanuts suggests relevant fields. Common ones include date, time, duration, location, and notes.
+  </Step>
+  <Step title="Add your events">
+    Create entries with dates. View them organized chronologically with upcoming events highlighted.
+  </Step>
+</Steps>
+
+---
+
+## Interface Overview
+
+<AccordionGroup>
+  <Accordion title="Timeline View" icon="timeline">
+    Events displayed chronologically:
+    - **Upcoming section** — Future events, nearest first
+    - **Today** — Highlighted current-day events
+    - **Past events** — Completed/elapsed entries
+  </Accordion>
+  
+  <Accordion title="Event Cards" icon="calendar-check">
+    Each event displays:
+    - **Date & time** — When the event occurs
+    - **Title** — Event name
+    - **Details** — Location, notes, attendees
+    - **Calendar export** — One-tap ICS download
+  </Accordion>
+  
+  <Accordion title="Quick Add" icon="plus">
+    Fast event creation:
+    - **Add button** — Full event form
+    - **Date picker** — Select date first, then details
+    - **Voice entry** — "Meeting tomorrow at 2pm"
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Date & Time Fields
+
+### Required Fields
+
+Every schedule needs at minimum:
+
+| Field | Purpose |
+|-------|---------|
+| **Event name** | What's happening |
+| **Date** | When it occurs |
+
+### Optional Time Fields
+
+| Field | Purpose |
+|-------|---------|
+| **Start time** | When event begins |
+| **End time** | When event ends |
+| **Duration** | Length of event |
+| **All-day** | Checkbox for full-day events |
+
+<Tip>
+For simple date-only schedules (birthdays, deadlines), skip time fields entirely. For appointments, include start and end times.
+</Tip>
+
+---
+
+## Calendar Export
+
+### Add to Calendar
+
+Every event with a date includes an **Add to Calendar** button that:
+1. Generates a standard .ics file
+2. Downloads instantly
+3. Opens in your default calendar app
+4. Creates the event with all details
+
+<Info>
+ICS export works with all major calendar apps: Google Calendar, Apple Calendar, Outlook, and more. No OAuth or account linking required.
+</Info>
+
+### Exported Data
+
+The .ics file includes:
+- Event title
+- Start date/time
+- End date/time (if specified)
+- Location (if specified)
+- Description/notes
+
+---
+
+## Schedule vs. Other Templates
+
+| Feature | Schedule | List | Tracker |
+|---------|----------|------|---------|
+| Date-focused | ✅ Primary | ❌ Optional | ❌ Auto timestamp |
+| Chronological view | ✅ Built-in | ❌ Manual | ✅ By entry date |
+| Calendar export | ✅ ICS | ❌ No | ❌ No |
+| Recurring entries | ✅ Supported | ❌ No | ✅ Implied |
+| Time slots | ✅ Yes | ❌ No | ❌ No |
+| Best for | Events | Tasks | Data logging |
+
+---
+
+## Views & Organization
+
+### Chronological Grouping
+
+Events automatically group by:
+- **Today** — Current day's events
+- **Tomorrow** — Next day
+- **This Week** — Upcoming 7 days
+- **Later** — Beyond this week
+- **Past** — Completed events
+
+### Filtering
+
+| Filter | Shows |
+|--------|-------|
+| **Upcoming** | Future events only |
+| **All** | Past and future |
+| **This week** | Next 7 days |
+| **This month** | Current month |
+
+---
+
+## Input Methods
+
+### Web App
+
+<AccordionGroup>
+  <Accordion title="Full Form" icon="file-lines">
+    Click **Add** for complete event creation with all fields.
+  </Accordion>
+  
+  <Accordion title="Quick Add" icon="bolt">
+    Tap a date to pre-fill the date field and open a streamlined form.
+  </Accordion>
+  
+  <Accordion title="Duplicate" icon="copy">
+    Long-press an event to duplicate it to another date.
+  </Accordion>
+</AccordionGroup>
+
+### Voice Entry
+
+<Note>
+Voice features require Starter plan or higher and consume credits.
+</Note>
+
+Natural language scheduling:
+- "Meeting with John tomorrow at 3pm"
+- "Dentist appointment next Tuesday morning"
+- "Team standup every Monday at 9"
+
+### Telegram
+
+Send events via chat:
+- "schedule: Doctor visit, March 15, 10am"
+- "add event: Team dinner, Friday 7pm"
+
+---
+
+## Configuration
+
+### In Edit Mode
+
+Access via the **Edit** button to:
+
+| Setting | Options |
+|---------|---------|
+| **Add fields** | Location, attendees, notes, etc. |
+| **Set defaults** | Default duration, location |
+| **Required fields** | Which info is mandatory |
+| **Theme** | Colors and icon |
+
+### Common Field Configurations
+
+**Appointment Scheduler:**
+
+Title (text, required)
+Date (date, required)
+Time (time, required)
+Duration (select: 15min, 30min, 1hr)
+Location (text)
+Notes (textarea)
+
+**Class Schedule:**
+Class name (text, required)
+Day (select: Monday-Friday)
+Time (time, required)
+Room (text)
+Instructor (text)
+
+**Content Calendar:**
+Content title (text, required)
+Publish date (date, required)
+Platform (select: Blog, Twitter, Instagram)
+Status (select: Draft, Ready, Published)
+Notes (textarea)
+
+---
+
+## Tips & Best Practices
+
+<AccordionGroup>
+  <Accordion title="Use consistent time blocks" icon="clock">
+    If you typically schedule 30-minute or 1-hour slots, set a default duration to speed up entry.
+  </Accordion>
+  
+  <Accordion title="Add location fields" icon="map-pin">
+    Even for virtual events, a location field (e.g., "Zoom", "Conference Room A") helps with context.
+  </Accordion>
+  
+  <Accordion title="Export to calendar immediately" icon="calendar-plus">
+    After creating important events, tap "Add to Calendar" right away so they appear in your main calendar.
+  </Accordion>
+  
+  <Accordion title="Review weekly" icon="magnifying-glass">
+    Check your schedule helper weekly to ensure nothing's been missed or needs updating.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Example: Appointment Scheduler
+
+A personal appointment tracker:
+
+**Setup:**
+- Name: "My Appointments"
+- Icon: 📅 Calendar
+- Theme: Professional blue
+
+**Fields:**
+1. **Appointment** (text, required)
+2. **Date** (date, required)
+3. **Time** (time, required)
+4. **Location** (text)
+5. **Notes** (textarea)
+6. **Reminder set** (checkbox)
+
+**Usage:**
+1. Add appointments as they're scheduled
+2. View upcoming in chronological order
+3. Tap "Add to Calendar" for phone reminders
+4. Check off or delete after attending
+
+---
+
+## Credit Usage
+
+| Action | Credits |
+|--------|---------|
+| Creating schedule | 1 credit (AI generation) |
+| Adding events | Free |
+| Editing events | Free |
+| Calendar export | Free |
+| Voice entry | 10 credits (speech-to-text) |
+
+---
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Plan Template" href="/templates/plan" icon="diagram-project">
+    For project milestones with categories
+  </Card>
+  <Card title="List Template" href="/templates/list" icon="list">
+    For tasks without dates
+  </Card>
+  <Card title="Voice Features" href="/features/voice" icon="microphone">
+    Schedule events by voice
+  </Card>
+  <Card title="Telegram Integration" href="/integrations/telegram" icon="paper-plane">
+    Add events via chat
+  </Card>
+</CardGroup>

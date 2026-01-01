@@ -1,0 +1,366 @@
+---
+title: "Form Template"
+description: "Structured one-time data capture with validation and confirmation"
+icon: "file-lines"
+---
+
+The **Form Template** is optimized for structured one-time data capture. Unlike trackers or lists, forms focus on collecting complete submissions with validation—perfect for intake forms, surveys, registrations, or any structured data collection.
+
+<CardGroup cols={2}>
+  <Card title="Perfect For" icon="bullseye">
+    - Contact forms
+    - Registration submissions
+    - Intake questionnaires
+    - Survey responses
+    - Order requests
+    - Feedback collection
+  </Card>
+  <Card title="Key Features" icon="sparkles">
+    - Field validation
+    - Required field enforcement
+    - Submission confirmation
+    - Structured data capture
+    - Multiple field types
+    - Export-ready entries
+  </Card>
+</CardGroup>
+
+---
+
+## Quick Start
+
+<Steps>
+  <Step title="Describe your form">
+    Tell Peanuts what data you're collecting:
+    - "Customer intake form"
+    - "Event registration"
+    - "Product feedback survey"
+  </Step>
+  <Step title="Configure fields">
+    Peanuts suggests relevant fields. Mark required fields and set validation rules.
+  </Step>
+  <Step title="Start collecting">
+    Share or use the form. Each submission creates a complete entry in your helper.
+  </Step>
+</Steps>
+
+---
+
+## Interface Overview
+
+<AccordionGroup>
+  <Accordion title="Form View" icon="rectangle-list">
+    The primary input interface:
+    - **Field labels** — Clear descriptions
+    - **Input areas** — Appropriate controls per type
+    - **Required indicators** — Asterisks on mandatory fields
+    - **Validation messages** — Inline error feedback
+  </Accordion>
+  
+  <Accordion title="Submission List" icon="list">
+    View past submissions:
+    - **Entry cards** — Summary of each submission
+    - **Timestamps** — When submitted
+    - **Full details** — Tap to view complete data
+  </Accordion>
+  
+  <Accordion title="Confirmation" icon="circle-check">
+    After submission:
+    - **Success message** — Confirmation toast
+    - **Clear form** — Ready for next entry
+    - **View entry** — Option to see submitted data
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Form vs. Other Templates
+
+<Tip>
+**Form** = One-time submissions, validation focus, structured capture  
+**Tracker** = Recurring entries, trends over time, statistics  
+**List** = Task management, completion tracking, persistence
+</Tip>
+
+| Feature | Form | Tracker | List |
+|---------|------|---------|------|
+| Primary purpose | Data capture | Data logging | Task management |
+| Entry frequency | One-time | Recurring | As needed |
+| Validation focus | ✅ High | ⚡ Medium | ⚡ Medium |
+| Statistics | ❌ Optional | ✅ Built-in | ❌ Optional |
+| Completion tracking | ❌ No | ❌ No | ✅ Yes |
+| Best for | Intake, surveys | Daily logs | To-dos |
+
+---
+
+## Field Types
+
+Forms support all standard field types:
+
+### Text Fields
+
+| Type | Use Case |
+|------|----------|
+| **Text** | Short answers, names, titles |
+| **Textarea** | Long responses, comments, descriptions |
+| **Email** | Email addresses with format validation |
+| **Phone** | Phone numbers |
+| **URL** | Website links |
+
+### Selection Fields
+
+| Type | Use Case |
+|------|----------|
+| **Select** | Single choice from options |
+| **Radio** | Single choice, visible options |
+| **Checkbox** | Yes/no, agreements, flags |
+| **Multi-select** | Multiple choices |
+
+### Data Fields
+
+| Type | Use Case |
+|------|----------|
+| **Number** | Quantities, ratings, scores |
+| **Date** | Dates, birthdays, deadlines |
+| **Time** | Appointment times |
+| **Image** | Photo uploads, attachments |
+
+---
+
+## Validation Rules
+
+### Required Fields
+
+Mark fields as required to enforce completion:
+
+Name (text, required) ← Must be filled
+Email (text, required) ← Cannot submit without
+Comments (textarea) ← Optional
+
+<Info>
+Required fields show an asterisk (*) and trigger validation errors if empty on submission.
+</Info>
+
+### Field Validation
+
+| Validation | Applies To | Behavior |
+|------------|------------|----------|
+| **Required** | All types | Cannot be empty |
+| **Min/Max length** | Text, Textarea | Character limits |
+| **Min/Max value** | Number | Numeric bounds |
+| **Format** | Email, URL | Pattern matching |
+
+### Held State
+
+When required fields are missing:
+
+1. Form submission is blocked
+2. Inline error messages appear below invalid fields
+3. Toast notification explains what's missing
+4. State shows as **⏸ Held** until resolved
+
+<Note>
+The "Held" state is a supportive pause, not an error. It ensures complete, quality data collection.
+</Note>
+
+---
+
+## Input Methods
+
+### Web App
+
+<AccordionGroup>
+  <Accordion title="Full Form" icon="file-lines">
+    Complete form with all fields displayed. Tab through fields or tap to select.
+  </Accordion>
+  
+  <Accordion title="Step-by-Step" icon="list-ol">
+    For longer forms, fields can present one at a time for focused input.
+  </Accordion>
+  
+  <Accordion title="Quick Drawer" icon="arrow-up-from-bracket">
+    Mobile slide-up form with streamlined field layout.
+  </Accordion>
+</AccordionGroup>
+
+### Voice Entry
+
+<Note>
+Voice features require Starter plan or higher and consume credits.
+</Note>
+
+Speak form submissions naturally:
+- "New registration: John Smith, email john@example.com"
+- "Feedback from customer: Great service, rating 5 stars"
+
+### Telegram
+
+Submit via chat:
+- Send structured data matching your form fields
+- Peanuts parses and creates entries
+
+---
+
+## Configuration
+
+### In Edit Mode
+
+Access via the **Edit** button to:
+
+| Setting | Options |
+|---------|---------|
+| **Add fields** | Create new form fields |
+| **Field order** | Drag to reorder |
+| **Required** | Toggle mandatory status |
+| **Placeholders** | Add hint text |
+| **Defaults** | Pre-fill common values |
+| **Options** | Define select choices |
+| **Theme** | Colors and icon |
+
+### Field Properties
+
+Each field supports:
+
+| Property | Description |
+|----------|-------------|
+| **Label** | Display name for the field |
+| **Required** | Whether field must be filled |
+| **Placeholder** | Hint text when empty |
+| **Default** | Pre-filled value |
+| **Help text** | Additional guidance |
+
+---
+
+## Submission Flow
+
+### Standard Flow
+
+<Steps>
+  <Step title="Fill fields">
+    User completes the form, filling required and optional fields.
+  </Step>
+  <Step title="Submit">
+    User taps Submit/Save button.
+  </Step>
+  <Step title="Validation">
+    System checks all required fields and validation rules.
+  </Step>
+  <Step title="Confirmation">
+    Success toast appears. Form clears for next entry.
+  </Step>
+</Steps>
+
+### Validation Failure
+
+If validation fails:
+1. Submission is prevented
+2. Fields with errors highlight in red
+3. Error messages appear below invalid fields
+4. Form scrolls to first error
+
+---
+
+## Working with Submissions
+
+### Viewing Entries
+
+All submissions appear in your helper's entry list:
+- Chronological order (newest first)
+- Summary preview on cards
+- Tap for full details
+
+### Editing Entries
+
+Tap any entry to:
+- View complete submission
+- Edit any field
+- Delete the entry
+
+### Exporting Data
+
+Export submissions for external use:
+- **CSV** — Spreadsheet-compatible
+- **PDF** — Formatted report
+- **Webhook** — Send to external systems
+
+---
+
+## Tips & Best Practices
+
+<AccordionGroup>
+  <Accordion title="Keep forms focused" icon="crosshairs">
+    Only ask for what you need. Long forms reduce completion rates. Consider breaking into multiple specialized forms.
+  </Accordion>
+  
+  <Accordion title="Use smart defaults" icon="wand-magic-sparkles">
+    Pre-fill common values (today's date, default country) to speed up entry.
+  </Accordion>
+  
+  <Accordion title="Order logically" icon="arrow-down-1-9">
+    Group related fields together. Flow from simple to complex questions.
+  </Accordion>
+  
+  <Accordion title="Provide clear labels" icon="tag">
+    Labels should be unambiguous. "Full name" is clearer than "Name."
+  </Accordion>
+  
+  <Accordion title="Use appropriate field types" icon="shapes">
+    Don't use text fields for dates or numbers. Proper types provide better validation and mobile keyboards.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Example: Customer Feedback Form
+
+A product feedback collection form:
+
+**Setup:**
+- Name: "Customer Feedback"
+- Icon: 💬 Message
+- Theme: Friendly green
+
+**Fields:**
+1. **Name** (text, required)
+2. **Email** (text, required, email format)
+3. **Product** (select: Product A, Product B, Product C)
+4. **Rating** (number, 1-5, required)
+5. **What did you like?** (textarea)
+6. **What could improve?** (textarea)
+7. **Would you recommend us?** (checkbox)
+
+**Validation:**
+- Name: Required, max 100 characters
+- Email: Required, valid email format
+- Rating: Required, between 1-5
+
+---
+
+## Credit Usage
+
+| Action | Credits |
+|--------|---------|
+| Creating form | 1 credit (AI generation) |
+| Submitting entries | Free |
+| Editing entries | Free |
+| Voice submission | 10 credits (speech-to-text) |
+| Exporting | Free |
+
+---
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Tracker Template" href="/templates/tracker" icon="chart-line">
+    For recurring data logging
+  </Card>
+  <Card title="Fields" href="/features/fields" icon="input-text">
+    Deep dive into field configuration
+  </Card>
+  <Card title="Webhooks" href="/integrations/webhooks" icon="webhook">
+    Send submissions to external systems
+  </Card>
+  <Card title="Reports" href="/features/reports" icon="file-pdf">
+    Generate PDF reports from entries
+  </Card>
+</CardGroup>

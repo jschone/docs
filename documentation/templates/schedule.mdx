@@ -1,0 +1,321 @@
+---
+title: "List Template"
+description: "Persistent task lists and collections with custom fields per item"
+icon: "list"
+---
+
+The **List Template** is designed for one-time tasks and collections that persist until manually completed or removed. Unlike checklists that reset daily, lists maintain state indefinitely—perfect for to-do lists, shopping lists, or any collection you manage over time.
+
+<CardGroup cols={2}>
+  <Card title="Perfect For" icon="bullseye">
+    - To-do lists
+    - Shopping lists
+    - Reading lists
+    - Project tasks
+    - Bucket lists
+    - Inventory tracking
+  </Card>
+  <Card title="Key Features" icon="sparkles">
+    - Persistent completion state
+    - Custom fields per item
+    - Manual task management
+    - Flexible data capture
+    - Sortable entries
+    - Bulk operations
+  </Card>
+</CardGroup>
+
+---
+
+## Quick Start
+
+<Steps>
+  <Step title="Describe your list">
+    Tell Peanuts what you're tracking:
+    - "Shopping list for groceries"
+    - "Books I want to read"
+    - "Home improvement projects"
+  </Step>
+  <Step title="Define item structure">
+    Peanuts suggests fields based on your description. Add details like priority, category, due date, or notes.
+  </Step>
+  <Step title="Start adding items">
+    Add entries via the form, voice, or quick drawer. Check off completed items when done.
+  </Step>
+</Steps>
+
+---
+
+## Interface Overview
+
+<AccordionGroup>
+  <Accordion title="Item Cards" icon="rectangle-list">
+    Each list item displays as a card showing:
+    - **Primary field** — Item name or title
+    - **Secondary fields** — Additional details you configured
+    - **Completion checkbox** — Toggle done/not done
+    - **Timestamp** — When the item was added
+  </Accordion>
+  
+  <Accordion title="Quick Add" icon="plus">
+    Fast entry options:
+    - **Add button** — Opens full entry form
+    - **Quick drawer** — Slide-up mobile form
+    - **Voice entry** — Speak to add items
+  </Accordion>
+  
+  <Accordion title="Stats Bar" icon="chart-simple">
+    Overview of your list:
+    - **Total items** — Count of all entries
+    - **Completed** — Items marked done
+    - **Remaining** — Items still pending
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## List vs. Other Templates
+
+<Tip>
+**List** = One-time tasks, manually managed, persistent  
+**Checklist** = Same tasks daily, auto-reset  
+**Tracker** = Recurring data logging with trends
+</Tip>
+
+| Feature | List | Checklist | Tracker |
+|---------|------|-----------|---------|
+| Items persist | ✅ Until deleted | ❌ Reset daily | ✅ Historical log |
+| Custom fields | ✅ Per item | ❌ Items only | ✅ Per entry |
+| Completion tracking | ✅ Manual | ✅ Daily | ❌ No checkbox |
+| Time-based reset | ❌ Never | ✅ Daily | ❌ Never |
+| Best for | Tasks, collections | Routines | Data logging |
+
+---
+
+## Custom Fields
+
+Lists support rich data capture for each item:
+
+### Supported Field Types
+
+| Type | Example Use |
+|------|-------------|
+| **Text** | Item name, notes, description |
+| **Number** | Quantity, priority, price |
+| **Select** | Category, status, priority level |
+| **Checkbox** | Urgent flag, requires follow-up |
+| **Date** | Due date, purchase date |
+| **Image** | Product photo, reference image |
+| **Calculated** | Total cost (quantity × price) |
+
+### Example: Shopping List Fields
+
+Item (text, required)
+Quantity (number, default: 1)
+Category (select: Produce, Dairy, Meat, Pantry, Frozen)
+Price estimate (number, optional)
+Total (calculated: quantity × price)
+
+---
+
+## Input Methods
+
+### Web App
+
+<AccordionGroup>
+  <Accordion title="Full Form" icon="file-lines">
+    Click the **Add** button to open the complete entry form with all configured fields.
+  </Accordion>
+  
+  <Accordion title="Quick Drawer" icon="arrow-up-from-bracket">
+    On mobile, swipe up or tap the quick-add bar for a streamlined form with essential fields only.
+  </Accordion>
+  
+  <Accordion title="Inline Edit" icon="pen">
+    Tap any item to view details and edit fields directly.
+  </Accordion>
+</AccordionGroup>
+
+### Voice Entry
+
+<Note>
+Voice features require Starter plan or higher and consume credits.
+</Note>
+
+Add items naturally:
+- "Add milk to my shopping list"
+- "New task: call the dentist"
+- "I need to buy batteries, quantity 4"
+
+### Telegram
+
+Send items via chat:
+- "add: Pick up dry cleaning"
+- "new: Buy birthday gift for Mom"
+- Forward messages to create items from content
+
+---
+
+## Managing Items
+
+### Completion
+
+Toggle items complete by:
+- **Tapping checkbox** — Marks done with strikethrough
+- **Voice command** — "Mark dentist complete"
+- **Telegram** — "done: dry cleaning"
+
+<Info>
+Completed items remain visible (with strikethrough styling) until you delete them. This lets you review what you've accomplished.
+</Info>
+
+### Editing
+
+Tap any item to:
+- View full details
+- Edit any field
+- Add notes or attachments
+- Delete the item
+
+### Bulk Operations
+
+From the list view:
+- **Delete completed** — Remove all done items at once
+- **Export** — Download list as CSV/PDF
+
+---
+
+## Configuration
+
+### In Edit Mode
+
+Access via the **Edit** button to:
+
+| Setting | Options |
+|---------|---------|
+| **Add fields** | Create new data fields |
+| **Remove fields** | Delete unnecessary fields |
+| **Reorder fields** | Change display order |
+| **Set required** | Mark fields as mandatory |
+| **Default values** | Pre-fill common values |
+| **Theme** | Change colors and icon |
+
+### Field Options
+
+Each field supports:
+
+| Option | Description |
+|--------|-------------|
+| **Required** | Must be filled to save item |
+| **Placeholder** | Hint text in empty fields |
+| **Default** | Pre-filled value |
+| **Options** | For select fields, the choices |
+
+### Widgets
+
+Add optional widgets:
+
+| Widget | Purpose |
+|--------|---------|
+| **Counter** | Total items or sum of a field |
+| **Progress** | Completion percentage |
+| **Chart** | Items by category or over time |
+
+---
+
+## Sorting & Filtering
+
+### Default Sorting
+
+Items display in reverse chronological order (newest first). Completed items show with strikethrough but remain in position.
+
+### Custom Views
+
+<Note>
+Advanced sorting and filtering coming in a future update.
+</Note>
+
+Current options:
+- View all items
+- Hide/show completed
+- Search by name
+
+---
+
+## Tips & Best Practices
+
+<AccordionGroup>
+  <Accordion title="Use categories wisely" icon="folder">
+    Add a select field for categories (e.g., Produce, Dairy) to group similar items. This makes long lists easier to scan.
+  </Accordion>
+  
+  <Accordion title="Set sensible defaults" icon="sliders">
+    If most items share a value (quantity: 1, priority: normal), set it as the default to speed up entry.
+  </Accordion>
+  
+  <Accordion title="Keep primary field short" icon="text">
+    The item name should be scannable at a glance. Use notes or description fields for longer details.
+  </Accordion>
+  
+  <Accordion title="Regular cleanup" icon="broom">
+    Periodically delete completed items to keep your list focused. Use "Delete completed" for bulk cleanup.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Example: Reading List
+
+A book tracking list:
+
+**Setup:**
+- Name: "Reading List"
+- Icon: 📚 Books
+- Theme: Warm amber
+
+**Fields:**
+1. **Title** (text, required)
+2. **Author** (text)
+3. **Genre** (select: Fiction, Non-Fiction, Sci-Fi, Biography, Self-Help)
+4. **Priority** (select: Next Up, Someday, Low)
+5. **Recommended by** (text)
+6. **Notes** (textarea)
+
+**Usage:**
+1. Add books as you discover them
+2. Set priority to organize your queue
+3. Check off books as you finish
+4. Keep completed for reference
+
+---
+
+## Credit Usage
+
+| Action | Credits |
+|--------|---------|
+| Creating list | 1 credit (AI generation) |
+| Adding items | Free |
+| Editing items | Free |
+| Completing items | Free |
+| Voice entry | 10 credits (speech-to-text) |
+| Exporting | Free |
+
+---
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Checklist Template" href="/templates/checklist" icon="list-check">
+    For daily recurring tasks that reset
+  </Card>
+  <Card title="Tracker Template" href="/templates/tracker" icon="chart-line">
+    For logging data over time
+  </Card>
+  <Card title="Fields" href="/features/fields" icon="input-text">
+    Configure custom fields
+  </Card>
+  <Card title="Voice Features" href="/features/voice" icon="microphone">
+    Add items hands-free
+  </Card>
+</CardGroup>
+

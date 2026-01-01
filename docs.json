@@ -63,9 +63,14 @@
           {
             "group": "Templates",
             "pages": [
+              "documentation/templates/visual",
+              "documentation/templates/form",
+              "documentation/templates/plan",
               "documentation/templates/overview",
               "documentation/templates/next",
               "documentation/templates/checklist",
+              "documentation/templates/schedule",
+              "documentation/templates/schedule-1",
               "documentation/templates/habit",
               "documentation/templates/list"
             ]
@@ -87,7 +92,7 @@
           {
             "group": "Tutorials",
             "pages": [
-              "guides/first-app",
+              "guides/tutorials/tutorials",
               "guides/telegram-bot",
               "guides/voice-tracking",
               "guides/automations"
