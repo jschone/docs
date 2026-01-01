@@ -1,80 +1,253 @@
 ---
 title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+description: "Create your first helper in under 2 minutes"
+icon: "rocket"
 ---
 
-## Get started in three steps
+<Info>
+  **What's a helper?** A helper is your personal tracking tool that captures and organizes anything you want to remember or monitor—expenses, workouts, medications, ideas, and more.
+</Info>
 
-Get your documentation site running locally and make your first customization.
+## Create Your Account
 
-### Step 1: Set up your local environment
+Before you can create helpers, you'll need a Peanuts account.
 
-<AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
-  </Accordion>
-</AccordionGroup>
+<Steps>
+  <Step title="Go to peanutsapp.com">
+    Visit [peanutsapp.com](https://peanutsapp.com) in your browser.
+  </Step>
+  <Step title="Click 'Get Started'">
+    Click the **Get Started** button in the navigation bar or hero section.
 
-### Step 2: Deploy your changes
+    <Frame>
+      ![Get Started button on landing page](/images/quickstart/get-started-button.png)
+    </Frame>
+  </Step>
+  <Step title="Sign up with email">
+    Enter your email address and create a password. You'll receive a confirmation email—click the link to verify your account.
 
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+    <Tip>
+      You can also sign in with Google for faster access.
+    </Tip>
+  </Step>
+</Steps>
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+---
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
+## The Onboarding Experience
 
-### Step 3: Go live
+After signing in for the first time, you'll be guided through a quick onboarding flow.
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
+<Frame caption="Welcome screen introducing Peanuts' core concepts">
+  ![Onboarding welcome screen](/images/quickstart/onboarding-welcome.png)
+</Frame>
 
-## Next steps
+The onboarding explains three key things:
 
-Now that you have your docs running, explore these key features:
+1. **Just describe what you need** — No setup required. AI creates it for you.
+2. **Track habits, logs, ideas—anything** — From expenses to workouts to mood.
+3. **Get insights over time** — See patterns and stay on track.
+
+Click **Let's get started** to create your first helper.
+
+---
+
+## Create Your First Helper
+
+This is where the magic happens. You can create a helper in two ways:
+
+<Tabs>
+  <Tab title="Natural Language (Recommended)">
+    Simply describe what you want to track in plain English.
+
+    <Steps>
+      <Step title="Type your request">
+        In the text input, describe what you want to track. Be conversational—Peanuts understands natural language.
+
+        **Example prompts:**
+
+        - "Track my daily water intake"
+        - "Log my expenses"
+        - "Remember to take my medication"
+        - "Rate my mood each day"
+
+        <Frame>
+          ![Typing a helper description](/images/quickstart/describe-helper.png)
+        </Frame>
+      </Step>
+      <Step title="Wait for AI generation">
+        Peanuts AI will analyze your request and create a customized helper with:
+
+        - Appropriate input fields
+        - Smart widgets (streaks, timers, charts)
+        - Validation rules
+        - A matching icon and color theme
+
+        <Frame caption="AI generating your helper configuration">
+          ![AI thinking animation](/images/quickstart/ai-generating.png)
+        </Frame>
+      </Step>
+      <Step title="Review your helper">
+        You'll see a live preview of your helper with all its components. The AI also provides an explanation of what it created and why.
+
+        <Frame>
+          ![Generated helper preview](/images/quickstart/helper-preview.png)
+        </Frame>
+      </Step>
+      <Step title="Save and start using">
+        Click **Create Helper** to save. You'll see a celebration animation, and then you'll be taken to your home screen where your new helper is ready to use!
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Quick Templates">
+    If you prefer to start with a pre-built option, tap **Need ideas?** to see quick templates:
+
+    | Template      | Description          | Best For                |
+    | ------------- | -------------------- | ----------------------- |
+    | 💸 Spending   | Track what you spend | Daily expense logging   |
+    | 💊 Medication | Never double up      | Medication adherence    |
+    | 💪 Workouts   | Build the habit      | Exercise tracking       |
+    | 😊 Mood       | Spot patterns        | Mental health awareness |
+
+    Click any template to instantly create that helper—no AI generation needed.
+
+    <Frame>
+      ![Quick template options](/images/quickstart/quick-templates.png)
+    </Frame>
+  </Tab>
+</Tabs>
+
+---
+
+## Understanding Your Helper
+
+Once created, your helper includes several powerful components:
 
 <CardGroup cols={2}>
-
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
-</Card>
-
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
-
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
-
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
-
+  <Card title="Input Fields" icon="input-text">
+    Text, numbers, dropdowns, dates, and checkboxes to capture your data.
+  </Card>
+  <Card title="Widgets" icon="chart-line">
+    Visual tools like streak counters, stopwatches, timers, ratings, and charts.
+  </Card>
+  <Card title="Smart Rules" icon="shield-check">
+    Validation, required fields, cooldown periods, and behavioral patterns.
+  </Card>
+  <Card title="Visual Theme" icon="palette">
+    Custom icon and color to make each helper instantly recognizable.
+  </Card>
 </CardGroup>
 
+<Frame caption="Anatomy of a helper showing fields, widgets, and entry history">
+  ![Helper component breakdown](/images/quickstart/helper-anatomy.png)
+</Frame>
+
+---
+
+## Add Your First Entry
+
+Now let's log something to your new helper!
+
+<Steps>
+  <Step title="Open your helper">
+    From the home screen, click on your helper card to open it.
+  </Step>
+  <Step title="Fill in the fields">
+    Enter your data in the provided fields. Required fields are marked with a red indicator.
+
+    <Frame>
+      ![Entry form with fields](/images/quickstart/add-entry-form.png)
+    </Frame>
+  </Step>
+  <Step title="Submit your entry">
+    Click the **Add** or **Log** button (depending on your helper type). You'll see a success message confirming your entry was saved.
+
+    <Check>
+      Your entry is now recorded with a timestamp and appears in your history.
+    </Check>
+  </Step>
+</Steps>
+
+<Tip>
+  **Pro tip:** Use voice entry! Click the microphone icon to speak your entry instead of typing. Peanuts will transcribe and parse your speech automatically.
+</Tip>
+
+---
+
+## Navigate Your Dashboard
+
+Your home screen is your command center for all helpers.
+
+<Frame caption="Home dashboard showing your helpers and recent activity">
+  ![Home dashboard overview](/images/quickstart/home-dashboard.png)
+</Frame>
+
+### Quick Actions
+
+| Action               | How to Access       | Description                |
+| -------------------- | ------------------- | -------------------------- |
+| **Add entry**        | Click helper card   | Opens quick-add drawer     |
+| **View all entries** | Click "View all"    | See complete history       |
+| **Settings**         | Click ⚙️ icon       | Edit helper configuration  |
+| **Pause/Resume**     | Overflow menu (...) | Temporarily disable helper |
+| **Delete**           | Overflow menu (...) | Remove helper permanently  |
+
+### Creating More Helpers
+
+Click the **\+ New Helper** button at the top of your home screen to create additional helpers. Each helper is completely independent with its own data, fields, and settings.
+
 <Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
+  **Free tier limits:** You can create up to 3 active helpers on the free plan. [Upgrade to Pro](/pricing) for unlimited helpers.
 </Note>
+
+---
+
+## Next Steps
+
+You've created your first helper! Here's what to explore next:
+
+<CardGroup cols={2}>
+  <Card title="Connect Telegram" icon="paper-plane" href="/integrations/telegram/setup">
+    Log entries directly from Telegram chat—no app needed.
+  </Card>
+  <Card title="Explore Templates" icon="grid" href="/templates/overview">
+    Discover 25+ pre-built templates for common tracking needs.
+  </Card>
+  <Card title="Add Widgets" icon="gauge" href="/features/widgets">
+    Learn about streaks, timers, charts, and more.
+  </Card>
+  <Card title="Set Up Reminders" icon="bell" href="/features/reminders">
+    Get notified when it's time to log an entry.
+  </Card>
+</CardGroup>
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="My helper didn't generate correctly">
+    Try being more specific in your description. Instead of "track stuff," say "track my daily water intake in glasses."
+
+    You can also refine your helper after creation using the **Tweak** button or natural language chat.
+  </Accordion>
+  <Accordion title="I can't create more helpers">
+    Free accounts are limited to 3 active helpers. You can either:
+
+    - Delete an existing helper to make room
+    - Pause helpers you're not actively using
+    - [Upgrade to a paid plan](/pricing) for higher limits
+  </Accordion>
+  <Accordion title="My entry didn't save">
+    Check that all required fields are filled in (marked with red). If using voice entry, ensure your microphone permissions are enabled.
+  </Accordion>
+  <Accordion title="The AI asked me clarifying questions">
+    This is normal! When your request could be interpreted multiple ways, Peanuts asks follow-up questions to create the best helper for your needs.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+<Check>
+  **Congratulations!** You've created your first helper and logged your first entry. You're now ready to track anything that matters to you.
+</Check>
