@@ -13,8 +13,8 @@
     "dark": "/logo/peanuts-logo-dark.png"
   },
   "favicon": {
-    "light": "/favicon.png",
-    "dark": "/favicon.png"
+    "light": "/favicon.svg",
+    "dark": "/favicon.svg"
   },
   "navbar": {
     "links": [
