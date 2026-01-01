@@ -10,8 +10,7 @@
   },
   "logo": {
     "light": "/logo/peanuts-logo-light.png",
-    "dark": "/logo/peanuts-logo-dark.png",
-    "href": "https://peanutsapp.com"
+    "dark": "/logo/peanuts-logo-dark.png"
   },
   "favicon": "/favicon.png",
   "navbar": {
@@ -57,6 +56,7 @@
               "documentation/features/widgets",
               "documentation/features/untitled-page-2",
               "documentation/features/notifications",
+              "documentation/features/knowledge",
               "documentation/features/webh"
             ]
           },
@@ -102,8 +102,8 @@
             "group": "FAQ & Troubleshooting",
             "pages": [
               "guides/faq-and-troubleshooting/general",
-              "faq/billing",
-              "faq/technical"
+              "guides/faq-and-troubleshooting/billing",
+              "guides/faq-and-troubleshooting/technical"
             ]
           }
         ]
@@ -114,12 +114,12 @@
           {
             "group": "Overview",
             "pages": [
-              "api/introduction",
-              "api/authentication"
+              "api-reference/overview/intro"
             ]
           },
           {
             "group": "Endpoints",
+            "hidden": true,
             "pages": [
               "api/micro-apps",
               "api/entries",

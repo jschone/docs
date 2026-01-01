@@ -1,0 +1,592 @@
+---
+title: 'Technical Troubleshooting'
+description: 'Solutions for common technical issues and error messages'
+icon: 'wrench'
+---
+
+## Quick Diagnostics
+
+Before diving into specific issues, try these quick fixes:
+
+<Steps>
+  <Step title="Refresh the App">
+    Pull down to refresh on mobile, or press `Cmd/Ctrl + R` on desktop
+  </Step>
+  <Step title="Check Your Connection">
+    Ensure you have a stable internet connection
+  </Step>
+  <Step title="Clear Cache">
+    Go to **Settings → Account → Clear Cache** or reinstall the PWA
+  </Step>
+  <Step title="Update the App">
+    If using PWA, close and reopen to get the latest version
+  </Step>
+</Steps>
+
+---
+
+## App Loading Issues
+
+### App Shows Blank/White Screen
+
+<AccordionGroup>
+  <Accordion title="Browser compatibility issue">
+    **Cause:** Outdated browser or unsupported browser features.
+    
+    **Solution:**
+    1. Update your browser to the latest version
+    2. Try a different browser (Chrome, Safari, Firefox, Edge)
+    3. Disable browser extensions that might interfere
+    4. Clear browser cache and cookies
+  </Accordion>
+  
+  <Accordion title="JavaScript disabled">
+    **Cause:** JavaScript is disabled in browser settings.
+    
+    **Solution:**
+    - **Chrome:** Settings → Privacy → Site Settings → JavaScript → Allowed
+    - **Safari:** Preferences → Security → Enable JavaScript
+    - **Firefox:** Type `about:config`, search `javascript.enabled`, set to `true`
+  </Accordion>
+  
+  <Accordion title="Network blocking">
+    **Cause:** Firewall, VPN, or network restrictions blocking app resources.
+    
+    **Solution:**
+    1. Try disabling VPN temporarily
+    2. Switch to a different network (mobile data vs. WiFi)
+    3. Check if your network blocks `*.supabase.co` domains
+  </Accordion>
+</AccordionGroup>
+
+### App Stuck on Loading Spinner
+
+<AccordionGroup>
+  <Accordion title="Session expired">
+    **Cause:** Your authentication session has expired.
+    
+    **Solution:**
+    1. Sign out completely
+    2. Clear browser cache
+    3. Sign back in
+  </Accordion>
+  
+  <Accordion title="Slow network">
+    **Cause:** Poor internet connection causing timeout.
+    
+    **Solution:**
+    1. Check your internet speed
+    2. Move to a location with better signal
+    3. Try again after a few minutes
+  </Accordion>
+</AccordionGroup>
+
+### "Offline" Badge When Online
+
+<AccordionGroup>
+  <Accordion title="Service worker cache issue">
+    **Cause:** The PWA's service worker has stale data.
+    
+    **Solution:**
+    1. Close all Peanuts tabs/windows
+    2. Clear browser cache for the site
+    3. Reopen the app
+    4. If using PWA, uninstall and reinstall
+  </Accordion>
+  
+  <Accordion title="API endpoint unreachable">
+    **Cause:** Backend services temporarily unavailable.
+    
+    **Solution:**
+    1. Wait 2-3 minutes and refresh
+    2. Check [status.peanutsapp.com](https://status.peanutsapp.com) for outages
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Authentication Errors
+
+### "Invalid Login Credentials"
+
+<Warning>
+  This error appears when the email/password combination doesn't match any account.
+</Warning>
+
+**Common causes:**
+- Typo in email address
+- Wrong password
+- Account doesn't exist (need to sign up first)
+
+**Solutions:**
+1. Double-check your email address for typos
+2. Use the **Forgot Password** link to reset
+3. Check if you signed up with a different email
+
+### "Email Not Verified"
+
+**Cause:** You haven't clicked the verification link sent to your email.
+
+**Solutions:**
+1. Check your inbox (and spam/junk folder) for the verification email
+2. Click **Resend Verification Email** on the login page
+3. Wait 2-3 minutes for the email to arrive
+4. Check if email was sent to the correct address
+
+### "Session Expired"
+
+**Cause:** Your login session has timed out for security.
+
+**Solution:** Simply sign in again. Your data is safe and unchanged.
+
+### Can't Receive Password Reset Email
+
+<AccordionGroup>
+  <Accordion title="Check spam folder">
+    Password reset emails sometimes get filtered. Check spam/junk folders and mark as "Not Spam."
+  </Accordion>
+  
+  <Accordion title="Corporate email filters">
+    Company email systems may block automated emails. Try using a personal email or contact your IT department.
+  </Accordion>
+  
+  <Accordion title="Wait and retry">
+    Email delivery can take up to 5 minutes. Wait before requesting another reset to avoid rate limiting.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Data & Sync Issues
+
+### Entries Not Saving
+
+<AccordionGroup>
+  <Accordion title="Network interruption">
+    **Cause:** Connection dropped during save.
+    
+    **Solution:**
+    1. Check your internet connection
+    2. Try saving again
+    3. Keep the app open until you see the success confirmation
+  </Accordion>
+  
+  <Accordion title="Required fields missing">
+    **Cause:** A required field wasn't filled in.
+    
+    **Solution:**
+    1. Look for red error messages below fields
+    2. Fill in all required fields (marked with *)
+    3. Try saving again
+  </Accordion>
+  
+  <Accordion title="Validation error">
+    **Cause:** Data doesn't meet field requirements.
+    
+    **Solution:**
+    1. Check for validation messages
+    2. Ensure numbers are within allowed ranges
+    3. Verify date formats are correct
+  </Accordion>
+</AccordionGroup>
+
+### Data Disappeared
+
+<Warning>
+  **Don't panic!** Data is rarely actually lost. Most "missing data" issues are display problems.
+</Warning>
+
+<AccordionGroup>
+  <Accordion title="Free tier history limit">
+    **Cause:** Free tier only shows last 7 days of data.
+    
+    **Solution:** Upgrade to Starter (30 days) or Pro (unlimited) to see older entries.
+  </Accordion>
+  
+  <Accordion title="Filter applied">
+    **Cause:** A date or category filter is hiding entries.
+    
+    **Solution:**
+    1. Check for active filters at the top of the list
+    2. Clear all filters
+    3. Try the "All" or "Show All" option
+  </Accordion>
+  
+  <Accordion title="Wrong helper selected">
+    **Cause:** Looking at a different helper than expected.
+    
+    **Solution:**
+    1. Go back to the Helpers list
+    2. Select the correct helper
+    3. Verify by checking the helper name at the top
+  </Accordion>
+  
+  <Accordion title="Account mismatch">
+    **Cause:** Signed into a different account than expected.
+    
+    **Solution:**
+    1. Check your account email in Settings
+    2. Sign out and sign into the correct account
+  </Accordion>
+</AccordionGroup>
+
+### Changes Not Syncing Between Devices
+
+**Cause:** Browser caching or session differences.
+
+**Solutions:**
+1. Pull to refresh on both devices
+2. Sign out and back in on the device showing old data
+3. Ensure both devices have internet connectivity
+4. Wait 30 seconds — sync can take time on slow connections
+
+---
+
+## Voice & AI Feature Errors
+
+### "Microphone Access Denied"
+
+<AccordionGroup>
+  <Accordion title="Browser permission needed">
+    **Solution:**
+    - **Chrome:** Click the lock icon → Site Settings → Microphone → Allow
+    - **Safari:** Safari → Settings → Websites → Microphone → Allow
+    - **iOS Safari:** Settings → Safari → Microphone → Allow
+    - **Android Chrome:** Settings → Site Settings → Microphone → Allow
+  </Accordion>
+  
+  <Accordion title="System permission needed">
+    **iOS:** Settings → Privacy → Microphone → Safari/Chrome → Enable
+    
+    **Android:** Settings → Apps → Chrome → Permissions → Microphone → Allow
+    
+    **macOS:** System Preferences → Security & Privacy → Microphone → Check browser
+    
+    **Windows:** Settings → Privacy → Microphone → Allow apps to access
+  </Accordion>
+</AccordionGroup>
+
+### Voice Recognition Not Working
+
+<AccordionGroup>
+  <Accordion title="Background noise">
+    **Solution:** Move to a quieter location or speak closer to the microphone.
+  </Accordion>
+  
+  <Accordion title="Language mismatch">
+    **Solution:** Speak clearly in English. Other languages may have reduced accuracy.
+  </Accordion>
+  
+  <Accordion title="Microphone hardware issue">
+    **Solution:**
+    1. Test microphone in another app (Voice Memos, etc.)
+    2. Check if microphone is muted
+    3. Try a different microphone/headset
+  </Accordion>
+</AccordionGroup>
+
+### "Insufficient Credits" Error
+
+**Cause:** Your AI credit balance is exhausted.
+
+**Solutions:**
+1. Wait for monthly credit reset (check reset date in Credits Usage)
+2. Purchase a credit top-up pack at `/settings/credits/top-up`
+3. Upgrade to a higher tier for more monthly credits
+
+### AI Response Seems Wrong
+
+<Info>
+  AI features work best with clear, specific input. Vague or complex requests may produce unexpected results.
+</Info>
+
+**Tips for better results:**
+- Speak clearly and at a moderate pace
+- Include specific details (amounts, dates, names)
+- Break complex entries into simpler parts
+- Review and edit the AI's interpretation before saving
+
+---
+
+## Telegram Bot Issues
+
+### Bot Not Responding
+
+<AccordionGroup>
+  <Accordion title="Bot not connected">
+    **Solution:**
+    1. Go to **Settings → Telegram**
+    2. Check if the bot shows as "Connected"
+    3. If not, follow the setup wizard to reconnect
+  </Accordion>
+  
+  <Accordion title="Chat not authorized">
+    **Solution:**
+    1. Send `/start` to your bot in Telegram
+    2. Authorize the chat when prompted
+    3. Try your message again
+  </Accordion>
+  
+  <Accordion title="Telegram rate limiting">
+    **Cause:** Too many messages sent too quickly.
+    
+    **Solution:** Wait a few minutes before sending more messages.
+  </Accordion>
+</AccordionGroup>
+
+### Messages Not Creating Entries
+
+<AccordionGroup>
+  <Accordion title="No helper selected">
+    **Cause:** Bot doesn't know which helper to use.
+    
+    **Solution:**
+    1. Use `/helpers` to see available helpers
+    2. Tap on a helper to select it
+    3. Or use the helper command directly (e.g., `/expenses`)
+  </Accordion>
+  
+  <Accordion title="Message format not recognized">
+    **Cause:** AI couldn't parse the message.
+    
+    **Solution:**
+    1. Try a simpler format: "Coffee €3.50"
+    2. Include clear values for required fields
+    3. Use the helper's expected format
+  </Accordion>
+  
+  <Accordion title="Credits exhausted">
+    **Cause:** No AI credits remaining for processing.
+    
+    **Solution:** Purchase more credits or wait for monthly reset.
+  </Accordion>
+</AccordionGroup>
+
+### Images/Voice Notes Not Processing
+
+**Common causes:**
+- File too large (max 20MB for images, 10MB for voice)
+- Unsupported format
+- Credits exhausted (vision/voice features cost more credits)
+
+**Solutions:**
+1. Reduce file size before sending
+2. Use supported formats (JPEG, PNG, MP3, M4A)
+3. Check your credit balance
+
+---
+
+## Webhook & Integration Errors
+
+### Webhook Not Triggering
+
+<AccordionGroup>
+  <Accordion title="Webhook not enabled">
+    **Solution:**
+    1. Open your helper's settings
+    2. Go to the **Integrations** tab
+    3. Enable **Webhooks**
+    4. Enter a valid webhook URL
+    5. Save changes
+  </Accordion>
+  
+  <Accordion title="Invalid webhook URL">
+    **Cause:** URL is malformed or unreachable.
+    
+    **Solution:**
+    1. Verify the URL starts with `https://`
+    2. Test the URL is accessible from the internet
+    3. Check for typos
+  </Accordion>
+  
+  <Accordion title="Receiving server issues">
+    **Cause:** Your server is returning errors.
+    
+    **Solution:**
+    1. Check your server logs for errors
+    2. Ensure endpoint returns 200 OK quickly
+    3. Review the **Webhook History** tab for error messages
+  </Accordion>
+</AccordionGroup>
+
+### Signature Verification Failing
+
+**Cause:** Mismatch between expected and computed signatures.
+
+**Checklist:**
+1. ✅ Using the correct webhook secret (found in Integrations settings)
+2. ✅ Using raw request body (not parsed JSON)
+3. ✅ Using HMAC-SHA256 algorithm
+4. ✅ Comparing hex-encoded signature
+5. ✅ Using constant-time comparison function
+
+```javascript
+// Correct signature verification
+const crypto = require('crypto');
+
+function verifySignature(payload, signature, secret) {
+  const expected = crypto
+    .createHmac('sha256', secret)
+    .update(payload, 'utf8') // Use raw payload string
+    .digest('hex');
+  
+  return crypto.timingSafeEqual(
+    Buffer.from(signature),
+    Buffer.from(expected)
+  );
+}
+```
+
+### Webhook Deliveries Failing
+
+Check the **Webhook History** in your helper's Integrations tab for:
+
+| Status Code | Meaning | Solution |
+|-------------|---------|----------|
+| **Timeout** | Server took too long | Return 200 immediately, process async |
+| **4xx** | Client error | Check your endpoint's validation |
+| **5xx** | Server error | Check your server logs |
+| **SSL Error** | Certificate issue | Ensure valid SSL certificate |
+
+<Tip>
+  Peanuts retries failed webhooks up to 3 times with exponential backoff (1min, 5min, 30min).
+</Tip>
+
+---
+
+## PWA & Installation Issues
+
+### "Add to Home Screen" Not Showing
+
+<AccordionGroup>
+  <Accordion title="Already installed">
+    **Cause:** PWA is already installed on this device.
+    
+    **Solution:** Check your home screen or app drawer for the Peanuts icon.
+  </Accordion>
+  
+  <Accordion title="Browser doesn't support PWA">
+    **Solution:**
+    - Use Chrome, Safari, or Edge
+    - Firefox has limited PWA support on desktop
+    - Some in-app browsers don't support installation
+  </Accordion>
+  
+  <Accordion title="iOS Safari only">
+    On iPhone/iPad, PWA installation only works in Safari, not Chrome or other browsers.
+  </Accordion>
+</AccordionGroup>
+
+### PWA Showing Old Content
+
+**Cause:** Service worker cache hasn't updated.
+
+**Solutions:**
+1. Close the PWA completely (remove from app switcher)
+2. Wait 30 seconds
+3. Reopen the app
+4. If still stale, uninstall and reinstall the PWA
+
+### Push Notifications Not Working
+
+<AccordionGroup>
+  <Accordion title="Notifications not enabled">
+    **Solution:**
+    1. Go to **Settings → Notifications**
+    2. Enable **Push Notifications**
+    3. Accept the browser permission prompt
+  </Accordion>
+  
+  <Accordion title="System notifications blocked">
+    **iOS:** Settings → Notifications → Peanuts → Allow
+    
+    **Android:** Settings → Apps → Peanuts → Notifications → Enable
+    
+    **macOS:** System Preferences → Notifications → Browser → Allow
+  </Accordion>
+  
+  <Accordion title="Quiet hours active">
+    **Cause:** Notifications paused during configured quiet hours.
+    
+    **Solution:** Check quiet hours settings or wait until they end.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Performance Issues
+
+### App Running Slowly
+
+<AccordionGroup>
+  <Accordion title="Too many entries loaded">
+    **Solution:**
+    1. Use date filters to limit visible entries
+    2. Archive old helpers you don't use
+    3. Export and clear old data periodically
+  </Accordion>
+  
+  <Accordion title="Browser memory issues">
+    **Solution:**
+    1. Close other browser tabs
+    2. Restart your browser
+    3. Clear browser cache
+  </Accordion>
+  
+  <Accordion title="Device resources low">
+    **Solution:**
+    1. Close other apps
+    2. Restart your device
+    3. Ensure sufficient storage space
+  </Accordion>
+</AccordionGroup>
+
+### Charts Not Rendering
+
+**Common causes:**
+- Not enough data points (need at least 2)
+- Date range has no entries
+- Widget misconfigured
+
+**Solutions:**
+1. Add more entries within the chart's time range
+2. Adjust the time range in widget settings
+3. Verify the widget is configured for the correct field
+
+---
+
+## Error Messages Reference
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `Network Error` | Internet connection issue | Check connectivity, try again |
+| `401 Unauthorized` | Session expired | Sign out and back in |
+| `403 Forbidden` | Permission denied | Check account status, contact support |
+| `404 Not Found` | Resource doesn't exist | Refresh, check if helper was deleted |
+| `429 Too Many Requests` | Rate limited | Wait 1-2 minutes, try again |
+| `500 Server Error` | Backend issue | Wait and retry, check status page |
+| `502/503/504` | Service temporarily unavailable | Wait 5 minutes, try again |
+
+---
+
+## Still Need Help?
+
+If you've tried the solutions above and still have issues:
+
+<CardGroup cols={2}>
+  <Card title="Contact Support" icon="envelope" href="mailto:support@peanutsapp.com">
+    Email us with details about your issue
+  </Card>
+  <Card title="Check Status" icon="signal" href="https://status.peanutsapp.com">
+    View current system status and incidents
+  </Card>
+</CardGroup>
+
+### When Contacting Support, Include:
+
+1. **Device info:** Phone model, OS version, browser
+2. **Steps to reproduce:** What were you doing when the error occurred?
+3. **Error message:** Exact text or screenshot
+4. **Account email:** So we can look up your account
+5. **Time of issue:** When did it first happen?
+

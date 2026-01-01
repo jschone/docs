@@ -1,0 +1,321 @@
+---
+title: 'Billing & Subscription'
+description: 'Manage your subscription, credits, and payment history'
+icon: 'credit-card'
+---
+
+## Overview
+
+Manage all aspects of your Peanuts subscription from the **Billing** page at `/settings/billing`. View your current plan, track payment history, and make changes to your subscription.
+
+<CardGroup cols={3}>
+  <Card title="View Plans" icon="layer-group" href="/pricing">
+    Compare all available subscription tiers
+  </Card>
+  <Card title="Credits Usage" icon="chart-pie" href="/settings/credits">
+    Monitor your AI credit consumption
+  </Card>
+  <Card title="Buy Credits" icon="plus" href="/settings/credits/top-up">
+    Purchase additional credits instantly
+  </Card>
+</CardGroup>
+
+---
+
+## Subscription Plans
+
+Peanuts offers four subscription tiers to match your needs. All paid plans include a **free trial** and can be billed monthly or yearly.
+
+<Tip>
+  **Save 2 months** by choosing yearly billing on any paid plan!
+</Tip>
+
+### Plan Comparison
+
+| Feature | Free | Starter | Pro | Team |
+|---------|------|---------|-----|------|
+| **Price** | €0 | €5/mo | €12/mo | €29/seat/mo |
+| **Active Helpers** | 3 | 10 | Unlimited | Unlimited |
+| **AI Credits** | 50/mo | 200/mo | 500/mo | 1000/seat/mo |
+| **Data History** | 7 days | 30 days | Unlimited | Unlimited |
+| **Voice Features** | ❌ | ✅ | ✅ | ✅ |
+| **Virtual Try-On** | ❌ | ✅ | ✅ | ✅ |
+| **Ask Peanuts AI** | ❌ | ✅ | ✅ | ✅ |
+| **Telegram Bot** | ❌ | ✅ | ✅ | ✅ |
+| **Webhooks** | ❌ | ✅ | ✅ | ✅ |
+| **PDF Reports** | ❌ | ❌ | ✅ | ✅ |
+| **Priority Support** | ❌ | ❌ | ✅ | ✅ |
+| **Team Management** | ❌ | ❌ | ❌ | ✅ |
+
+<Info>
+  **Team plan** is billed per seat. Each team member gets their own credit allocation and helper access.
+</Info>
+
+---
+
+## AI Credits System
+
+Credits are the currency for AI-powered features in Peanuts. Different operations consume different amounts of credits based on their complexity.
+
+### Credit Costs
+
+| Operation | Credits | Examples |
+|-----------|---------|----------|
+| **Text AI** | 1 | AI chat, helper creation, smart nudges |
+| **Vision AI** | 5 | Receipt scanning, smart scan, image analysis |
+| **Speech-to-Text** | 10 | Voice entry, hands-free mode |
+| **Text-to-Speech** | 15 | Voice readback, audio responses |
+
+### Credit Reset Cycle
+
+<Note>
+  Credits reset **monthly** on your billing date. Unused credits do **not** roll over to the next month.
+</Note>
+
+### Monitoring Your Credits
+
+Track your credit usage in two ways:
+
+1. **Header Counter** — Quick glance at remaining credits from any page
+2. **Credits Usage Dashboard** — Detailed breakdown at `/settings/credits`
+
+The dashboard shows:
+- Remaining credits and usage percentage
+- Breakdown by operation type (pie chart)
+- Recent activity (bar chart)
+- Full transaction history
+
+---
+
+## Credit Top-Up
+
+Need more credits before your monthly reset? Purchase one-time credit packs without changing your subscription.
+
+<CardGroup cols={3}>
+  <Card title="50 Credits" icon="coins">
+    **€2**
+    
+    Perfect for occasional extra usage
+  </Card>
+  <Card title="150 Credits" icon="gem">
+    **€5**
+    
+    17% more credits — Best value!
+  </Card>
+  <Card title="400 Credits" icon="crown">
+    **€10**
+    
+    33% more credits for power users
+  </Card>
+</CardGroup>
+
+### Key Benefits
+
+- ✅ **Instant delivery** — Credits available immediately
+- ✅ **Never expire** — Use them whenever you need
+- ✅ **No subscription change** — One-time purchase
+- ✅ **Stack with monthly credits** — Added to your balance
+
+### How to Purchase
+
+<Steps>
+  <Step title="Go to Credits">
+    Navigate to **Settings → Credits Usage**
+  </Step>
+  <Step title="Click Buy Credits">
+    Select the **Buy Credits** button
+  </Step>
+  <Step title="Choose Your Pack">
+    Select 50, 150, or 400 credits
+  </Step>
+  <Step title="Complete Payment">
+    Pay securely via card or other methods
+  </Step>
+</Steps>
+
+---
+
+## Managing Your Subscription
+
+### Upgrading Your Plan
+
+<Steps>
+  <Step title="Go to Billing">
+    Navigate to **Settings → Billing**
+  </Step>
+  <Step title="Click Change Plan">
+    Select the **Change Plan** button
+  </Step>
+  <Step title="Choose New Tier">
+    Select Starter, Pro, or Team
+  </Step>
+  <Step title="Select Billing Period">
+    Choose monthly or yearly billing
+  </Step>
+  <Step title="Complete Payment">
+    Enter payment details and confirm
+  </Step>
+</Steps>
+
+<Tip>
+  Upgrades take effect **immediately**. You'll receive the new credit allocation right away.
+</Tip>
+
+### Changing Billing Period
+
+Switch between monthly and yearly billing from the Billing page. When switching to yearly:
+- Pay for 10 months upfront
+- Get 2 months free
+- New billing cycle starts immediately
+
+### Cancelling Your Subscription
+
+<Warning>
+  Cancelling your subscription will downgrade you to the **Free** tier at the end of your current billing period.
+</Warning>
+
+**What you'll lose:**
+- Access to premium features (Voice, Try-On, Ask Peanuts)
+- Credit allocation above 50/month
+- Helpers beyond the 3-helper limit (archived, not deleted)
+- Data history beyond 7 days
+- Telegram and webhook integrations
+
+<Steps>
+  <Step title="Go to Billing">
+    Navigate to **Settings → Billing**
+  </Step>
+  <Step title="Click Cancel Subscription">
+    Find the cancel option in your plan card
+  </Step>
+  <Step title="Confirm Cancellation">
+    Review what you'll lose and confirm
+  </Step>
+</Steps>
+
+<Note>
+  Your data is **never deleted** when you cancel. Archived helpers and entries remain accessible if you resubscribe.
+</Note>
+
+---
+
+## Payment History
+
+View all past transactions from the **Billing** page. Each entry shows:
+
+- **Date** — When the transaction occurred
+- **Description** — Plan tier or credit pack purchased
+- **Amount** — Total charged
+- **Status** — Current payment state
+
+### Payment Statuses
+
+| Status | Icon | Meaning |
+|--------|------|---------|
+| **Completed** | ✅ | Payment successful, features active |
+| **Pending** | ⏳ | Processing, usually completes within minutes |
+| **Failed** | ❌ | Payment declined, please retry |
+| **Cancelled** | 🚫 | Transaction was cancelled |
+
+---
+
+## Low Credit Alerts
+
+Peanuts sends email notifications when your credits are running low to help you avoid interruptions.
+
+### Alert Thresholds
+
+You'll receive an email when credits drop to:
+- **10 credits** remaining
+- **5 credits** remaining  
+- **3 credits** remaining
+- **1 credit** remaining
+
+### Opting Out
+
+If you prefer not to receive these notifications:
+
+<Steps>
+  <Step title="Go to Settings">
+    Navigate to **Settings**
+  </Step>
+  <Step title="Find Notifications">
+    Scroll to the **Notifications** section
+  </Step>
+  <Step title="Toggle Off">
+    Disable **Low-credit email alerts**
+  </Step>
+</Steps>
+
+---
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="When do my credits reset?">
+    Credits reset on your monthly billing date. For example, if you subscribed on the 15th, credits reset on the 15th of each month.
+    
+    You can see your next reset date in the **Credits Usage** dashboard.
+  </Accordion>
+  
+  <Accordion title="What happens to unused credits?">
+    Unused monthly credits do **not** roll over. They reset to your plan's allocation on your billing date.
+    
+    However, **purchased credits** (from top-ups) never expire and remain until used.
+  </Accordion>
+  
+  <Accordion title="Can I get a refund?">
+    Refunds are handled on a case-by-case basis. Contact support within 7 days of purchase for subscription refunds.
+    
+    Credit pack purchases are generally non-refundable once credits have been used.
+  </Accordion>
+  
+  <Accordion title="Do purchased credits expire?">
+    No! Credits purchased through top-up packs **never expire**. They remain in your account until used, even if you cancel your subscription.
+  </Accordion>
+  
+  <Accordion title="What payment methods are accepted?">
+    Peanuts accepts:
+    - Credit and debit cards (Visa, Mastercard, Amex)
+    - Apple Pay
+    - Google Pay
+    - iDEAL (Netherlands)
+    - Bancontact (Belgium)
+    - And more regional methods
+  </Accordion>
+  
+  <Accordion title="Is my payment information secure?">
+    Absolutely. Peanuts uses **Adyen**, a PCI DSS Level 1 certified payment processor. Your card details are never stored on our servers.
+  </Accordion>
+  
+  <Accordion title="Can I pause my subscription?">
+    Currently, pausing isn't available. You can cancel and resubscribe when ready — your data will be preserved.
+  </Accordion>
+  
+  <Accordion title="What happens if a payment fails?">
+    You'll receive an email notification. Your subscription remains active for a short grace period while you update your payment method.
+    
+    Update your card in **Settings → Billing** to avoid service interruption.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Pricing Page" icon="tags" href="/pricing">
+    View detailed plan comparison and features
+  </Card>
+  <Card title="Credits Usage" icon="chart-bar" href="/settings/credits">
+    Monitor your AI credit consumption
+  </Card>
+  <Card title="Buy Credits" icon="cart-shopping" href="/settings/credits/top-up">
+    Purchase additional credit packs
+  </Card>
+  <Card title="Account Settings" icon="user-gear" href="/settings/account">
+    Manage your account and data
+  </Card>
+</CardGroup>
+
+

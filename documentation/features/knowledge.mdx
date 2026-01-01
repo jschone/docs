@@ -1,0 +1,236 @@
+---
+title: "Business Knowledge Base"
+description: "Upload your business documents and let Peanuts AI learn from them to provide accurate, context-aware answers."
+---
+
+import { Info, Steps, Tip, Warning, Accordion, AccordionGroup, CardGroup, Card } from 'mintlify/components';
+
+<Info>
+  **Pro Feature** — Business Knowledge Base is available on the Pro plan and above. [View pricing](/pricing) to upgrade.
+</Info>
+
+## What is the Knowledge Base?
+
+The Business Knowledge Base is your personal **RAG (Retrieval-Augmented Generation) system**. Upload your business documents—pricelists, catalogs, terms & conditions, product specs—and Peanuts AI will learn from them to answer your questions with accurate, contextual information.
+
+```mermaid
+graph LR
+    A[📄 Upload Document] --> B[🔄 Parse & Extract]
+    B --> C[🧠 Learn & Index]
+    C --> D[✨ AI-Powered Answers]
+```
+
+### Why Use It?
+
+- **Generate accurate quotes** based on your actual pricing
+- **Answer customer questions** using your product information
+- **Reference specifications** without manually searching documents
+- **Summarize terms** for specific situations
+
+---
+
+## Getting Started
+
+<Steps>
+  <Step title="Navigate to Knowledge Base">
+    Go to **Account** → scroll to **Business Knowledge Base** section.
+  </Step>
+  
+  <Step title="Verify Pro Subscription">
+    Ensure you have an active Pro subscription. Non-Pro users will see an upgrade prompt.
+  </Step>
+  
+  <Step title="Upload Your First Document">
+    Click the upload area or drag-and-drop a file. Supported formats include PDF, Excel, CSV, images, and text files.
+  </Step>
+  
+  <Step title="Wait for Processing">
+    Watch the status indicator change from **Processing** → **Learning** → **Ready**. This typically takes 30 seconds to 2 minutes.
+  </Step>
+  
+  <Step title="Ask Peanuts">
+    Open **Ask Peanuts** and ask a question that references your uploaded knowledge. The AI will cite the source document in its response.
+  </Step>
+</Steps>
+
+---
+
+## Supported Document Types
+
+<AccordionGroup>
+  <Accordion title="📕 PDF Documents" icon="file-pdf">
+    **Best for:** Pricelists, catalogs, contracts, brochures, manuals
+    
+    - Text-based PDFs process fastest
+    - Scanned PDFs use OCR (may take longer)
+    - Tables and formatting are preserved
+    - Page numbers are tracked for citations
+  </Accordion>
+  
+  <Accordion title="📊 Excel & CSV" icon="file-excel">
+    **Best for:** Product databases, price matrices, inventory lists, customer data
+    
+    - All sheets are processed (Excel)
+    - Headers become searchable context
+    - Great for structured pricing data
+  </Accordion>
+  
+  <Accordion title="🖼️ Images" icon="image">
+    **Best for:** Scanned documents, product photos with text, screenshots, receipts
+    
+    - Supports JPG, PNG, WEBP
+    - AI vision extracts all visible text
+    - Handwritten text may have lower accuracy
+  </Accordion>
+  
+  <Accordion title="📝 Text Files" icon="file-lines">
+    **Best for:** Terms & conditions, service descriptions, notes, FAQs
+    
+    - Plain text (.txt) files
+    - Markdown files
+    - Fastest processing time
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## How Documents Are Processed
+
+When you upload a document, Peanuts processes it through several stages:
+
+| Stage | What Happens |
+|-------|--------------|
+| **Upload** | File stored securely in your private storage |
+| **Parsing** | AI extracts all text, tables, and structured data |
+| **Chunking** | Content split into ~500 token segments with overlap |
+| **Embedding** | Each chunk converted to semantic vectors |
+| **Ready** | Knowledge indexed and available for AI queries |
+
+<Tip>
+  Processing time varies based on document size and type. A 10-page PDF typically takes 30-60 seconds, while a large Excel file may take up to 2 minutes.
+</Tip>
+
+---
+
+## Document Status Indicators
+
+Your documents display status badges showing their current state:
+
+| Status | Icon | Meaning |
+|--------|------|---------|
+| **Processing** | 🔄 | Extracting content from your document |
+| **Learning** | 🧠 | Generating semantic embeddings |
+| **Ready** | ✅ | Available for AI queries |
+| **Error** | ❌ | Something went wrong (retry available) |
+
+If a document shows an error, you can click **Retry** to attempt processing again. Common causes include corrupted files or unsupported content.
+
+---
+
+## Using Knowledge with Ask Peanuts
+
+Once your documents are ready, Ask Peanuts automatically searches them when answering your questions.
+
+### Example Queries
+
+```
+"What's the price for the Premium Package in my pricelist?"
+
+"Generate a quote for 50 units of Product X with installation"
+
+"What materials do we use for exterior installations?"
+
+"Summarize our refund policy for a customer who wants to return after 30 days"
+
+"What are the specifications for Model ABC-123?"
+```
+
+### Citations
+
+When Peanuts uses information from your knowledge base, it includes citations:
+
+> Based on your **Product Catalog.pdf** (page 12), the Premium Package is priced at €2,499 including installation...
+
+---
+
+## Best Practices
+
+<Tip>
+  **For best results with your Knowledge Base:**
+</Tip>
+
+1. **Use well-formatted source documents** — Clear headings and structure help AI understand context
+2. **Prefer text-based PDFs** — Native text processes faster and more accurately than scanned images
+3. **Keep documents focused** — One topic per file (e.g., separate "Pricing 2024" from "Terms of Service")
+4. **Update when info changes** — Delete outdated documents and upload new versions
+5. **Use descriptive filenames** — "Product_Catalog_2024.pdf" is better than "doc1.pdf"
+
+---
+
+## Limitations
+
+<Warning>
+  Keep these limitations in mind when using the Knowledge Base:
+</Warning>
+
+- **Maximum file size:** 20MB per document
+- **Processing time:** 30 seconds to 2 minutes depending on size and complexity
+- **OCR accuracy:** Image-only PDFs and scanned documents may contain extraction errors
+- **Internet required:** Documents are processed in the cloud
+- **Private to your account:** Knowledge is never shared across users
+
+---
+
+## Managing Documents
+
+### Viewing Documents
+
+All uploaded documents appear in the Knowledge Base section with their:
+- Filename and file type icon
+- File size
+- Current status
+- Upload date
+
+### Deleting Documents
+
+Click the **trash icon** next to any document to delete it. This:
+- Removes the file from storage
+- Deletes all extracted chunks and embeddings
+- AI will no longer reference this knowledge
+
+<Warning>
+  Deletion is permanent. The knowledge cannot be recovered—you'll need to re-upload the document.
+</Warning>
+
+### Retrying Failed Documents
+
+If a document shows an error status, click **Retry** to attempt processing again. If it continues to fail:
+- Check if the file is corrupted
+- Try saving in a different format
+- Ensure the file isn't password-protected
+
+---
+
+## Privacy & Security
+
+Your business documents are handled with strict privacy:
+
+- **Isolated storage** — Each user has a private storage bucket
+- **No cross-account access** — Your knowledge is invisible to other users
+- **Secure processing** — Documents processed via encrypted connections
+- **Full deletion** — Removing a document purges all associated data
+
+---
+
+## Related Features
+
+<CardGroup cols={2}>
+  <Card title="Ask Peanuts" icon="robot" href="/tutorials/ask-peanuts">
+    Learn how to get the most out of AI-powered questions
+  </Card>
+  <Card title="Voice Features" icon="microphone" href="/tutorials/voice-features">
+    Use voice input to ask questions hands-free
+  </Card>
+</CardGroup>
+
+
