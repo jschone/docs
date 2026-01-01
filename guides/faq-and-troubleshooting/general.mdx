@@ -1,0 +1,395 @@
+---
+title: "FAQ & Troubleshooting"
+description: "Answers to common questions and solutions to frequent issues"
+icon: "circle-question"
+---
+
+## Getting Started
+
+<AccordionGroup>
+  <Accordion title="What is Peanuts?">
+    Peanuts is your personal tracking assistant—a tool that helps you log, organize, and understand the things that matter to you. Whether it's expenses, workouts, habits, or any routine, Peanuts creates simple "helpers" that capture your data through text, voice, or photos.
+    
+    Think of it as a smart notebook that:
+    - Understands what you're logging naturally
+    - Works across web, mobile, and Telegram
+    - Gives you insights from your patterns over time
+  </Accordion>
+  
+  <Accordion title="Do I need to download an app?">
+    No app store download required! Peanuts is a Progressive Web App (PWA) that installs directly from your browser. Visit [peanutsapp.com](https://peanutsapp.com), sign up, and tap "Add to Home Screen" for the full app experience.
+    
+    See our [Installation Guide](/tutorials/installation) for step-by-step instructions.
+  </Accordion>
+  
+  <Accordion title="Is Peanuts free?">
+    Yes! The Free plan includes:
+    - Up to 3 helpers
+    - 50 AI credits per month
+    - Basic voice entry
+    - Web and mobile access
+    
+    Paid plans unlock unlimited helpers, more credits, advanced features like webhooks, and priority support. See [Pricing](/pricing) for details.
+  </Accordion>
+  
+  <Accordion title="What's a 'helper'?">
+    A helper is your personal tracking tool for a specific purpose—like an expense tracker, workout log, or reading list. Each helper has:
+    - Custom fields tailored to what you're tracking
+    - A unique command (e.g., `/expenses`)
+    - Optional widgets for stats and charts
+    
+    You describe what you want to track, and Peanuts creates a helper automatically.
+  </Accordion>
+  
+  <Accordion title="How many helpers can I create?">
+    | Plan | Helpers |
+    |------|---------|
+    | Free | 3 |
+    | Starter | 10 |
+    | Pro | Unlimited |
+    | Team | Unlimited |
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Account & Billing
+
+<AccordionGroup>
+  <Accordion title="How do I change my email address?">
+    Currently, email addresses cannot be changed directly. To use a different email:
+    1. Create a new account with your preferred email
+    2. Export data from your current account (if needed)
+    3. Recreate your helpers on the new account
+    
+    We're working on a proper email change feature.
+  </Accordion>
+  
+  <Accordion title="How do I cancel my subscription?">
+    1. Go to **Settings** → **Billing**
+    2. Click **Manage Subscription**
+    3. Select **Cancel Subscription**
+    
+    Your access continues until the end of your billing period. You can resubscribe anytime.
+  </Accordion>
+  
+  <Accordion title="What happens to my data if I downgrade?">
+    Your data is never deleted when downgrading. However:
+    - If you exceed the helper limit, you won't be able to create new helpers
+    - Existing helpers remain accessible
+    - Premium features (webhooks, advanced voice) become unavailable
+    
+    Upgrade anytime to regain full access.
+  </Accordion>
+  
+  <Accordion title="How do I delete my account?">
+    1. Go to **Settings** → **Account**
+    2. Scroll to **Danger Zone**
+    3. Click **Delete Account**
+    4. Confirm by typing your email
+    
+    <Warning>
+    This permanently deletes all your data, helpers, and entries. This action cannot be undone.
+    </Warning>
+  </Accordion>
+  
+  <Accordion title="Do you offer refunds?">
+    We offer refunds within 7 days of purchase if you haven't used significant credits. Contact [support@peanutsapp.com](mailto:support@peanutsapp.com) with your request.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Credits & Usage
+
+<AccordionGroup>
+  <Accordion title="What are credits?">
+    Credits are used for AI-powered features like:
+    - Voice transcription (10 credits)
+    - Text-to-speech (15 credits)
+    - AI parsing and insights (1 credit)
+    - Image analysis/Smart Scan (5 credits)
+    
+    Credits reset monthly based on your billing cycle.
+  </Accordion>
+  
+  <Accordion title="I ran out of credits. What now?">
+    Options when credits are exhausted:
+    1. **Wait for reset** — Credits refresh monthly
+    2. **Buy a top-up** — One-time credit packs at Settings → Credits
+    3. **Upgrade your plan** — Higher tiers include more credits
+    
+    Basic features (manual entry, viewing data) work without credits.
+  </Accordion>
+  
+  <Accordion title="Why did my credits disappear?">
+    Credits reset to your plan's allowance each billing cycle—they don't roll over. Check your reset date at **Settings** → **Credits**.
+    
+    If credits dropped unexpectedly mid-cycle, check your **Usage History** for recent AI operations.
+  </Accordion>
+  
+  <Accordion title="How can I use fewer credits?">
+    Tips to conserve credits:
+    - Use text entry instead of voice when convenient
+    - Disable "Read Aloud" in Ask Peanuts
+    - Use Quick Voice instead of Hands-Free Mode
+    - Batch similar entries instead of logging one at a time
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Helpers & Data
+
+<AccordionGroup>
+  <Accordion title="How do I edit a helper's fields?">
+    1. Open your helper
+    2. Tap the **gear icon** → **Edit Helper**
+    3. Choose **Quick Edit** (simple changes) or **Advanced** (full control)
+    4. Add, remove, or modify fields
+    5. Save changes
+    
+    Existing entries aren't affected—new fields appear empty on old entries.
+  </Accordion>
+  
+  <Accordion title="Can I change a helper's type after creating it?">
+    Helper types (Form, Tracker, List, etc.) are set at creation and can't be changed directly. However, you can:
+    1. Create a new helper with the desired type
+    2. Describe your needs—Peanuts may suggest migrating
+    3. Manually recreate if the structure is very different
+  </Accordion>
+  
+  <Accordion title="How do I delete a helper?">
+    1. Open the helper
+    2. Tap **gear icon** → **Delete Helper**
+    3. Confirm deletion
+    
+    <Warning>
+    Deleting a helper permanently removes all its entries. Export your data first if you need it.
+    </Warning>
+  </Accordion>
+  
+  <Accordion title="Can I export my data?">
+    Yes! From any helper:
+    1. Tap the **menu** (three dots)
+    2. Select **Export**
+    3. Choose format (CSV or JSON)
+    
+    For full account export, go to **Settings** → **Account** → **Export All Data**.
+  </Accordion>
+  
+  <Accordion title="Is my data private?">
+    Absolutely. Your data is:
+    - Encrypted in transit and at rest
+    - Never shared with third parties
+    - Never used to train AI models
+    - Accessible only by you (and your Telegram bot if connected)
+    
+    See our [Privacy Policy](/legal/privacy) for full details.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Voice Features
+
+<AccordionGroup>
+  <Accordion title="Voice entry isn't working">
+    **Check these first:**
+    1. **Microphone permission** — Browser/device must have mic access
+    2. **Credits available** — Voice features require credits
+    3. **Plan level** — Voice requires Starter or higher
+    4. **Internet connection** — Voice processing needs connectivity
+    
+    **Still not working?**
+    - Try a different browser (Chrome works best)
+    - Refresh the page
+    - Test your mic in another app
+  </Accordion>
+  
+  <Accordion title="Why is transcription inaccurate?">
+    For better results:
+    - Speak clearly at a normal pace
+    - Reduce background noise
+    - Hold your phone closer
+    - Include context: "Forty-five dollars at the grocery store" vs "45"
+    - Use complete sentences
+  </Accordion>
+  
+  <Accordion title="Audio isn't playing in Hands-Free Mode">
+    Troubleshooting steps:
+    1. Check device volume and silent/vibrate mode
+    2. Try with headphones
+    3. Verify Bluetooth is connected (if using wireless audio)
+    4. Ensure "Read Aloud" is enabled in settings
+    5. Refresh and try again
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Telegram Integration
+
+<AccordionGroup>
+  <Accordion title="How do I connect Telegram?">
+    See our complete guide: [Connect Telegram](/tutorials/connect-telegram)
+    
+    Quick steps:
+    1. Create a bot via @BotFather
+    2. Copy your bot token
+    3. Add it in Peanuts Settings → Telegram
+    4. Start a chat with your bot and send `/start`
+  </Accordion>
+  
+  <Accordion title="My bot isn't responding">
+    **Common fixes:**
+    1. Verify the bot token is correct (no extra spaces)
+    2. Make sure you started a chat with `/start`
+    3. Check if the chat is authorized in Peanuts settings
+    4. Ensure your Peanuts account is active
+    
+    **Still stuck?**
+    - Regenerate the bot token via @BotFather
+    - Remove and re-add the integration
+  </Accordion>
+  
+  <Accordion title="Photos aren't being analyzed">
+    Photo analysis requires:
+    - Active subscription (Starter+)
+    - Available credits (5 per image)
+    - Supported image format (JPG, PNG, WebP)
+    - Image under 20MB
+    
+    If analysis fails, try a clearer photo with better lighting.
+  </Accordion>
+  
+  <Accordion title="How do I disconnect Telegram?">
+    1. Go to **Settings** → **Telegram**
+    2. Click **Disconnect**
+    3. Optionally, delete the bot via @BotFather
+    
+    Your Peanuts data remains intact after disconnecting.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Webhooks & Integrations
+
+<AccordionGroup>
+  <Accordion title="Webhooks aren't firing">
+    **Checklist:**
+    1. ✅ Webhook is enabled in helper settings
+    2. ✅ URL is correct and publicly accessible
+    3. ✅ Endpoint returns 2xx status code
+    4. ✅ You're on Pro plan or higher
+    
+    Check **Webhook History** for specific error messages.
+  </Accordion>
+  
+  <Accordion title="Signature verification is failing">
+    Common issues:
+    - Using parsed JSON instead of raw request body
+    - Secret has extra whitespace
+    - Using SHA1 instead of SHA256
+    - Not using timing-safe comparison
+    
+    See [verification examples](/tutorials/automations-webhooks#verification-examples) for correct implementation.
+  </Accordion>
+  
+  <Accordion title="Can I integrate with [specific tool]?">
+    If your tool accepts webhooks, yes! Peanuts sends standard JSON payloads that work with:
+    - Zapier, Make, n8n
+    - Google Sheets (via Apps Script)
+    - Slack, Discord, Teams
+    - Custom servers and APIs
+    
+    See [Automations & Webhooks](/tutorials/automations-webhooks) for examples.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## App & Performance
+
+<AccordionGroup>
+  <Accordion title="The app is slow or unresponsive">
+    Try these fixes:
+    1. **Clear cache** — Settings → Clear App Cache
+    2. **Update the app** — Reinstall from browser
+    3. **Check connection** — Slow internet affects sync
+    4. **Reduce data** — Archive old entries if you have thousands
+    5. **Use a modern browser** — Chrome/Safari work best
+  </Accordion>
+  
+  <Accordion title="Data isn't syncing">
+    Sync issues are usually connectivity-related:
+    1. Check internet connection
+    2. Pull down to refresh
+    3. Force close and reopen the app
+    4. Check if Peanuts status page shows issues
+    
+    Offline entries sync automatically when connection returns.
+  </Accordion>
+  
+  <Accordion title="Push notifications aren't working">
+    **On iOS:**
+    - Must be installed as PWA (Add to Home Screen)
+    - Notifications must be enabled in iOS Settings
+    - iOS 16.4+ required
+    
+    **On Android:**
+    - Enable notifications in browser settings
+    - Check "Do Not Disturb" mode
+    - Ensure battery optimization isn't blocking
+    
+    **In Peanuts:**
+    - Settings → Notifications → Enable push
+    - Check Quiet Hours settings
+  </Accordion>
+  
+  <Accordion title="I see a blank white screen">
+    This usually indicates a loading error:
+    1. Hard refresh: Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac)
+    2. Clear browser cache completely
+    3. Try incognito/private mode
+    4. Try a different browser
+    5. Check if ad blockers are interfering
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Still Need Help?
+
+<CardGroup cols={2}>
+  <Card title="Contact Support" icon="envelope" href="mailto:support@peanutsapp.com">
+    Email us for personalized help
+  </Card>
+  <Card title="Community" icon="users" href="https://discord.gg/peanuts">
+    Join our Discord for tips and discussions
+  </Card>
+  <Card title="Feature Requests" icon="lightbulb" href="mailto:feedback@peanutsapp.com">
+    Suggest new features or improvements
+  </Card>
+  <Card title="Status Page" icon="signal" href="https://status.peanutsapp.com">
+    Check for known issues or outages
+  </Card>
+</CardGroup>
+
+---
+
+## Quick Fixes Cheatsheet
+
+| Problem | Quick Fix |
+|---------|-----------|
+| Can't log in | Reset password, check email spam |
+| Voice not working | Check mic permissions, try Chrome |
+| Bot not responding | Verify token, send `/start` |
+| Webhook failing | Check URL, verify signature |
+| Credits gone | Check usage history, wait for reset |
+| App slow | Clear cache, reduce entries |
+| Sync stuck | Check internet, pull to refresh |
+| Notifications off | Enable in device + app settings |
+
+
