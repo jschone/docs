@@ -1,122 +1,154 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
-  "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Peanuts",
+  "logo": {
+    "dark": "/logo/peanuts-logo-dark.png",
+    "light": "/logo/peanuts-logo-light.png",
+    "href": "https://peanutsapp.com"
   },
-  "favicon": "/favicon.svg",
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
-          }
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#2DB8A1",
+    "light": "#3DCFB6",
+    "dark": "#1A9C87",
+    "background": {
+      "light": "#FCFCFC",
+      "dark": "#141619"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "mailto:hello@peanutsapp.com"
+    }
+  ],
+  "topbarCtaButton": {
+    "type": "link",
+    "name": "Get Started",
+    "url": "https://peanutsapp.com"
+  },
+  "tabs": [
+    {
+      "name": "Guides",
+      "url": "guides"
+    },
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Community",
+      "icon": "discord",
+      "url": "https://discord.gg/peanuts"
+    },
+    {
+      "name": "Blog",
+      "icon": "newspaper",
+      "url": "https://peanutsapp.com/blog"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "introduction",
+        "quickstart",
+        "how-it-works",
+        "first-helper"
+      ]
+    },
+    {
+      "group": "Core Concepts",
+      "pages": [
+        "concepts/helpers",
+        "concepts/entries",
+        "concepts/proofs",
+        "concepts/held-done",
+        "concepts/ai-assistant"
+      ]
+    },
+    {
+      "group": "Features",
+      "pages": [
+        "features/voice-entry",
+        "features/image-scanning",
+        "features/widgets",
+        "features/charts-insights",
+        "features/reminders",
+        "features/reports",
+        "features/knowledge-base"
+      ]
+    },
+    {
+      "group": "Integrations",
+      "pages": [
+        "integrations/overview",
+        "integrations/telegram",
+        "integrations/whatsapp",
+        "integrations/webhooks",
+        "integrations/email"
+      ]
+    },
+    {
+      "group": "Templates",
+      "pages": [
+        "templates/overview",
+        "templates/expense-tracker",
+        "templates/habit-tracker",
+        "templates/workout-log",
+        "templates/reading-list",
+        "templates/grocery-list"
+      ]
+    },
+    {
+      "group": "Guides",
+      "pages": [
+        "guides/telegram-setup",
+        "guides/whatsapp-setup",
+        "guides/webhook-automation",
+        "guides/sharing-helpers",
+        "guides/data-export"
+      ]
+    },
+    {
+      "group": "FAQ & Troubleshooting",
+      "pages": [
+        "faq/general",
+        "faq/telegram",
+        "faq/billing",
+        "faq/privacy-security"
+      ]
+    },
+    {
+      "group": "API Reference",
+      "pages": [
+        "api-reference/introduction",
+        "api-reference/authentication"
+      ]
+    },
+    {
+      "group": "Endpoints",
+      "pages": [
+        "api-reference/endpoints/helpers",
+        "api-reference/endpoints/entries",
+        "api-reference/endpoints/search"
       ]
     }
+  ],
+  "footerSocials": {
+    "x": "https://x.com/peanutsapp",
+    "discord": "https://discord.gg/peanuts",
+    "github": "https://github.com/peanutsapp"
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+  "feedback": {
+    "suggestEdit": true,
+    "raiseIssue": true
   },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+  "modeToggle": {
+    "default": "light",
+    "isHidden": false
   }
 }
+
