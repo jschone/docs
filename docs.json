@@ -135,6 +135,9 @@
       "x": "https://x.com/peanutsapp",
       "github": "https://github.com/peanutsapp"
     }
+  },
+  "background": {
+    "decoration": "gradient"
   }
 }
 
