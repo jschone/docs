@@ -1,140 +1,137 @@
 {
-  "$schema": "https://mintlify.com/schema/docs.json",
+  "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
   "name": "Peanuts",
+  "description": "AI-powered personal productivity platform for tracking, organizing, and automating your life.",
+  "colors": {
+    "primary": "#329D9C",
+    "light": "#6FF7E2",
+    "dark": "#1A7A79"
+  },
   "logo": {
-    "dark": "/logo/peanuts-logo-dark.png",
     "light": "/logo/peanuts-logo-light.png",
+    "dark": "/logo/peanuts-logo-dark.png",
     "href": "https://peanutsapp.com"
   },
   "favicon": "/favicon.png",
-  "colors": {
-    "primary": "#2DB8A1",
-    "light": "#3DCFB6",
-    "dark": "#1A9C87",
-    "background": {
-      "light": "#FCFCFC",
-      "dark": "#141619"
+  "navbar": {
+    "links": [
+      {
+        "label": "Community",
+        "href": "https://t.me/peanutsapp"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Get Started",
+      "href": "https://peanutsapp.com"
     }
   },
-  "topbarLinks": [
-    {
-      "name": "Support",
-      "url": "mailto:support@peanutsapp.com"
-    }
-  ],
-  "topbarCtaButton": {
-    "name": "Get Started",
-    "url": "https://peanutsapp.com"
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/micro-apps",
+              "concepts/templates",
+              "concepts/ai-assistant",
+              "concepts/credits"
+            ]
+          },
+          {
+            "group": "Features",
+            "pages": [
+              "features/voice-input",
+              "features/smart-scan",
+              "features/widgets",
+              "features/reports",
+              "features/webhooks",
+              "features/notifications"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/telegram",
+              "integrations/whatsapp",
+              "integrations/email",
+              "integrations/calendar"
+            ]
+          },
+          {
+            "group": "Templates",
+            "pages": [
+              "templates/overview",
+              "templates/tracker",
+              "templates/habit",
+              "templates/checklist",
+              "templates/dashboard"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "Tutorials",
+            "pages": [
+              "guides/first-app",
+              "guides/telegram-bot",
+              "guides/voice-tracking",
+              "guides/automations"
+            ]
+          },
+          {
+            "group": "FAQ & Troubleshooting",
+            "pages": [
+              "faq/general",
+              "faq/billing",
+              "faq/technical"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "api/introduction",
+              "api/authentication"
+            ]
+          },
+          {
+            "group": "Endpoints",
+            "pages": [
+              "api/micro-apps",
+              "api/entries",
+              "api/webhooks"
+            ]
+          }
+        ]
+      }
+    ]
   },
-  "tabs": [
-    {
-      "name": "Guides",
-      "url": "guides"
-    },
-    {
-      "name": "API Reference",
-      "url": "api-reference"
+  "footer": {
+    "socials": {
+      "x": "https://x.com/peanutsapp",
+      "github": "https://github.com/peanutsapp"
     }
-  ],
-  "anchors": [
-    {
-      "name": "Community",
-      "icon": "telegram",
-      "url": "https://t.me/peanutsapp",
-      "color": "#2DB8A1"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://peanutsapp.com/blog",
-      "color": "#FDE472"
-    }
-  ],
-  "navigation": [
-    {
-      "group": "Getting Started",
-      "pages": [
-        "introduction",
-        "quickstart",
-        "core-concepts"
-      ]
-    },
-    {
-      "group": "Features",
-      "pages": [
-        "features/helpers",
-        "features/entries",
-        "features/voice-input",
-        "features/smart-scan",
-        "features/widgets",
-        "features/reports",
-        "features/knowledge-base"
-      ]
-    },
-    {
-      "group": "Integrations",
-      "pages": [
-        "integrations/telegram",
-        "integrations/whatsapp",
-        "integrations/webhooks",
-        "integrations/email"
-      ]
-    },
-    {
-      "group": "Templates",
-      "pages": [
-        "templates/overview",
-        "templates/trackers",
-        "templates/habits",
-        "templates/lists"
-      ]
-    },
-    {
-      "group": "Guides",
-      "pages": [
-        "guides/first-helper",
-        "guides/telegram-setup",
-        "guides/voice-tracking",
-        "guides/automation"
-      ]
-    },
-    {
-      "group": "FAQ & Troubleshooting",
-      "pages": [
-        "faq/general",
-        "faq/billing",
-        "faq/troubleshooting"
-      ]
-    },
-    {
-      "group": "API Reference",
-      "pages": [
-        "api-reference/introduction",
-        "api-reference/authentication"
-      ]
-    },
-    {
-      "group": "Endpoints",
-      "pages": [
-        "api-reference/endpoints/helpers",
-        "api-reference/endpoints/entries",
-        "api-reference/endpoints/search"
-      ]
-    }
-  ],
-  "footerSocials": {
-    "x": "https://x.com/peanutsapp",
-    "website": "https://peanutsapp.com"
-  },
-  "feedback": {
-    "suggestEdit": true,
-    "raiseIssue": true
-  },
-  "modeToggle": {
-    "default": "light",
-    "isHidden": false
   }
 }
+
 
 
